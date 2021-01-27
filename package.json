@@ -1,0 +1,20 @@
+{
+  "name": "flatstack-warsaw",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "prettier --check \"src/**/*.js\""
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.0.5",
+    "snowpack": "^3.0.1"
+  }
+}
