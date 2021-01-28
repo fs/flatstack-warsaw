@@ -17,6 +17,11 @@ module.exports = {
     filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
+  module: {
+    rules: [
+      { test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ },
+    ],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
@@ -33,8 +38,6 @@ module.exports = {
   ],
   devServer: {
     host: 'localhost',
-  },
-  module: {
-    rules: [{ test: /pages\/.*\.jsx$/, use: ['babel-loader'] }],
+    open: true,
   },
 };

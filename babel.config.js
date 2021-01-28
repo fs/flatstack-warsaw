@@ -1,10 +1,6 @@
 module.exports = function (api) {
   const isStatic = api.caller((caller) => caller.target === 'node');
 
-  if (!isStatic) {
-    return {};
-  }
-
   return {
     presets: [
       [
@@ -16,9 +12,13 @@ module.exports = function (api) {
       [
         '@babel/preset-env',
         {
-          targets: {
-            node: 'current',
-          },
+          ...(isStatic
+            ? {
+                targets: {
+                  node: 'current',
+                },
+              }
+            : {}),
         },
       ],
     ],
