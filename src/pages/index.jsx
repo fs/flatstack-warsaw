@@ -1,12 +1,12 @@
-import { renderToStaticMarkup } from 'react-dom/server';
-import Content from './shared/Content';
-import L10nContext from './shared/L10nContext';
+import Content from '../components/Content';
+import L10nContext from '../components/L10nContext';
 import enLocale from '../locales/en';
+import render from '../renderer';
 
-const EnPage = () => (
+const EnPage = (
   <L10nContext.Provider locale="en" values={enLocale}>
     <Content />
   </L10nContext.Provider>
 );
 
-export default renderToStaticMarkup(<EnPage />);
+export default render(EnPage);

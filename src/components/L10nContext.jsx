@@ -1,5 +1,5 @@
 import React, { useCallback, useContext } from 'react';
-import enLocale from '../../locales/en';
+import enLocale from '../locales/en';
 
 const Context = React.createContext(null);
 

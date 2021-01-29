@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const PatchHtmlWebpackPluginPlugin = require("./PatchHtmlWebpackPluginPlugin");
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -18,11 +19,10 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
-    rules: [
-      { test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ },
-    ],
+    rules: [{ test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ }],
   },
   plugins: [
+    new PatchHtmlWebpackPluginPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: `./pages/index.jsx`,
