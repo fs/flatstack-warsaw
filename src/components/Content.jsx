@@ -1,11 +1,29 @@
+import styled, { createGlobalStyle } from 'styled-components';
+import { Helmet } from 'react-helmet-async';
 import { useL10n } from './L10nContext';
 
+const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+`;
+
+const P = styled.p`
+  color: red;
+`;
+
 const Content = () => {
-  const { t } = useL10n();
+  const { t, locale } = useL10n();
 
   return (
-    <html lang="en">
-      <head>
+    <>
+      <GlobalStyle />
+      <Helmet>
+        <html lang={locale} />
         <meta charSet="utf-8" />
         <title>{t('title')}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -16,21 +34,16 @@ const Content = () => {
         <meta name="keywords" content={t('metaKeywords')} />
 
         <meta property="og:title" content={t('og:title')} />
-        <meta
-          property="og:description"
-          content={t('og:description')}
-        />
+        <meta property="og:description" content={t('og:description')} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://warsaw.flatstack.com/" />
         <meta
           property="og:image"
           content="https://warsaw.flatstack.com/logo500.png"
         />
-      </head>
-      <body>
-        <p>{t('welcome')}</p>
-      </body>
-    </html>
+      </Helmet>
+      <P>{t('welcome')}</P>
+    </>
   );
 };
 
