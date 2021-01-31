@@ -21,5 +21,5 @@ export default function render(Page) {
   );
   sheet.seal();
 
-  return html;
+  return `<!DOCTYPE html>${html}`;
 }
