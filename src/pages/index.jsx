@@ -3,7 +3,7 @@ import L10nContext from '../components/L10nContext';
 import enLocale from '../locales/en';
 import render from '../renderer';
 
-const EnPage = (
+const EnPage = () => (
   <L10nContext.Provider locale="en" values={enLocale}>
     <Content />
   </L10nContext.Provider>
