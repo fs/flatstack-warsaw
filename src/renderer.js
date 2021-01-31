@@ -1,19 +1,16 @@
-import { ServerStyleSheet } from 'styled-components';
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { ServerStyleSheet } from 'styled-components';
+import { HelmetProvider } from 'react-helmet-async';
 import Document from './Document';
 
-export default function (page) {
+export default function (Page) {
   const sheet = new ServerStyleSheet();
 
-  const helmetContext = {huh: true};
+  const helmetContext = {};
 
   const content = renderToString(
     <HelmetProvider context={helmetContext}>
-      <Helmet>
-        <title>Test</title>
-      </Helmet>
-      {sheet.collectStyles(page)}
+      {sheet.collectStyles(<Page />)}
     </HelmetProvider>,
   );
 
