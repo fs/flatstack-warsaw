@@ -1,6 +1,9 @@
 // Temporary fix
 // See issue: https://github.com/jantimon/html-webpack-plugin/issues/1590
 
+const WebpackOptionsApply = require('webpack/lib/WebpackOptionsApply');
+const ResolverFactory = require('webpack/lib/ResolverFactory');
+
 class PatchHtmlWebpackPluginPlugin {
   apply(compiler) {
     compiler.hooks.compilation.tap(
@@ -13,7 +16,12 @@ class PatchHtmlWebpackPluginPlugin {
               return;
             }
 
-            childCompiler.options.externalsPresets = {
+            const optionsCopy = { ...childCompiler.options };
+            optionsCopy.resolve = {
+              ...optionsCopy.resolve,
+            };
+
+            optionsCopy.externalsPresets = {
               web: false,
               node: true,
               nwjs: false,
@@ -22,16 +30,16 @@ class PatchHtmlWebpackPluginPlugin {
               electronPreload: false,
               electronRenderer: false,
             };
-            childCompiler.options.loader = {
+            optionsCopy.loader = {
               target: 'node',
             };
-            childCompiler.options.target = 'node';
-            childCompiler.options.node = {
+            optionsCopy.target = 'node';
+            optionsCopy.node = {
               global: false,
               __filename: 'eval-only',
               __dirname: 'eval-only',
             };
-            childCompiler.options.output = {
+            optionsCopy.output = {
               ...childCompiler.options.output,
               chunkFormat: 'commonjs',
               chunkLoading: 'require',
@@ -42,12 +50,12 @@ class PatchHtmlWebpackPluginPlugin {
               workerChunkLoading: 'require',
               workerWasmLoading: 'async-node',
             };
-            childCompiler.options.resolve.conditionNames = [
+            optionsCopy.resolve.conditionNames = [
               'webpack',
               'development',
               'node',
             ];
-            childCompiler.options.resolve.byDependency = {
+            optionsCopy.resolve.byDependency = {
               wasm: {
                 conditionNames: ['import', 'module', '...'],
                 aliasFields: [],
@@ -93,6 +101,16 @@ class PatchHtmlWebpackPluginPlugin {
                 preferRelative: true,
               },
             };
+
+            // it is needed because `resolverFactory` already exist on childCompiler and it refers to old options.resolve object
+            // so we need to reinitialize resolverFactory before compilation
+            childCompiler.resolverFactory = new ResolverFactory();
+
+            // but new resolverFactory should be initialized. And it is what WebpackOptionsApply for.
+            childCompiler.options = new WebpackOptionsApply().process(
+              optionsCopy,
+              childCompiler,
+            );
           },
         );
       },
