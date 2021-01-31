@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve",
     "build": "webpack",
-    "test": "echo \"This template does not include a test runner by default.\" && exit 1",
+    "test": "echo \"This template does not include a test runner by default.\"",
     "format": "prettier --write \"src/**/*.js\"",
     "lint": "prettier --check \"src/**/*.js\""
   },
