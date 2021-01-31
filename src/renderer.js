@@ -3,7 +3,7 @@ import { ServerStyleSheet } from 'styled-components';
 import { HelmetProvider } from 'react-helmet-async';
 import Document from './Document';
 
-export default function (Page) {
+export default function render(Page) {
   const sheet = new ServerStyleSheet();
 
   const helmetContext = {};
