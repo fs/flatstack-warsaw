@@ -1,0 +1,31 @@
+{
+  "ci": {
+    "collect": {
+      "numberOfRuns": 5
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "viewport": "error",
+        "first-contentful-paint": [
+          "error",
+          { "maxNumericValue": 2000, "aggregationMethod": "optimistic" }
+        ],
+        "interactive": [
+          "error",
+          { "maxNumericValue": 2000, "aggregationMethod": "optimistic" }
+        ],
+        "categories:performance": [
+          "warn",
+          { "minScore": 1, "aggregationMethod": "optimistic" }
+        ],
+        "categories:accessibility": [
+          "error",
+          { "minScore": 1, "aggregationMethod": "optimistic" }
+        ],
+        "resource-summary:script:size": ["error", { "maxNumericValue": 50000 }],
+        "resource-summary:total:size": ["error", { "maxNumericValue": 300000 }]
+      }
+    }
+  }
+}
