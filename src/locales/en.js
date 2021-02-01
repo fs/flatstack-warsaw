@@ -8,6 +8,7 @@ export default {
     'og:title': 'Flatstack Warsaw. Join us!',
     'og:description':
       'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
+    logoAlt: 'Flatstack logo',
     welcome: 'Hello! We are Flatstack!',
     aboutTeam: 'About team',
     aboutTeamText: (
