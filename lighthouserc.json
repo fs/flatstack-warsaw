@@ -16,7 +16,7 @@
           { "maxNumericValue": 2000, "aggregationMethod": "optimistic" }
         ],
         "categories:performance": [
-          "warn",
+          "error",
           { "minScore": 1, "aggregationMethod": "optimistic" }
         ],
         "categories:accessibility": [
