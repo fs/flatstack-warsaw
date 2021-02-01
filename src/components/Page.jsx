@@ -1,6 +1,9 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet-async';
 import { useL10n } from './L10nContext';
+import Header from './Header';
+import Hero from './Hero';
+import AboutTeam from './AboutTeam';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,14 +12,15 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    color: ${({ theme }) => theme.colors.text};
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    fill: currentColor;
+    -webkit-font-smoothing: antialiased;
   }
 `;
 
-const P = styled.p`
-  color: red;
-`;
-
-const Content = () => {
+const Page = () => {
   const { t, locale } = useL10n();
 
   return (
@@ -42,9 +46,11 @@ const Content = () => {
           content="https://warsaw.flatstack.com/logo500.png"
         />
       </Helmet>
-      <P>{t('welcome')}</P>
+      <Header />
+      <Hero />
+      <AboutTeam />
     </>
   );
 };
 
-export default Content;
+export default Page;

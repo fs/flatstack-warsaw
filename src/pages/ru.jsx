@@ -1,11 +1,11 @@
-import Content from '../components/Content';
+import Page from '../components/Page';
 import L10nContext from '../components/L10nContext';
 import ruLocale from '../locales/ru';
 import render from '../render';
 
 const RuPage = () => (
   <L10nContext.Provider locale="ru" values={ruLocale}>
-    <Content />
+    <Page />
   </L10nContext.Provider>
 );
 
