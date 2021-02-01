@@ -24,7 +24,20 @@
           { "minScore": 1, "aggregationMethod": "optimistic" }
         ],
         "resource-summary:script:size": ["error", { "maxNumericValue": 50000 }],
-        "resource-summary:total:size": ["error", { "maxNumericValue": 300000 }]
+        "resource-summary:total:size": ["error", { "maxNumericValue": 300000 }],
+        "resource-summary:font:count": ["error", { "maxNumericValue": 0 }],
+        "resource-summary:third-party:count": [
+          "error",
+          { "maxNumericValue": 0 }
+        ],
+        "installable-manifest": "off",
+        "is-crawlable": "off",
+        "maskable-icon": "off",
+        "works-offline": "off",
+        "service-worker": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "offline-start-url": "off"
       }
     }
   }
