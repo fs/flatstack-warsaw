@@ -1,0 +1,25 @@
+name: After deploy
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Wait for the Netlify Preview
+        uses: jakepartusch/wait-for-netlify-action@v1.2
+        id: netlify
+        with:
+          site_name: 'flatstack-warsaw'
+      - name: Audit URLs using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ steps.netlify.outputs.url }}
+            ${{ steps.netlify.outputs.url }}/ru
+          configPath: './lighthouserc.json'
+          uploadArtifacts: true
