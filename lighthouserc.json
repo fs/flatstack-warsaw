@@ -15,6 +15,10 @@
           "error",
           { "maxNumericValue": 2000, "aggregationMethod": "optimistic" }
         ],
+        "cumulative-layout-shift": [
+          "error",
+          { "maxNumericValue": 0, "aggregationMethod": "optimistic" }
+        ],
         "categories:performance": [
           "error",
           { "minScore": 1, "aggregationMethod": "optimistic" }
