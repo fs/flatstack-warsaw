@@ -1,8 +1,9 @@
 name: After deploy
 
 on:
-  - push
-  - pull_request
+  push:
+    branches: [ main ]
+  pull_request:
 
 jobs:
   lighthouse:
