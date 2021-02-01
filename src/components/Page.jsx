@@ -49,6 +49,7 @@ const Page = () => {
       <Header />
       <Hero />
       <AboutTeam />
+      <p style={{ color: 'white' }}>bad text</p>
     </>
   );
 };
