@@ -1,7 +1,8 @@
 import { renderToString, renderToStaticMarkup } from 'react-dom/server';
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet, ThemeProvider } from 'styled-components';
 import { HelmetProvider } from 'react-helmet-async';
 import Document from './Document';
+import theme from './theme';
 
 export default function render(Page) {
   const sheet = new ServerStyleSheet();
@@ -10,7 +11,9 @@ export default function render(Page) {
 
   const content = renderToString(
     <HelmetProvider context={helmetContext}>
-      {sheet.collectStyles(<Page />)}
+      <ThemeProvider theme={theme}>
+        {sheet.collectStyles(<Page />)}
+      </ThemeProvider>
     </HelmetProvider>,
   );
 
