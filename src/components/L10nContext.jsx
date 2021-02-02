@@ -3,16 +3,36 @@ import enLocale from '../locales/en';
 
 const Context = React.createContext(null);
 
-const noTranslationFn = (key) => () => {
-  throw new Error(`translation for "${key}" not found`);
-};
+function noTranslationFn(key) {
+  return () => {
+    throw new Error(`translation for "${key}" not found`);
+  };
+}
+
+function getByPath(path, obj) {
+  const pathSegments = path.split('.');
+
+  let result = obj;
+
+  for (let i = 0; i < pathSegments.length; i++) {
+    const curr = result[pathSegments[i]];
+
+    if (!curr) {
+      return null;
+    }
+
+    result = curr;
+  }
+
+  return result;
+}
 
 export const Provider = ({ locale, values, children }) => {
   const t = useCallback(
     (key, options) => {
       const translation =
-        values.translations[key] ||
-        enLocale.translations[key] ||
+        getByPath(key,values.translations) ||
+        getByPath(key, enLocale.translations) ||
         noTranslationFn(key);
 
       if (typeof translation === 'function') {

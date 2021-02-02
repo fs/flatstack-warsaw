@@ -14,8 +14,8 @@ const AboutTeam = () => {
   return (
     <Wrapper>
       <Container>
-        <h1>{t('aboutTeam')}</h1>
-        {t('aboutTeamText')}
+        <h1>{t('aboutTeam.title')}</h1>
+        {t('aboutTeam.text')}
       </Container>
     </Wrapper>
   );
