@@ -10,12 +10,14 @@ export default {
       'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
     logoAlt: 'Flatstack logo',
     welcome: 'Hello! We are Flatstack!',
-    aboutTeam: 'About team',
-    aboutTeamText: (
-      <>
-        <p>We are blah blah blah.</p>
-        <p>Example of splitting text into paragraphs in translations.</p>
-      </>
-    ),
+    aboutTeam: {
+      title: 'About team',
+      text: (
+        <>
+          <p>We are blah blah blah.</p>
+          <p>Example of splitting text into paragraphs in translations.</p>
+        </>
+      )
+    },
   },
 };

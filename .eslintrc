@@ -11,6 +11,7 @@
     "react/jsx-props-no-spreading": "off",
     "react/prop-types": "off",
     "jsx-a11y/html-has-lang": "off",
-    "react/jsx-filename-extension": "off"
+    "react/jsx-filename-extension": "off",
+    "no-plusplus": "off"
   }
 }
