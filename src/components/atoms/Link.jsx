@@ -28,7 +28,7 @@ const StyledLink = styled(Link)`
     transition: all 0.3s ease-out;
     transform: scaleX(0);
     transform-origin: top left;
-    background-color: ${({theme}) => theme.colors.accent};
+    background-color: ${({ theme }) => theme.colors.accent};
     opacity: 0.3;
   }
 
