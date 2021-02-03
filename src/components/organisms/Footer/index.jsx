@@ -12,14 +12,12 @@ const Wrapper = styled.footer`
   }
 `;
 
-const Footer = () => {
-  return (
-    <Wrapper>
-      <Container>
-        <p>&copy; 2020 Flatstack LLC</p>
-      </Container>
-    </Wrapper>
-  );
-};
+const Footer = () => (
+  <Wrapper>
+    <Container>
+      <p>&copy; 2020 Flatstack LLC</p>
+    </Container>
+  </Wrapper>
+);
 
 export default Footer;

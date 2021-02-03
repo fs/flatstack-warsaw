@@ -31,7 +31,7 @@ export const Provider = ({ locale, values, children }) => {
   const t = useCallback(
     (key, options) => {
       const translation =
-        getByPath(key,values.translations) ||
+        getByPath(key, values.translations) ||
         getByPath(key, enLocale.translations) ||
         noTranslationFn(key);
 

@@ -21,16 +21,16 @@ export default {
           <LineWrapper>Join us!</LineWrapper>
         </>
       ),
-      joinButton: 'Join'
+      joinButton: 'Join',
     },
     jobDescription: {
-      title: 'Who we are looking for?'
+      title: 'Who we are looking for?',
     },
     aboutProject: {
-      title: 'About project'
+      title: 'About project',
     },
     aboutTeam: {
-      title: 'About team'
+      title: 'About team',
     },
     join: {
       title: 'Join us!',
