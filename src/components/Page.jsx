@@ -1,9 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet-async';
 import { useL10n } from './L10nContext';
-import Header from './Header';
-import Hero from './Hero';
-import AboutTeam from './AboutTeam';
+import Header from './organisms/Header';
+import Hero from './organisms/Hero';
+import Footer from './organisms/Footer';
+import Join from "./organisms/Join";
+import JobDescription from "./organisms/JobDescription";
+import AboutProject from "./organisms/AboutProject";
+import AboutTeam from "./organisms/AboutTeam";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -48,7 +52,11 @@ const Page = () => {
       </Helmet>
       <Header />
       <Hero />
+      <JobDescription />
+      <AboutProject />
       <AboutTeam />
+      <Join />
+      <Footer />
     </>
   );
 };

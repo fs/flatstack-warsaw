@@ -9,15 +9,31 @@ export default {
     'og:description':
       'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
     logoAlt: 'Flatstack logo',
-    welcome: 'Hello! We are Flatstack!',
-    aboutTeam: {
-      title: 'About team',
-      text: (
+    hero: {
+      title: ({ LineWrapper }) => (
         <>
-          <p>We are blah blah blah.</p>
-          <p>Example of splitting text into paragraphs in translations.</p>
+          <LineWrapper>Hello! We are Flatstack!</LineWrapper>
+          <br />
+          <LineWrapper>
+            We are hiring software engineers for our Warsaw office.
+          </LineWrapper>
+          <br />
+          <LineWrapper>Join us!</LineWrapper>
         </>
-      )
+      ),
+      joinButton: 'Join'
+    },
+    jobDescription: {
+      title: 'Who we are looking for?'
+    },
+    aboutProject: {
+      title: 'About project'
+    },
+    aboutTeam: {
+      title: 'About team'
+    },
+    join: {
+      title: 'Join us!',
     },
   },
 };

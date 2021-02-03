@@ -9,15 +9,31 @@ export default {
     'og:description':
       'Мы — Flatstack и мы нанимает инженеров для нашего офиса в Варшаве. Присоединяйся к нам!',
     logoAlt: 'Логотип Flatstack',
-    welcome: 'Привет! Мы — Flatstack!',
-    aboutTeam: {
-      title: 'О команде',
-      text: (
+    hero: {
+      title: ({ LineWrapper }) => (
         <>
-          <p>Мы — бла бла бла.</p>
-          <p>Пример разделения на абзацы в переводах.</p>
+          <LineWrapper>Привет! Мы — Flatstack!</LineWrapper>
+          <br />
+          <LineWrapper>
+            Мы нанимает инженеров для нашего офиса в Варшаве.
+          </LineWrapper>
+          <br />
+          <LineWrapper>Присоединяйся к нам!</LineWrapper>
         </>
       ),
+      joinButton: 'Присоедениться',
+    },
+    jobDescription: {
+      title: 'Кого мы ищем?',
+    },
+    aboutProject: {
+      title: 'О проекте',
+    },
+    aboutTeam: {
+      title: 'О команде',
+    },
+    join: {
+      title: 'Присоединяйся к нам!',
     },
   },
 };
