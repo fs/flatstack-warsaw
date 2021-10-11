@@ -43,7 +43,8 @@
         "service-worker": "off",
         "splash-screen": "off",
         "themed-omnibox": "off",
-        "offline-start-url": "off"
+        "offline-start-url": "off",
+        "csp-xss": "off"
       }
     }
   }
