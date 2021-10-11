@@ -2,7 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-const PatchHtmlWebpackPluginPlugin = require("./PatchHtmlWebpackPluginPlugin");
+const PatchHtmlWebpackPluginPlugin = require('./PatchHtmlWebpackPluginPlugin');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -25,11 +25,11 @@ module.exports = {
     new PatchHtmlWebpackPluginPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: `./pages/index.jsx`,
+      template: `./webpack-templates/index.js`,
     }),
     new HtmlWebpackPlugin({
       filename: 'ru.html',
-      template: `./pages/ru.jsx`,
+      template: `./webpack-templates/ru.js`,
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
@@ -39,5 +39,14 @@ module.exports = {
   devServer: {
     host: 'localhost',
     open: true,
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /^\/ru$/,
+          to: '/ru.html',
+        },
+        { from: /./, to: '/404.html' },
+      ],
+    },
   },
 };
