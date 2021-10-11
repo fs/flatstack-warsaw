@@ -1,9 +1,9 @@
 import ReactDOM from 'react-dom';
-import {HelmetProvider} from "react-helmet-async";
-import {ThemeProvider} from "styled-components";
-import EnPage from './components/pages/index'
-import RuPage from './components/pages/ru'
-import theme from "./theme";
+import { HelmetProvider } from 'react-helmet-async';
+import { ThemeProvider } from 'styled-components';
+import EnPage from './components/pages/index';
+import RuPage from './components/pages/ru';
+import theme from './theme';
 
 const target = document.body;
 
