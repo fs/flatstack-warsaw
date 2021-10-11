@@ -15,6 +15,8 @@
           "error",
           { "maxNumericValue": 2000, "aggregationMethod": "optimistic" }
         ],
+        "max-potential-fid": "off",
+        "total-blocking-time": ["error", { "maxNumericValue": 50 }],
         "cumulative-layout-shift": [
           "error",
           { "maxNumericValue": 0, "aggregationMethod": "optimistic" }
