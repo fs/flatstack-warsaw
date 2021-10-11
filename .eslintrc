@@ -12,6 +12,10 @@
     "react/prop-types": "off",
     "jsx-a11y/html-has-lang": "off",
     "react/jsx-filename-extension": "off",
-    "no-plusplus": "off"
+    "no-plusplus": "off",
+    "import/no-unresolved": [
+      "error",
+      { "commonjs": true, "caseSensitive": true, "ignore": ["^react$", "^react-dom$", "^react-dom\/.*$"] }
+    ]
   }
 }
