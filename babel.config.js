@@ -7,6 +7,7 @@ module.exports = function (api) {
         '@babel/preset-react',
         {
           runtime: 'automatic',
+          importSource: 'preact/compat',
         },
       ],
       [

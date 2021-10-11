@@ -13,6 +13,12 @@ module.exports = {
   devtool: NODE_ENV === 'production' ? 'source-map' : 'eval-source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
+    alias: {
+      react: 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react-dom': 'preact/compat',
+      'react/jsx-runtime': 'preact/jsx-runtime',
+    },
   },
   output: {
     filename: '[name].[contenthash].js',
