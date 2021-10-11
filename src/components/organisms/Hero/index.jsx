@@ -12,9 +12,8 @@ const Wrapper = styled.section`
 const LineWrapper = styled.span``;
 
 const cursorAnimation = keyframes`
-  to {
-    visibility: hidden;
-  }
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
 `;
 
 const Title = styled.h1`
@@ -36,7 +35,7 @@ const Title = styled.h1`
   &::after {
     content: '\\A|';
     white-space: pre;
-    animation: ${cursorAnimation} 1.5s steps(2, start) infinite;
+    animation: ${cursorAnimation} 1.5s step-end infinite;
   }
 `;
 
