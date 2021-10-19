@@ -4,10 +4,10 @@ import { useL10n } from './L10nContext';
 import Header from './organisms/Header';
 import Hero from './organisms/Hero';
 import Footer from './organisms/Footer';
-import Join from './organisms/Join';
-import JobDescription from './organisms/JobDescription';
-import AboutProject from './organisms/AboutProject';
-import AboutTeam from './organisms/AboutTeam';
+import Vacancy from './organisms/Vacancy';
+import Relocation from './organisms/Relocation';
+import Feedbacks from './organisms/Feedbacks';
+import Warsaw from './organisms/Warsaw';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -52,10 +52,10 @@ const Page = () => {
       </Helmet>
       <Header />
       <Hero />
-      <JobDescription />
-      <AboutProject />
-      <AboutTeam />
-      <Join />
+      <Vacancy />
+      <Relocation />
+      <Feedbacks />
+      <Warsaw />
       <Footer />
     </>
   );
