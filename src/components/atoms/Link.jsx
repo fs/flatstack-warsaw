@@ -2,13 +2,12 @@ import styled from 'styled-components';
 
 const ChildrenWrapper = styled.span`
   display: inline-block;
-  position: relative;
-  text-decoration: underline;
+  text-decoration: ${({ noUnderline }) => (noUnderline ? 'none' : 'underline')};
 `;
 
-const Link = ({ children, ...props }) => (
+const Link = ({ children, noUnderline, ...props }) => (
   <a {...props}>
-    <ChildrenWrapper>{children}</ChildrenWrapper>
+    <ChildrenWrapper noUnderline={noUnderline}>{children}</ChildrenWrapper>
   </a>
 );
 
@@ -21,11 +20,11 @@ const StyledLink = styled(Link)`
     content: '';
     display: inline-block;
     position: absolute;
-    top: -0.3em;
-    left: -0.3em;
-    right: -0.3em;
-    bottom: -0.3em;
-    transition: all 0.3s ease-out;
+    top: -0.2em;
+    left: -0.2em;
+    right: -0.2em;
+    bottom: -0.2em;
+    transition: transform 0.3s ease-out;
     transform: scaleX(0);
     transform-origin: top left;
     background-color: ${({ theme }) => theme.colors.accent};
