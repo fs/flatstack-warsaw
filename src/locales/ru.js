@@ -11,35 +11,21 @@ export default {
     logoAlt: 'Логотип Flatstack',
     menu: {
       vacancy: 'Вакансии',
-      relocations: 'Релокация',
+      relocation: 'Релокация',
       feedbacks: 'Отзывы',
       warsaw: 'Варшава',
     },
-    hero: {
-      title: ({ LineWrapper }) => (
-        <>
-          <LineWrapper>Привет! Мы — Flatstack!</LineWrapper>
-          <br />
-          <LineWrapper>
-            Мы нанимает инженеров для нашего офиса в Варшаве.
-          </LineWrapper>
-          <br />
-          <LineWrapper>Присоединяйся к нам!</LineWrapper>
-        </>
-      ),
-      joinButton: 'Присоедениться',
+    vacancy: {
+      aboutFlatstack: 'О компании Flatstack',
     },
-    jobDescription: {
-      title: 'Кого мы ищем?',
+    relocation: {
+      title: 'Релокация',
     },
-    aboutProject: {
-      title: 'О проекте',
+    feedbacks: {
+      title: 'Отзывы',
     },
-    aboutTeam: {
-      title: 'О команде',
-    },
-    join: {
-      title: 'Присоединяйся к нам!',
+    warsaw: {
+      title: 'Варшава',
     },
   },
 };
