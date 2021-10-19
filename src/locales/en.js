@@ -9,6 +9,12 @@ export default {
     'og:description':
       'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
     logoAlt: 'Flatstack logo',
+    menu: {
+      vacancy: 'Vacancy',
+      relocations: 'Relocations',
+      feedbacks: 'Feedbacks',
+      warsaw: 'Warsaw',
+    },
     hero: {
       title: ({ LineWrapper }) => (
         <>
