@@ -11,35 +11,21 @@ export default {
     logoAlt: 'Flatstack logo',
     menu: {
       vacancy: 'Vacancy',
-      relocations: 'Relocations',
+      relocation: 'Relocation',
       feedbacks: 'Feedbacks',
       warsaw: 'Warsaw',
     },
-    hero: {
-      title: ({ LineWrapper }) => (
-        <>
-          <LineWrapper>Hello! We are Flatstack!</LineWrapper>
-          <br />
-          <LineWrapper>
-            We are hiring software engineers for our Warsaw office.
-          </LineWrapper>
-          <br />
-          <LineWrapper>Join us!</LineWrapper>
-        </>
-      ),
-      joinButton: 'Join',
+    vacancy: {
+      aboutFlatstack: 'About Flatstack',
     },
-    jobDescription: {
-      title: 'Who we are looking for?',
+    relocation: {
+      title: 'Relocation',
     },
-    aboutProject: {
-      title: 'About project',
+    feedbacks: {
+      title: 'Feedbacks',
     },
-    aboutTeam: {
-      title: 'About team',
-    },
-    join: {
-      title: 'Join us!',
+    warsaw: {
+      title: 'Warsaw',
     },
   },
 };

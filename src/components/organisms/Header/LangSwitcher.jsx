@@ -2,14 +2,7 @@ import styled from 'styled-components';
 import Link from '../../atoms/Link';
 import { useL10n } from '../../L10nContext';
 
-const Wrapper = styled.div`
-  margin: 0 -0.3em;
-`;
-
-const StyledLink = styled(Link)`
-  display: inline-block;
-  margin: 0 0.3em;
-`;
+const Wrapper = styled.div``;
 
 const LangSwitcher = ({ className }) => {
   const { locale } = useL10n();
@@ -17,9 +10,9 @@ const LangSwitcher = ({ className }) => {
   return (
     <Wrapper className={className}>
       {locale === 'en' ? (
-        <StyledLink href="/ru">Русский</StyledLink>
+        <Link href="/ru">Русский</Link>
       ) : (
-        <StyledLink href="/">English</StyledLink>
+        <Link href="/">English</Link>
       )}
     </Wrapper>
   );

@@ -3,6 +3,10 @@ import Container from '../../atoms/Container';
 import { useL10n } from '../../L10nContext';
 import LangSwitcher from './LangSwitcher';
 import Link from '../../atoms/Link';
+import { ID as VACANCY_SECTION_ID } from '../Vacancy';
+import { ID as RELOCATION_SECTION_ID } from '../Relocation';
+import { ID as FEEDBACKS_SECTION_ID } from '../Feedbacks';
+import { ID as WARSAW_SECTION_ID } from '../Warsaw';
 
 const Wrapper = styled.header``;
 
@@ -11,19 +15,15 @@ const InnerWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
-`;
-
-const StyledLangSwitcher = styled(LangSwitcher)`
-  padding: 1em 0;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
 `;
 
 const Logo = styled.img`
-  margin: 1.5rem 0;
+  flex: none;
 `;
 
-const Menu = styled.nav`
-  margin: 1.5rem 0;
-`;
+const Menu = styled.nav``;
 
 const Ul = styled.ul`
   list-style-type: none;
@@ -40,6 +40,7 @@ const Delimiter = styled.div`
   width: 1px;
   background-color: ${({ theme }) => theme.colors.secondary};
   align-self: center;
+  flex: none;
 `;
 
 const RightCol = styled.div`
@@ -47,6 +48,9 @@ const RightCol = styled.div`
   flex-direction: row;
   align-items: baseline;
   gap: 1.5em;
+  overflow: auto;
+  margin: 0 -0.5em;
+  padding: 0 0.5em;
 `;
 
 const Header = () => {
@@ -61,29 +65,41 @@ const Header = () => {
             <Menu>
               <Ul>
                 <li>
-                  <Link href="#" noUnderline>
+                  <Link
+                    href={`#${VACANCY_SECTION_ID}`}
+                    underlineType={Link.underlineTypes.NEVER}
+                  >
                     {t('menu.vacancy')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" noUnderline>
-                    {t('menu.relocations')}
+                  <Link
+                    href={`#${RELOCATION_SECTION_ID}`}
+                    underlineType={Link.underlineTypes.NEVER}
+                  >
+                    {t('menu.relocation')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" noUnderline>
+                  <Link
+                    href={`#${FEEDBACKS_SECTION_ID}`}
+                    underlineType={Link.underlineTypes.NEVER}
+                  >
                     {t('menu.feedbacks')}
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" noUnderline>
+                  <Link
+                    href={`#${WARSAW_SECTION_ID}`}
+                    underlineType={Link.underlineTypes.NEVER}
+                  >
                     {t('menu.warsaw')}
                   </Link>
                 </li>
               </Ul>
             </Menu>
             <Delimiter />
-            <StyledLangSwitcher />
+            <LangSwitcher />
           </RightCol>
         </InnerWrapper>
       </Container>

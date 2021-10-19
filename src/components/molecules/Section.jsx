@@ -5,12 +5,9 @@ const Wrapper = styled.section`
   margin-bottom: 2em;
 `;
 
-const Section = ({ title, children, ...props }) => (
+const Section = ({ children, ...props }) => (
   <Wrapper {...props}>
-    <Container>
-      <h1>{title}</h1>
-      {children}
-    </Container>
+    <Container>{children}</Container>
   </Wrapper>
 );
 
