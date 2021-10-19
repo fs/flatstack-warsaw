@@ -9,31 +9,23 @@ export default {
     'og:description':
       'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
     logoAlt: 'Flatstack logo',
-    hero: {
-      title: ({ LineWrapper }) => (
-        <>
-          <LineWrapper>Hello! We are Flatstack!</LineWrapper>
-          <br />
-          <LineWrapper>
-            We are hiring software engineers for our Warsaw office.
-          </LineWrapper>
-          <br />
-          <LineWrapper>Join us!</LineWrapper>
-        </>
-      ),
-      joinButton: 'Join',
+    menu: {
+      vacancy: 'Vacancy',
+      relocation: 'Relocation',
+      feedbacks: 'Feedbacks',
+      warsaw: 'Warsaw',
     },
-    jobDescription: {
-      title: 'Who we are looking for?',
+    vacancy: {
+      aboutFlatstack: 'About Flatstack',
     },
-    aboutProject: {
-      title: 'About project',
+    relocation: {
+      title: 'Relocation',
     },
-    aboutTeam: {
-      title: 'About team',
+    feedbacks: {
+      title: 'Feedbacks',
     },
-    join: {
-      title: 'Join us!',
+    warsaw: {
+      title: 'Warsaw',
     },
   },
 };
