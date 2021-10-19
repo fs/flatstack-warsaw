@@ -15,7 +15,7 @@ const Wrapper = styled.footer`
 const Footer = () => (
   <Wrapper>
     <Container>
-      <p>&copy; 2020 Flatstack LLC</p>
+      <p>&copy; 2021 Flatstack LLC</p>
     </Container>
   </Wrapper>
 );
