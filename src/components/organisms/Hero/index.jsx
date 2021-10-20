@@ -2,21 +2,41 @@ import styled from 'styled-components';
 import Section from '../../molecules/Section';
 import ButtonLink, { variants as buttonVariants } from '../../atoms/ButtonLink';
 import { useL10n } from '../../L10nContext';
-import titleBgPath from './title-bg.jpeg';
+import titleBgJpgPath from './title-bg.jpg';
+import titleBgWebpPath from './title-bg.webp';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
+`;
+
+const InnerWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
 const Title = styled.h1`
   // depend on viewport width, but not bigger than 5em and not smaller than 3em
   font-size: max(min(5em, 15vw), 3em);
   font-weight: 900;
-  background: url('${titleBgPath}') no-repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin: 0 0 0.3em;
   line-height: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(70%);
+
+  body.no-webp & {
+    background-image: url('${titleBgJpgPath}');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  body.webp & {
+    background-image: url('${titleBgWebpPath}');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 `;
 
 const Subtitle = styled.span`
@@ -68,24 +88,26 @@ const Hero = () => {
 
   return (
     <StyledSection>
-      <Title>Fullstack Developer</Title>
-      <Subtitle>
-        {t('hero.subtitle', { Highlight: SubtitleHighlight })}
-      </Subtitle>
-      <TechnologiesWrapper>
-        {technologies.map((technology) => (
-          <Technology>{technology}</Technology>
-        ))}
-      </TechnologiesWrapper>
-      <ActionsWrapper>
-        <ButtonLink href="#">{t('hero.actions.apply')}</ButtonLink>
-        <ButtonLink href="#" variant={buttonVariants.BORDERED}>
-          {t('hero.actions.recommend')}
-        </ButtonLink>
-        <ButtonLink href="#" variant={buttonVariants.BORDERED}>
-          {t('hero.actions.share')}
-        </ButtonLink>
-      </ActionsWrapper>
+      <InnerWrapper>
+        <Title>Fullstack Developer</Title>
+        <Subtitle>
+          {t('hero.subtitle', { Highlight: SubtitleHighlight })}
+        </Subtitle>
+        <TechnologiesWrapper>
+          {technologies.map((technology) => (
+            <Technology>{technology}</Technology>
+          ))}
+        </TechnologiesWrapper>
+        <ActionsWrapper>
+          <ButtonLink href="#">{t('hero.actions.apply')}</ButtonLink>
+          <ButtonLink href="#" variant={buttonVariants.BORDERED}>
+            {t('hero.actions.recommend')}
+          </ButtonLink>
+          <ButtonLink href="#" variant={buttonVariants.BORDERED}>
+            {t('hero.actions.share')}
+          </ButtonLink>
+        </ActionsWrapper>
+      </InnerWrapper>
     </StyledSection>
   );
 };
