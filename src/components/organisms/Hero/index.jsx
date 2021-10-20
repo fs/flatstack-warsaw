@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import Section from '../../molecules/Section';
 import ButtonLink, { variants as buttonVariants } from '../../atoms/ButtonLink';
 import { useL10n } from '../../L10nContext';
-import titleBgJpgPath from './title-bg.jpg';
-import titleBgWebpPath from './title-bg.webp';
+import titleBgJpgPath from './title-bg.jpg?inline';
+import titleBgWebpPath from './title-bg.webp?inline';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
