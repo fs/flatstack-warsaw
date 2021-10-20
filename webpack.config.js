@@ -25,7 +25,22 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
-    rules: [{ test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ }],
+    rules: [
+      { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
+      {
+        oneOf: [
+          {
+            test: /\.(jpe?g|png|gif|svg|webp|avif)$/,
+            resourceQuery: /inline/,
+            type: 'asset/inline',
+          },
+          {
+            test: /\.(jpe?g|png|gif|svg|webp|avif)$/,
+            type: 'asset/resource',
+          },
+        ],
+      },
+    ],
   },
   plugins: [
     new PatchHtmlWebpackPluginPlugin(),
