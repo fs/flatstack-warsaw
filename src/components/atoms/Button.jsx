@@ -1,15 +1,26 @@
 import styled, { css } from 'styled-components';
 
+export const variants = {
+  ACCENT: 'ACCENT',
+  TEXT: 'TEXT',
+};
+
 const accentCss = css`
   background-color: ${({ theme }) => theme.colors.accent};
-  padding: 0.5em 1em;
+  padding: 0.7em 1.5em;
   font-weight: 600;
   outline: none;
-  color: ${({ theme }) => theme.colors.secondary};
+  color: ${({ theme }) => theme.colors.invertedText};
+  border-radius: 0.7em;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
+    color: ${({ theme }) => theme.colors.invertedText};
   }
+`;
+
+const textCss = css`
+  padding: 0.7em 1.5em;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const inlineCss = css`
@@ -26,13 +37,12 @@ const Button = styled.button`
   text-align: center;
   text-decoration: none;
   user-select: none;
-  padding: 0.5em;
   cursor: pointer;
   display: block;
-  border-radius: 0;
   transition: transform 0.3s ease-out;
 
-  ${accentCss};
+  ${({ variant }) => variant === variants.ACCENT && accentCss};
+  ${({ variant }) => variant === variants.TEXT && textCss};
 
   &:active,
   &:focus,
@@ -48,5 +58,9 @@ const Button = styled.button`
       padding: 1em 2em;
     `};
 `;
+
+Button.defaultProps = {
+  variant: variants.ACCENT,
+};
 
 export default Button;
