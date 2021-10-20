@@ -6,7 +6,7 @@ import EnPage from './components/pages/index';
 import RuPage from './components/pages/ru';
 import theme from './theme';
 
-const target = document.body;
+const target = document.getElementById('root');
 
 const App = () => (
   <HelmetProvider>
