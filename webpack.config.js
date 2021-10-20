@@ -28,8 +28,17 @@ module.exports = {
     rules: [
       { test: /\.jsx?$/, use: 'babel-loader', exclude: /node_modules/ },
       {
-        test: /\.(jpe?g|png|gif|svg|webp|avif)$/,
-        use: 'file-loader',
+        oneOf: [
+          {
+            test: /\.(jpe?g|png|gif|svg|webp|avif)$/,
+            resourceQuery: /inline/,
+            type: 'asset/inline',
+          },
+          {
+            test: /\.(jpe?g|png|gif|svg|webp|avif)$/,
+            type: 'asset/resource',
+          },
+        ],
       },
     ],
   },
