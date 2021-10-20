@@ -42,7 +42,6 @@ const Title = styled.h1`
 const Subtitle = styled.span`
   // depend on viewport width, but not bigger than 2em and not smaller than 1.25em
   font-size: max(min(2em, 6vw), 1.25em);
-  margin: 2rem 0;
 `;
 
 const SubtitleHighlight = styled.span`
