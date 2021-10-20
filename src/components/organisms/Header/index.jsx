@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Container from '../../atoms/Container';
 import { useL10n } from '../../L10nContext';
+import LogoSvg from './LogoSvg';
 import LangSwitcher from './LangSwitcher';
 import Link from '../../atoms/Link';
 import { ID as VACANCY_SECTION_ID } from '../Vacancy';
@@ -19,7 +20,7 @@ const InnerWrapper = styled.div`
   margin: 1.5rem 0;
 `;
 
-const Logo = styled.img`
+const StyledLogo = styled(LogoSvg)`
   flex: none;
 `;
 
@@ -60,7 +61,7 @@ const Header = () => {
     <Wrapper>
       <Container>
         <InnerWrapper>
-          <Logo src="/logo.svg" alt={t('logoAlt')} width="120" height="56" />
+          <StyledLogo width="120" height="56" />
           <RightCol>
             <Menu>
               <Ul>
