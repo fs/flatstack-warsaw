@@ -3,24 +3,22 @@ import styled, { css } from 'styled-components';
 export const variants = {
   ACCENT: 'ACCENT',
   TEXT: 'TEXT',
+  BORDERED: 'BORDERED',
 };
 
 const accentCss = css`
   background-color: ${({ theme }) => theme.colors.accent};
-  padding: 0.7em 1.5em;
   font-weight: 600;
   outline: none;
   color: ${({ theme }) => theme.colors.invertedText};
-  border-radius: 0.7em;
 
   &:hover {
     color: ${({ theme }) => theme.colors.invertedText};
   }
 `;
 
-const textCss = css`
-  padding: 0.7em 1.5em;
-  color: ${({ theme }) => theme.colors.text};
+const borderedCss = css`
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
 `;
 
 const inlineCss = css`
@@ -40,9 +38,12 @@ const Button = styled.button`
   cursor: pointer;
   display: block;
   transition: transform 0.3s ease-out;
+  padding: 0.7em 1.5em;
+  color: ${({ theme }) => theme.colors.text};
+  border-radius: 0.7em;
 
   ${({ variant }) => variant === variants.ACCENT && accentCss};
-  ${({ variant }) => variant === variants.TEXT && textCss};
+  ${({ variant }) => variant === variants.BORDERED && borderedCss};
 
   &:active,
   &:focus,
