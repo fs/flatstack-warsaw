@@ -15,14 +15,17 @@ export default {
       feedbacks: 'Отзывы',
       warsaw: 'Варшава',
     },
-    heroDescription: {
-      where: 'в Варшаву',
-      condition: 'с релокацией',
-    },
-    heroActions: {
-      apply: 'Откликнуться',
-      recommend: 'Рекомендовать',
-      share: 'Поделиться',
+    hero: {
+      subtitle: ({ Highlight }) => (
+        <>
+          в Варшаву <Highlight>&#123;с релокацией&#125;</Highlight>
+        </>
+      ),
+      actions: {
+        apply: 'Откликнуться',
+        recommend: 'Рекомендовать',
+        share: 'Поделиться',
+      },
     },
     vacancy: {
       aboutFlatstack: 'О компании Flatstack',
