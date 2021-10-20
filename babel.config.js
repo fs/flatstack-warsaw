@@ -23,6 +23,6 @@ module.exports = function (api) {
         },
       ],
     ],
-    plugins: ['polished', ['babel-plugin-styled-components', { ssr: true }]],
+    plugins: [['babel-plugin-styled-components', { ssr: true }]],
   };
 };

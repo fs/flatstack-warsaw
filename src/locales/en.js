@@ -27,5 +27,17 @@ export default {
     warsaw: {
       title: 'Warsaw',
     },
+    join: {
+      title: 'Join the team',
+      form: {
+        name: 'Name',
+        email: 'Email',
+        link: 'Link to your CV or profile in social media',
+        cv: 'Attach CV',
+        submit: 'Submit',
+        agreement: 'By clicking the "Submit" button, you agree with our',
+        privacyPolicy: 'privacy policy',
+      },
+    },
   },
 };
