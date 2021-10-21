@@ -25,6 +25,10 @@ const inlineCss = css`
   display: inline-block;
 `;
 
+const fullWidthCss = css`
+  width: 100%;
+`;
+
 const Button = styled.button`
   border: none;
   background: none;
@@ -44,6 +48,7 @@ const Button = styled.button`
 
   ${({ variant }) => variant === variants.ACCENT && accentCss};
   ${({ variant }) => variant === variants.BORDERED && borderedCss};
+  ${({ fullWidth }) => fullWidth && fullWidthCss};
 
   &:active,
   &:focus,
