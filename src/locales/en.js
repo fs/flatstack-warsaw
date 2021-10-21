@@ -15,6 +15,18 @@ export default {
       feedbacks: 'Feedbacks',
       warsaw: 'Warsaw',
     },
+    hero: {
+      subtitle: ({ Highlight }) => (
+        <>
+          to Warsaw <Highlight>&#123;with relocation&#125;</Highlight>
+        </>
+      ),
+      actions: {
+        apply: 'Apply now',
+        recommend: 'Recommend',
+        share: 'Share',
+      },
+    },
     vacancy: {
       aboutFlatstack: 'About Flatstack',
     },

@@ -6,10 +6,9 @@ const Document = ({ children, styles, helmet }) => (
       {helmet.link.toComponent()}
       {styles}
     </head>
-    <body
-      dangerouslySetInnerHTML={{ __html: children }}
-      {...helmet.bodyAttributes.toComponent()}
-    />
+    <body {...helmet.bodyAttributes.toComponent()}>
+      <div id="root" dangerouslySetInnerHTML={{ __html: children }} />
+    </body>
   </html>
 );
 

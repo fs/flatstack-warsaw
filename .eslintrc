@@ -15,7 +15,7 @@
     "no-plusplus": "off",
     "import/no-unresolved": [
       "error",
-      { "commonjs": true, "caseSensitive": true, "ignore": ["^react$", "^react-dom$", "^react-dom\/.*$"] }
+      { "commonjs": true, "caseSensitive": true, "ignore": ["^react$", "^react-dom$", "^react-dom\/.*$", "\\?"] }
     ]
   }
 }
