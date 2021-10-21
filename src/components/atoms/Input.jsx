@@ -5,20 +5,22 @@ const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
-const Label = styled.label``;
+const Label = styled.label`
+  margin-bottom: 0.2em;
+`;
 
 const HtmlInput = styled.input`
-  max-width: 30em;
-  padding: 0.5em;
+  width: 100%;
+  padding: 0.8em;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   border-radius: 0.7em;
 `;
 
-const Input = ({ name, label, ...rest }) => {
+const Input = ({ name, label, className, id, ...rest }) => {
   return (
-    <InputWrapper>
-      <Label for={name}>{label}</Label>
-      <HtmlInput name={name} {...rest} />
+    <InputWrapper className={className}>
+      <Label for={id}>{label}</Label>
+      <HtmlInput name={name} id={id} {...rest} />
     </InputWrapper>
   );
 };
