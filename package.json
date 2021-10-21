@@ -11,8 +11,10 @@
     "lint": "eslint './src/**/*.{js,jsx}'"
   },
   "dependencies": {
+    "core-js": "^3.18.3",
     "preact": "^10.5.14",
     "react-helmet-async": "^1.1.2",
+    "regenerator-runtime": "^0.13.9",
     "styled-components": "^5.3.1",
     "webp-in-css": "^0.6.0"
   },

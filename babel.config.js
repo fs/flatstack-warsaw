@@ -19,7 +19,10 @@ module.exports = function (api) {
                   node: 'current',
                 },
               }
-            : {}),
+            : {
+                useBuiltIns: 'usage',
+                corejs: { version: 3 },
+              }),
         },
       ],
     ],
