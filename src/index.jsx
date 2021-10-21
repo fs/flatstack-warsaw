@@ -1,4 +1,6 @@
 import 'webp-in-css/polyfill';
+import 'regenerator-runtime/runtime';
+
 import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from 'styled-components';
