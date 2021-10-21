@@ -1,10 +1,8 @@
 export default {
   colors: {
-    accent: '#ee060b',
-    primary: '#f3f3f3',
+    accent: '#fa0e1c',
     secondary: '#c4c4c4',
-    text: '#000000',
-    invertedText: '#ffffff',
-    paleText: '#4e4e4e',
+    text: '#212529',
+    primary: '#e7e7e7',
   },
 };
