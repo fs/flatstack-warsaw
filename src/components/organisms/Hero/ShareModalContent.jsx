@@ -4,6 +4,9 @@ import ButtonLink, { variants as buttonVariants } from '../../atoms/ButtonLink';
 import Button from '../../atoms/Button';
 import { useL10n } from '../../L10nContext';
 import VkIcon from '../../icons/VkIcon';
+import FacebookIcon from '../../icons/FacebookIcon';
+import TwitterIcon from '../../icons/TwitterIcon';
+import LinkedInIcon from '../../icons/LinkedInIcon';
 
 const LinksWrapper = styled.div`
   display: flex;
@@ -89,6 +92,7 @@ const ShareModalContent = () => {
           symmetric
           centered={false}
         >
+          <StyledIcon icon={FacebookIcon} />
           {t('shareModal.shareViaFacebook')}
         </Link>
         <Link
@@ -110,6 +114,7 @@ const ShareModalContent = () => {
           symmetric
           centered={false}
         >
+          <StyledIcon icon={TwitterIcon} />
           {t('shareModal.shareViaTwitter')}
         </Link>
         <Link
@@ -121,6 +126,7 @@ const ShareModalContent = () => {
           symmetric
           centered={false}
         >
+          <StyledIcon icon={LinkedInIcon} />
           {t('shareModal.shareViaLinkedIn')}
         </Link>
       </LinksWrapper>
