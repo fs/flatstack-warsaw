@@ -6,5 +6,6 @@ export default {
     text: '#000000',
     invertedText: '#ffffff',
     paleText: '#4e4e4e',
+    outline: '#086cea',
   },
 };

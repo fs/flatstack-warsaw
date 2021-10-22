@@ -39,5 +39,15 @@ export default {
     warsaw: {
       title: 'Warsaw',
     },
+    shareModal: {
+      title: 'Share',
+      copy: 'Copy',
+      copySuccess: 'Copied!',
+      copyFailed: 'Failed!',
+      shareViaFacebook: 'Share via Facebook',
+      shareViaVk: 'Share via VK',
+      shareViaTwitter: 'Share via Twitter',
+      shareViaLinkedIn: 'Share via LinkedIn',
+    },
   },
 };

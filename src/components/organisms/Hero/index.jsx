@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 import Section from '../../molecules/Section';
-import ButtonLink, { variants as buttonVariants } from '../../atoms/ButtonLink';
+import ButtonLink, {
+  variants as buttonLinkVariants,
+} from '../../atoms/ButtonLink';
 import { useL10n } from '../../L10nContext';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
+import ShareButton from './ShareButton';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
@@ -98,13 +101,13 @@ const Hero = () => {
           ))}
         </TechnologiesWrapper>
         <ActionsWrapper>
-          <ButtonLink href="#">{t('hero.actions.apply')}</ButtonLink>
-          <ButtonLink href="#" variant={buttonVariants.BORDERED}>
+          <ButtonLink href="#" variant={buttonLinkVariants.ACCENT}>
+            {t('hero.actions.apply')}
+          </ButtonLink>
+          <ButtonLink href="#" variant={buttonLinkVariants.BORDERED}>
             {t('hero.actions.recommend')}
           </ButtonLink>
-          <ButtonLink href="#" variant={buttonVariants.BORDERED}>
-            {t('hero.actions.share')}
-          </ButtonLink>
+          <ShareButton>{t('hero.actions.share')}</ShareButton>
         </ActionsWrapper>
       </InnerWrapper>
     </StyledSection>
