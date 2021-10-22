@@ -39,5 +39,11 @@ export default {
     warsaw: {
       title: 'Варшава',
     },
+    shareModal: {
+      title: 'Поделиться',
+      copy: 'Копировать',
+      copySuccess: 'Скопировано!',
+      copyFailed: 'Ошибка!',
+    },
   },
 };

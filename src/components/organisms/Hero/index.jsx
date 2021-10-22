@@ -3,10 +3,10 @@ import Section from '../../molecules/Section';
 import ButtonLink, {
   variants as buttonLinkVariants,
 } from '../../atoms/ButtonLink';
-import Button, { variants as buttonVariants } from '../../atoms/Button';
 import { useL10n } from '../../L10nContext';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
+import ShareButton from './ShareButton';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
@@ -88,27 +88,6 @@ const technologies = [
 const Hero = () => {
   const { t } = useL10n();
 
-  const handleShare = async () => {
-    const shareData = {
-      title: t('og:title'),
-      text: t('og:description'),
-      url: '/',
-    };
-
-    if (typeof navigator.share !== 'undefined') {
-      try {
-        await navigator.share(shareData);
-        return;
-      } catch (err) {
-        if (err.name === 'AbortError') {
-          return;
-        }
-      }
-    }
-
-    console.log('alternative share');
-  };
-
   return (
     <StyledSection>
       <InnerWrapper>
@@ -122,13 +101,13 @@ const Hero = () => {
           ))}
         </TechnologiesWrapper>
         <ActionsWrapper>
-          <ButtonLink href="#">{t('hero.actions.apply')}</ButtonLink>
+          <ButtonLink href="#" variant={buttonLinkVariants.ACCENT}>
+            {t('hero.actions.apply')}
+          </ButtonLink>
           <ButtonLink href="#" variant={buttonLinkVariants.BORDERED}>
             {t('hero.actions.recommend')}
           </ButtonLink>
-          <Button variant={buttonVariants.BORDERED} onClick={handleShare}>
-            {t('hero.actions.share')}
-          </Button>
+          <ShareButton>{t('hero.actions.share')}</ShareButton>
         </ActionsWrapper>
       </InnerWrapper>
     </StyledSection>
