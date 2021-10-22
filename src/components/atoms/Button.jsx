@@ -24,7 +24,7 @@ const accentCss = css`
   }
 
   &:focus-visible {
-    outline: auto;
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
     background-color: ${({ theme }) => theme.colors.accent};
   }
 
@@ -46,7 +46,7 @@ const borderedCss = css`
   }
 
   &:focus-visible {
-    outline: auto;
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
     background-color: transparent;
   }
 
@@ -68,7 +68,7 @@ const primaryCss = css`
   }
 
   &:focus-visible {
-    outline: auto;
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -96,6 +96,7 @@ const Button = styled.button`
   padding: 0.7em 1.5em;
   color: ${({ theme }) => theme.colors.text};
   border-radius: 0.7em;
+  outline-offset: 0.15em;
 
   &:active,
   &:focus,
