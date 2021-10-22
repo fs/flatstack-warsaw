@@ -88,16 +88,24 @@ const Button = styled.button`
   font-size: inherit;
   line-height: inherit;
   font-weight: inherit;
-  text-align: center;
   text-decoration: none;
   user-select: none;
   cursor: pointer;
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   padding: 0.7em 1.5em;
   margin: 0;
   color: ${({ theme }) => theme.colors.text};
   border-radius: 0.7em;
   outline-offset: 0.15em;
+
+  ${({ centered }) =>
+    centered &&
+    css`
+      text-align: center;
+      justify-content: center;
+    `};
 
   &:active,
   &:focus,
@@ -116,10 +124,27 @@ const Button = styled.button`
     css`
       padding: 1em 2em;
     `};
+
+  ${({ symmetric, big }) => {
+    if (symmetric && big) {
+      return css`
+        padding: 1em 1.2em;
+      `;
+    }
+
+    if (symmetric && !big) {
+      return css`
+        padding: 0.7em 0.8em;
+      `;
+    }
+
+    return '';
+  }};
 `;
 
 Button.defaultProps = {
   variant: variants.PRIMARY,
+  centered: true,
 };
 
 export default Button;
