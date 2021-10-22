@@ -39,5 +39,11 @@ export default {
     warsaw: {
       title: 'Warsaw',
     },
+    shareModal: {
+      title: 'Share',
+      copy: 'Copy',
+      copySuccess: 'Copied!',
+      copyFailed: 'Failed!',
+    },
   },
 };

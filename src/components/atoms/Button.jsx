@@ -5,6 +5,7 @@ export const variants = {
   ACCENT: 'ACCENT',
   TEXT: 'TEXT',
   BORDERED: 'BORDERED',
+  PRIMARY: 'PRIMARY',
 };
 
 const accentCss = css`
@@ -54,6 +55,28 @@ const borderedCss = css`
   }
 `;
 
+const primaryCss = css`
+  background-color: ${({ theme }) => theme.colors.primary};
+
+  &:focus {
+    background-color: ${({ theme }) => shade(0.1, theme.colors.primary)};
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &:focus-visible {
+    outline: auto;
+    background-color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &&:hover {
+    background-color: ${({ theme }) => shade(0.1, theme.colors.primary)};
+  }
+`;
+
 const inlineCss = css`
   display: inline-block;
 `;
@@ -83,6 +106,7 @@ const Button = styled.button`
 
   ${({ variant }) => variant === variants.ACCENT && accentCss};
   ${({ variant }) => variant === variants.BORDERED && borderedCss};
+  ${({ variant }) => variant === variants.PRIMARY && primaryCss};
 
   ${({ inline }) => inline && inlineCss};
   ${({ big }) =>
@@ -93,7 +117,7 @@ const Button = styled.button`
 `;
 
 Button.defaultProps = {
-  variant: variants.ACCENT,
+  variant: variants.PRIMARY,
 };
 
 export default Button;
