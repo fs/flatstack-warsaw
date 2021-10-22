@@ -94,6 +94,7 @@ const Button = styled.button`
   cursor: pointer;
   display: block;
   padding: 0.7em 1.5em;
+  margin: 0;
   color: ${({ theme }) => theme.colors.text};
   border-radius: 0.7em;
   outline-offset: 0.15em;
