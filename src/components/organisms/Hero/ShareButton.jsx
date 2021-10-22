@@ -1,28 +1,12 @@
-import { useState, useEffect, useMemo } from 'react';
-import styled from 'styled-components';
+import { useState } from 'react';
 import { useL10n } from '../../L10nContext';
 import Button, { variants as buttonVariants } from '../../atoms/Button';
 import Modal from '../../molecules/Modal';
-
-const selfLink = typeof window === 'undefined' ? '' : window.location.href;
-
-const CopyRow = styled.div`
-  display: flex;
-  gap: 0.5em;
-`;
-
-const CopyInput = styled('input')`
-  flex: 1 1 auto;
-`;
-
-const CopyButton = styled(Button)`
-  flex: none;
-`;
+import ShareModalContent from './ShareModalContent';
 
 const ShareButton = ({ children }) => {
   const { t } = useL10n();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [copyStatus, setCopyStatus] = useState(null);
 
   const handleShare = async () => {
     const shareData = {
@@ -45,38 +29,6 @@ const ShareButton = ({ children }) => {
     setIsModalOpen(true);
   };
 
-  const handleCopy = async () => {
-    if (typeof navigator.clipboard === 'undefined') {
-      return;
-    }
-
-    try {
-      await navigator.clipboard.writeText(selfLink);
-      setCopyStatus({ value: true });
-    } catch (e) {
-      setCopyStatus({ value: false });
-    }
-  };
-
-  useEffect(() => {
-    const timeoutID = setTimeout(() => {
-      setCopyStatus(null);
-    }, 1000);
-
-    return () => clearTimeout(timeoutID);
-  }, [copyStatus]);
-
-  const copyButtonText = useMemo(() => {
-    switch (copyStatus?.value) {
-      case true:
-        return t('shareModal.copySuccess');
-      case false:
-        return t('shareModal.copyFailed');
-      default:
-        return t('shareModal.copy');
-    }
-  }, [copyStatus, t]);
-
   return (
     <>
       <Button variant={buttonVariants.BORDERED} onClick={handleShare}>
@@ -88,10 +40,7 @@ const ShareButton = ({ children }) => {
         onClose={() => setIsModalOpen(false)}
         title={t('shareModal.title')}
       >
-        <CopyRow>
-          <CopyInput type="text" value={selfLink} />
-          <CopyButton onClick={handleCopy}>{copyButtonText}</CopyButton>
-        </CopyRow>
+        <ShareModalContent />
       </Modal>
     </>
   );
