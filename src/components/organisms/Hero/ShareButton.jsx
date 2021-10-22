@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { useL10n } from '../../L10nContext';
 import Button, { variants as buttonVariants } from '../../atoms/Button';
-import Modal from '../../molecules/Modal';
 import ShareModalContent from './ShareModalContent';
+
+const Modal = lazy(() => import('../../molecules/Modal'));
 
 const ShareButton = ({ children }) => {
   const { t } = useL10n();
@@ -35,13 +36,17 @@ const ShareButton = ({ children }) => {
         {children}
       </Button>
 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title={t('shareModal.title')}
-      >
-        <ShareModalContent />
-      </Modal>
+      {isModalOpen ? (
+        <Suspense fallback={null}>
+          <Modal
+            isOpen
+            onClose={() => setIsModalOpen(false)}
+            title={t('shareModal.title')}
+          >
+            <ShareModalContent />
+          </Modal>
+        </Suspense>
+      ) : null}
     </>
   );
 };
