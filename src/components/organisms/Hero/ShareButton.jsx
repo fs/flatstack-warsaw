@@ -1,9 +1,19 @@
 import { useState, lazy, Suspense } from 'react';
+import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
 import Button, { variants as buttonVariants } from '../../atoms/Button';
 import ShareModalContent from './ShareModalContent';
+import LoadingIcon from '../../icons/LoadingIcon';
 
 const Modal = lazy(() => import('../../molecules/Modal'));
+
+const StyledButton = styled(Button)``;
+
+const StyledLoadingIcon = styled(LoadingIcon)`
+  font-size: 1.5em;
+  margin: -0.5em -0.5em -0.5em 0.5em;
+  color: ${({ theme }) => theme.colors.accent};
+`;
 
 const ShareButton = ({ children }) => {
   const { t } = useL10n();
@@ -32,12 +42,20 @@ const ShareButton = ({ children }) => {
 
   return (
     <>
-      <Button variant={buttonVariants.BORDERED} onClick={handleShare}>
-        {children}
-      </Button>
-
       {isModalOpen ? (
-        <Suspense fallback={null}>
+        <Suspense
+          fallback={
+            <StyledButton
+              variant={buttonVariants.BORDERED}
+              onClick={handleShare}
+            >
+              {children} <StyledLoadingIcon />
+            </StyledButton>
+          }
+        >
+          <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
+            {children}
+          </StyledButton>
           <Modal
             isOpen
             onClose={() => setIsModalOpen(false)}
@@ -46,7 +64,11 @@ const ShareButton = ({ children }) => {
             <ShareModalContent />
           </Modal>
         </Suspense>
-      ) : null}
+      ) : (
+        <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
+          {children}
+        </StyledButton>
+      )}
     </>
   );
 };
