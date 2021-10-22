@@ -44,6 +44,10 @@ export default {
       copy: 'Копировать',
       copySuccess: 'Скопировано!',
       copyFailed: 'Ошибка!',
+      shareViaFacebook: 'Поделиться в Facebook',
+      shareViaVk: 'Поделиться в ВКонтакте',
+      shareViaTwitter: 'Поделиться в Twitter',
+      shareViaLinkedIn: 'Поделиться в LinkedIn',
     },
   },
 };
