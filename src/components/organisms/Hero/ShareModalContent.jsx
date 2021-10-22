@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ButtonLink, { variants as buttonVariants } from '../../atoms/ButtonLink';
 import Button from '../../atoms/Button';
 import { useL10n } from '../../L10nContext';
+import VkIcon from '../../icons/VkIcon';
 
 const LinksWrapper = styled.div`
   display: flex;
@@ -13,6 +14,16 @@ const LinksWrapper = styled.div`
   & > * {
     flex: 1 0 15em;
   }
+`;
+
+const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
+  font-size: 1.5em;
+`;
+
+const Link = styled(ButtonLink)`
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
 `;
 
 const CopyRow = styled.div`
@@ -69,40 +80,49 @@ const ShareModalContent = () => {
   return (
     <>
       <LinksWrapper>
-        <ButtonLink
+        <Link
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
             selfLink,
           )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
+          symmetric
+          centered={false}
         >
           {t('shareModal.shareViaFacebook')}
-        </ButtonLink>
-        <ButtonLink
+        </Link>
+        <Link
           href={`https://vk.com/share.php?url=${encodeURIComponent(selfLink)}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
+          symmetric
+          centered={false}
         >
+          <StyledIcon icon={VkIcon} />
           {t('shareModal.shareViaVk')}
-        </ButtonLink>
-        <ButtonLink
+        </Link>
+        <Link
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
             selfLink,
           )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
+          symmetric
+          centered={false}
         >
           {t('shareModal.shareViaTwitter')}
-        </ButtonLink>
-        <ButtonLink
+        </Link>
+        <Link
           href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(
             selfLink,
           )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
+          symmetric
+          centered={false}
         >
           {t('shareModal.shareViaLinkedIn')}
-        </ButtonLink>
+        </Link>
       </LinksWrapper>
 
       <CopyRow>
