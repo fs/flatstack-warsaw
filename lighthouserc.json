@@ -29,7 +29,7 @@
           "error",
           { "minScore": 1, "aggregationMethod": "optimistic" }
         ],
-        "resource-summary:script:size": ["error", { "maxNumericValue": 70000 }],
+        "resource-summary:script:size": ["error", { "maxNumericValue": 100000 }],
         "resource-summary:total:size": ["error", { "maxNumericValue": 300000 }],
         "resource-summary:font:count": ["error", { "maxNumericValue": 0 }],
         "resource-summary:third-party:count": [
