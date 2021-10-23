@@ -173,10 +173,10 @@ const Join = () => {
               {t('join.form.submit')}
             </StyledButton>
             <Agreement>
-              {t('join.form.agreement')}
-              <Link href="/privacy-policy.pdf" target="_blank">
-                {t('join.form.privacyPolicy')}
-              </Link>
+              {t('join.form.agreement', {
+                LinkComponent: Link,
+                url: '/privacy-policy.pdf',
+              })}
             </Agreement>
           </Form>
           <CardsWrapper>
