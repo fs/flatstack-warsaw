@@ -3,7 +3,7 @@ import Container from '../../atoms/Container';
 import { useL10n } from '../../L10nContext';
 import LogoSvg from './LogoSvg';
 import LangSwitcher from './LangSwitcher';
-import Link from '../../atoms/Link';
+import Link, { underlineTypes } from '../../atoms/Link';
 import { ID as VACANCY_SECTION_ID } from '../Vacancy';
 import { ID as RELOCATION_SECTION_ID } from '../Relocation';
 import { ID as FEEDBACKS_SECTION_ID } from '../Feedbacks';
@@ -68,7 +68,7 @@ const Header = () => {
                 <li>
                   <Link
                     href={`#${VACANCY_SECTION_ID}`}
-                    underlineType={Link.underlineTypes.NEVER}
+                    underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.vacancy')}
                   </Link>
@@ -76,7 +76,7 @@ const Header = () => {
                 <li>
                   <Link
                     href={`#${RELOCATION_SECTION_ID}`}
-                    underlineType={Link.underlineTypes.NEVER}
+                    underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.relocation')}
                   </Link>
@@ -84,7 +84,7 @@ const Header = () => {
                 <li>
                   <Link
                     href={`#${FEEDBACKS_SECTION_ID}`}
-                    underlineType={Link.underlineTypes.NEVER}
+                    underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.feedbacks')}
                   </Link>
@@ -92,7 +92,7 @@ const Header = () => {
                 <li>
                   <Link
                     href={`#${WARSAW_SECTION_ID}`}
-                    underlineType={Link.underlineTypes.NEVER}
+                    underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.warsaw')}
                   </Link>
