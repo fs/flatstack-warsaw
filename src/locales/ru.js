@@ -39,6 +39,16 @@ export default {
     warsaw: {
       title: 'Варшава',
     },
+    shareModal: {
+      title: 'Поделиться',
+      copy: 'Копировать',
+      copySuccess: 'Скопировано!',
+      copyFailed: 'Ошибка!',
+      shareViaFacebook: 'Поделиться в Facebook',
+      shareViaVk: 'Поделиться в ВКонтакте',
+      shareViaTwitter: 'Поделиться в Twitter',
+      shareViaLinkedIn: 'Поделиться в LinkedIn',
+    },
     join: {
       title: 'Присоединиться к команде',
       form: {

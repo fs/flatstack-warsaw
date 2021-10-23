@@ -19,10 +19,13 @@ module.exports = function (api) {
                   node: 'current',
                 },
               }
-            : {}),
+            : {
+                useBuiltIns: 'usage',
+                corejs: { version: 3 },
+              }),
         },
       ],
     ],
-    plugins: [['babel-plugin-styled-components', { ssr: true }]],
+    plugins: ['polished', ['babel-plugin-styled-components', { ssr: true }]],
   };
 };
