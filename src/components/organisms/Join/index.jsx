@@ -56,8 +56,6 @@ const HrCard = styled(Card)`
 
 const Picture = styled.picture`
   display: block;
-  width: 8em;
-  height: 8em;
   position: absolute;
   top: -4.5em;
   left: 50%;
@@ -89,8 +87,7 @@ const Picture = styled.picture`
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
+  display: block;
   border-radius: 50%;
 `;
 
@@ -172,7 +169,12 @@ const Join = () => {
             <Picture>
               <source srcSet={HrPhotoWebpPath} type="image/webp" />
               <source srcSet={HrPhotoAvifPath} type="image/avif" />
-              <Image src={HrPhotoJpgPath} alt={t('join.hrPhotoAlt')} />
+              <Image
+                src={HrPhotoJpgPath}
+                alt={t('join.hrPhotoAlt')}
+                width="128"
+                height="128"
+              />
             </Picture>
             <HrCardText>{t('join.hrMessage')}</HrCardText>
             <ContactLinksWrapper>
