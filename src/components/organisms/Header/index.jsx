@@ -50,8 +50,8 @@ const RightCol = styled.div`
   align-items: baseline;
   gap: 1.5em;
   overflow: auto;
-  margin: 0 -0.5em;
-  padding: 0 0.5em;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em 0.5em 0;
 `;
 
 const Header = () => {
