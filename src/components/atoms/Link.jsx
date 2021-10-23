@@ -48,6 +48,7 @@ const StyledLink = styled(Link)`
   position: relative;
   display: inline-block;
   color: ${({ theme }) => theme.colors.text};
+  cursor: pointer;
 
   &:hover,
   &:focus {

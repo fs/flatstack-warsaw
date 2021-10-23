@@ -50,7 +50,12 @@ export default {
         agreement: 'Нажимая кнопку "Отправить", вы даёте соглашение с нашей',
         privacyPolicy: 'политикой конфиденциальности',
       },
-      managerMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
+      hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
+      hrPhotoAlt: 'Hr photo',
+      share: 'Поделиться',
+      shareLink: 'поделиться ссылкой',
+      recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
+      recommendationLinkText: 'Рекомендовать',
     },
   },
 };
