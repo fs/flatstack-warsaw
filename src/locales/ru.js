@@ -76,6 +76,7 @@ export default {
       shareLink: 'поделиться ссылкой',
       recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
       recommendationLinkText: 'Рекомендовать',
+      appleWatchImageAlt: 'Apple Watch',
     },
   },
 };

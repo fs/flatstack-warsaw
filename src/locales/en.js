@@ -77,6 +77,7 @@ export default {
       recommendationDescription:
         'Get Apple Watch for successful recommendation',
       recommendationLinkText: 'Recommend',
+      appleWatchImageAlt: 'Apple Watch',
     },
   },
 };

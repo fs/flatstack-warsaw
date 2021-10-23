@@ -127,10 +127,6 @@ const RecommendationCardDescriptionWrapper = styled.div`
   align-items: flex-start;
 `;
 
-const AppleWatchImage = styled.img`
-  width: 5em;
-`;
-
 const RecommendationDescription = styled.p``;
 
 export const ID = 'join-section';
@@ -203,7 +199,12 @@ const Join = () => {
             </RecommendationCardDescriptionWrapper>
             <picture>
               <source srcSet={AppleWatchWebpPath} type="image/webp" />
-              <AppleWatchImage src={AppleWatchPngPath} alt="Apple watch" />
+              <img
+                src={AppleWatchPngPath}
+                alt={t('join.appleWatchImageAlt')}
+                width="80"
+                height="94"
+              />
             </picture>
           </RecommendationCard>
         </RightCol>
