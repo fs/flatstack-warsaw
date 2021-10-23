@@ -1,14 +1,14 @@
 import React from 'react';
 
-const TelegramIconSvg = (props) => {
+const WhatsappIcon = (props) => {
   return (
     <svg
-      xmlSpace="preserve"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
+      height="1em"
+      width="1em"
       {...props}
     >
-      <title>whatsapp</title>
       <path
         d="M256.063 16.75h-.125C124.379 16.75 17.397 124.051 17.397 256c0 52.336 16.819 100.848 45.422 140.232l-29.732 88.873 91.716-29.394c37.725 25.063 82.731 39.538 131.26 39.538 131.559 0 238.541-107.335 238.541-239.25 0-131.916-106.983-239.249-238.541-239.249zm0 0"
         fill="#24b135"
@@ -21,4 +21,4 @@ const TelegramIconSvg = (props) => {
   );
 };
 
-export default TelegramIconSvg;
+export default WhatsappIcon;

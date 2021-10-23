@@ -10,8 +10,8 @@ import HrPhotoWebpPath from './hr-photo.webp?inline';
 import HrPhotoAvifPath from './hr-photo.avif?inline';
 import AppleWatchWebpPath from './apple-watch.webp';
 import AppleWatchPngPath from './apple-watch.png';
-import TelegramIconSvg from './TelegramIconSvg';
-import WhatsappIconSvg from './WhatsappIconSvg';
+import TelegramIcon from '../../icons/TelegramIcon';
+import WhatsappIcon from '../../icons/WhatsappIcon';
 import ButtonLink from '../../atoms/ButtonLink';
 
 const JoinSection = styled.div`
@@ -112,23 +112,23 @@ const ShareCard = styled(Card)`
   align-items: center;
   gap: 1em;
 `;
-const SocialsWrapper = styled.div`
+
+const ContactLinksWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin: 0.5em 0;
 `;
 
-const Social = styled.div`
+const ContactLink = styled(Link)`
   display: flex;
   align-items: center;
   gap: 1em;
   margin: 0.5em 0;
 `;
 
-const TelegramIcon = styled(TelegramIconSvg)`
-  width: 1.5em;
-`;
-
-const WhatsappIcon = styled(WhatsappIconSvg)`
-  width: 1.5em;
+const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
+  font-size: 1.5em;
 `;
 
 const AplleWatchImage = styled.img`
@@ -173,8 +173,10 @@ const Join = () => {
               {t('join.form.submit')}
             </StyledButton>
             <Agreement>
-              {t('join.form.agreement')}{' '}
-              <Link href="#">{t('join.form.privacyPolicy')}</Link>
+              {t('join.form.agreement')}
+              <Link href="/privacy-policy.pdf" target="_blank">
+                {t('join.form.privacyPolicy')}
+              </Link>
             </Agreement>
           </Form>
           <CardsWrapper>
@@ -185,16 +187,14 @@ const Join = () => {
                 <Image src={HrPhotoJpgPath} alt={t('join.hrPhotoAlt')} />
               </Picture>
               <Message>{t('join.hrMessage')}</Message>
-              <SocialsWrapper>
-                <Social>
-                  <TelegramIcon />
-                  <Link href="tel:000-000-000">Telegram</Link>
-                </Social>
-                <Social>
-                  <WhatsappIcon />
-                  <Link href="tel:000-000-000">Whatsapp</Link>
-                </Social>
-              </SocialsWrapper>
+              <ContactLinksWrapper>
+                <ContactLink href="tel:000-000-000" noHoverEffect>
+                  <StyledIcon icon={TelegramIcon} /> Telegram
+                </ContactLink>
+                <ContactLink href="tel:000-000-000" noHoverEffect>
+                  <StyledIcon icon={WhatsappIcon} /> Whatsapp
+                </ContactLink>
+              </ContactLinksWrapper>
             </StyledCard>
             <ShareCard>
               <picture>
