@@ -3,7 +3,7 @@ const LinkedInIcon = (props) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
-      viewBox="0 0 67 67"
+      viewBox="4 4 60 60"
       height="1em"
       width="1em"
       {...props}
