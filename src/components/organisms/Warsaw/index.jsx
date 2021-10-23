@@ -7,7 +7,7 @@ const Warsaw = () => {
   const { t } = useL10n();
   return (
     <Section id={ID}>
-      <h1>{t('warsaw.title')}</h1>
+      <Section.Title>{t('warsaw.title')}</Section.Title>
     </Section>
   );
 };

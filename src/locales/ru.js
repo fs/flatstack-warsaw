@@ -66,6 +66,10 @@ export default {
           </>
         ),
       },
+      contacts: {
+        telegram: 'Telegram',
+        whatsapp: 'WhatsApp',
+      },
       hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
       hrPhotoAlt: 'Hr photo',
       share: 'Поделиться',
