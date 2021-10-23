@@ -4,6 +4,7 @@ import Container from '../atoms/Container';
 const Wrapper = styled.section`
   margin-bottom: 2em;
   background-color: ${({ theme, grey }) => grey && theme.colors.primary};
+  padding: ${({ grey }) => (grey ? '2em' : '0')} 0;
 `;
 
 const Section = ({ children, ...props }) => (

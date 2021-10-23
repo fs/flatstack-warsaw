@@ -5,6 +5,6 @@ const ButtonLink = styled(Button).attrs(() => ({
   as: 'a',
 }))``;
 
-export { variants } from './Button';
+export { variants, paddingVariants } from './Button';
 
 export default ButtonLink;

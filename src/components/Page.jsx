@@ -15,6 +15,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     margin: 0;
     color: ${({ theme }) => theme.colors.text};

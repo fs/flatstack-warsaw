@@ -2,37 +2,32 @@ import styled from 'styled-components';
 import Section from '../../molecules/Section';
 import { useL10n } from '../../L10nContext';
 import Input from '../../atoms/Input';
-import Button from '../../atoms/Button';
+import Button, { variants as buttonVariants } from '../../atoms/Button';
 import Link from '../../atoms/Link';
 import Card from '../../atoms/Card';
-import HrPhotoJpgPath from './hr-photo.jpg?inline';
-import HrPhotoWebpPath from './hr-photo.webp?inline';
-import HrPhotoAvifPath from './hr-photo.avif?inline';
+import HrPhotoJpgPath from './hr-photo.jpg';
+import HrPhotoWebpPath from './hr-photo.webp';
+import HrPhotoAvifPath from './hr-photo.avif';
 import AppleWatchWebpPath from './apple-watch.webp';
 import AppleWatchPngPath from './apple-watch.png';
 import TelegramIcon from '../../icons/TelegramIcon';
 import WhatsappIcon from '../../icons/WhatsappIcon';
-import ButtonLink from '../../atoms/ButtonLink';
-
-const StyledSection = styled(Section)`
-  padding: 1em 0;
-`;
 
 const InnerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 6em 2em;
+  gap: 10em 15%;
+  margin-top: 3em;
 `;
 
 const Form = styled.form`
-  margin: 1rem 0;
-  max-width: 30em;
+  flex: 3 0 22em;
+  max-width: 100%;
 `;
 
 const StyledInput = styled(Input)`
-  margin: 0.5em 0;
+  margin: 0 0 1em 0;
 `;
 
 const StyledButton = styled(Button)`
@@ -43,27 +38,27 @@ const Agreement = styled.span`
   color: ${({ theme }) => theme.colors.paleText};
 `;
 
-const CardsWrapper = styled.div`
+const RightCol = styled.div`
+  flex: 1 0 16em;
   display: flex;
   flex-direction: column;
   gap: 2em;
+  max-width: 100%;
 `;
 
-const StyledCard = styled(Card)`
+const HrCard = styled(Card)`
   padding-top: 4.5em;
   position: relative;
 `;
 
 const Picture = styled.picture`
+  display: block;
   width: 8em;
   height: 8em;
-  border-radius: 50%;
   position: absolute;
-  top: -30%;
+  top: -4.5em;
   left: 50%;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
-  display: block;
 
   &::before {
     display: block;
@@ -86,26 +81,17 @@ const Picture = styled.picture`
     background-color: ${({ theme }) => theme.colors.accent};
     position: absolute;
     bottom: -1em;
-    right: 5%;
+    right: 0;
   }
 `;
 
 const Image = styled.img`
-  width: 8em;
-  height: 8em;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  position: absolute;
 `;
 
-const Message = styled.p``;
-
-const ShareCard = styled(Card)`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1em;
-`;
+const HrCardText = styled.p``;
 
 const ContactLinksWrapper = styled.div`
   display: flex;
@@ -125,22 +111,32 @@ const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
   font-size: 1.5em;
 `;
 
-const AppleWatchImage = styled.img`
-  width: 6em;
+const RecommendationCard = styled(Card)`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1em;
 `;
 
-const RecommendationWrapper = styled.div`
+const RecommendationCardDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+`;
+
+const AppleWatchImage = styled.img`
+  width: 5em;
 `;
 
 const RecommendationDescription = styled.p``;
+
+export const ID = 'join-section';
 
 const Join = () => {
   const { t } = useL10n();
 
   return (
-    <StyledSection grey id="join">
+    <Section grey id={ID}>
       <Section.Title>{t('join.title')}</Section.Title>
       <InnerWrapper>
         <Form>
@@ -151,7 +147,7 @@ const Join = () => {
             id="join-form-input-name"
           />
           <StyledInput
-            type="text"
+            type="email"
             name="email"
             label={t('join.form.email')}
             id="join-form-input-email"
@@ -162,7 +158,7 @@ const Join = () => {
             label={t('join.form.link')}
             id="join-form-input-link"
           />
-          <StyledButton type="submit" fullWidth>
+          <StyledButton type="submit" fullWidth variant={buttonVariants.ACCENT}>
             {t('join.form.submit')}
           </StyledButton>
           <Agreement>
@@ -172,14 +168,14 @@ const Join = () => {
             })}
           </Agreement>
         </Form>
-        <CardsWrapper>
-          <StyledCard>
+        <RightCol>
+          <HrCard>
             <Picture>
               <source srcSet={HrPhotoWebpPath} type="image/webp" />
               <source srcSet={HrPhotoAvifPath} type="image/avif" />
               <Image src={HrPhotoJpgPath} alt={t('join.hrPhotoAlt')} />
             </Picture>
-            <Message>{t('join.hrMessage')}</Message>
+            <HrCardText>{t('join.hrMessage')}</HrCardText>
             <ContactLinksWrapper>
               <ContactLink href="tel:000-000-000" noHoverEffect>
                 <StyledIcon icon={TelegramIcon} /> {t('join.contacts.telegram')}
@@ -188,22 +184,24 @@ const Join = () => {
                 <StyledIcon icon={WhatsappIcon} /> {t('join.contacts.whatsapp')}
               </ContactLink>
             </ContactLinksWrapper>
-          </StyledCard>
-          <ShareCard>
+          </HrCard>
+          <RecommendationCard>
+            <RecommendationCardDescriptionWrapper>
+              <RecommendationDescription>
+                {t('join.recommendationDescription')}
+              </RecommendationDescription>
+              <Button variant={buttonVariants.ACCENT_TEXT} negativeMargins>
+                {t('join.recommendationLinkText')}
+              </Button>
+            </RecommendationCardDescriptionWrapper>
             <picture>
               <source srcSet={AppleWatchWebpPath} type="image/webp" />
               <AppleWatchImage src={AppleWatchPngPath} alt="Apple watch" />
             </picture>
-            <RecommendationWrapper>
-              <RecommendationDescription>
-                {t('join.recommendationDescription')}
-              </RecommendationDescription>
-              <ButtonLink>{t('join.recommendationLinkText')}</ButtonLink>
-            </RecommendationWrapper>
-          </ShareCard>
-        </CardsWrapper>
+          </RecommendationCard>
+        </RightCol>
       </InnerWrapper>
-    </StyledSection>
+    </Section>
   );
 };
 

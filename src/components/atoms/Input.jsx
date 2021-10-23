@@ -6,14 +6,14 @@ const InputWrapper = styled.div`
   flex-direction: column;
 `;
 const Label = styled.label`
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
 `;
 
 const HtmlInput = styled.input`
   width: 100%;
   padding: 0.8em;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-  border-radius: 0.7em;
+  border-radius: 1em;
 `;
 
 const Input = ({ name, label, className, id, ...rest }) => {
