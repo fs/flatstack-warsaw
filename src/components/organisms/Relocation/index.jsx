@@ -7,7 +7,7 @@ const Relocation = () => {
   const { t } = useL10n();
   return (
     <Section id={ID}>
-      <h1>{t('relocation.title')}</h1>
+      <Section.Title>{t('relocation.title')}</Section.Title>
     </Section>
   );
 };

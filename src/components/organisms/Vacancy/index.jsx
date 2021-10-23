@@ -7,7 +7,7 @@ const Vacancy = () => {
   const { t } = useL10n();
   return (
     <Section id={ID}>
-      <h1>{t('vacancy.aboutFlatstack')}</h1>
+      <Section.Title>{t('vacancy.aboutFlatstack')}</Section.Title>
     </Section>
   );
 };

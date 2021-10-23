@@ -14,22 +14,16 @@ import TelegramIcon from '../../icons/TelegramIcon';
 import WhatsappIcon from '../../icons/WhatsappIcon';
 import ButtonLink from '../../atoms/ButtonLink';
 
-const JoinSection = styled.div`
-  padding: 1rem 0;
-  margin: -1rem 0;
+const StyledSection = styled(Section)`
+  padding: 1em 0;
 `;
 
-const JoinSectionWrapper = styled.div`
+const InnerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 6em 2em; ;
-`;
-
-const Title = styled.h2`
-  font-size: 1.5em;
-  margin: 1rem 0;
+  gap: 6em 2em;
 `;
 
 const Form = styled.form`
@@ -131,7 +125,7 @@ const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
   font-size: 1.5em;
 `;
 
-const AplleWatchImage = styled.img`
+const AppleWatchImage = styled.img`
   width: 6em;
 `;
 
@@ -146,72 +140,70 @@ const Join = () => {
   const { t } = useL10n();
 
   return (
-    <Section grey id="join">
-      <JoinSection>
-        <Title>{t('join.title')}</Title>
-        <JoinSectionWrapper>
-          <Form>
-            <StyledInput
-              type="text"
-              name="name"
-              label={t('join.form.name')}
-              id="join-form-input-name"
-            />
-            <StyledInput
-              type="text"
-              name="email"
-              label={t('join.form.email')}
-              id="join-form-input-email"
-            />
-            <StyledInput
-              type="text"
-              name="link"
-              label={t('join.form.link')}
-              id="join-form-input-link"
-            />
-            <StyledButton type="submit" fullWidth>
-              {t('join.form.submit')}
-            </StyledButton>
-            <Agreement>
-              {t('join.form.agreement', {
-                LinkComponent: Link,
-                url: '/privacy-policy.pdf',
-              })}
-            </Agreement>
-          </Form>
-          <CardsWrapper>
-            <StyledCard>
-              <Picture>
-                <source srcSet={HrPhotoWebpPath} type="image/webp" />
-                <source srcSet={HrPhotoAvifPath} type="image/avif" />
-                <Image src={HrPhotoJpgPath} alt={t('join.hrPhotoAlt')} />
-              </Picture>
-              <Message>{t('join.hrMessage')}</Message>
-              <ContactLinksWrapper>
-                <ContactLink href="tel:000-000-000" noHoverEffect>
-                  <StyledIcon icon={TelegramIcon} /> Telegram
-                </ContactLink>
-                <ContactLink href="tel:000-000-000" noHoverEffect>
-                  <StyledIcon icon={WhatsappIcon} /> Whatsapp
-                </ContactLink>
-              </ContactLinksWrapper>
-            </StyledCard>
-            <ShareCard>
-              <picture>
-                <source srcSet={AppleWatchWebpPath} type="image/webp" />
-                <AplleWatchImage src={AppleWatchPngPath} alt="Apple watch" />
-              </picture>
-              <RecommendationWrapper>
-                <RecommendationDescription>
-                  {t('join.recommendationDescription')}
-                </RecommendationDescription>
-                <ButtonLink>{t('join.recommendationLinkText')}</ButtonLink>
-              </RecommendationWrapper>
-            </ShareCard>
-          </CardsWrapper>
-        </JoinSectionWrapper>
-      </JoinSection>
-    </Section>
+    <StyledSection grey id="join">
+      <Section.Title>{t('join.title')}</Section.Title>
+      <InnerWrapper>
+        <Form>
+          <StyledInput
+            type="text"
+            name="name"
+            label={t('join.form.name')}
+            id="join-form-input-name"
+          />
+          <StyledInput
+            type="text"
+            name="email"
+            label={t('join.form.email')}
+            id="join-form-input-email"
+          />
+          <StyledInput
+            type="text"
+            name="link"
+            label={t('join.form.link')}
+            id="join-form-input-link"
+          />
+          <StyledButton type="submit" fullWidth>
+            {t('join.form.submit')}
+          </StyledButton>
+          <Agreement>
+            {t('join.form.agreement', {
+              LinkComponent: Link,
+              url: '/privacy-policy.pdf',
+            })}
+          </Agreement>
+        </Form>
+        <CardsWrapper>
+          <StyledCard>
+            <Picture>
+              <source srcSet={HrPhotoWebpPath} type="image/webp" />
+              <source srcSet={HrPhotoAvifPath} type="image/avif" />
+              <Image src={HrPhotoJpgPath} alt={t('join.hrPhotoAlt')} />
+            </Picture>
+            <Message>{t('join.hrMessage')}</Message>
+            <ContactLinksWrapper>
+              <ContactLink href="tel:000-000-000" noHoverEffect>
+                <StyledIcon icon={TelegramIcon} /> {t('join.contacts.telegram')}
+              </ContactLink>
+              <ContactLink href="tel:000-000-000" noHoverEffect>
+                <StyledIcon icon={WhatsappIcon} /> {t('join.contacts.whatsapp')}
+              </ContactLink>
+            </ContactLinksWrapper>
+          </StyledCard>
+          <ShareCard>
+            <picture>
+              <source srcSet={AppleWatchWebpPath} type="image/webp" />
+              <AppleWatchImage src={AppleWatchPngPath} alt="Apple watch" />
+            </picture>
+            <RecommendationWrapper>
+              <RecommendationDescription>
+                {t('join.recommendationDescription')}
+              </RecommendationDescription>
+              <ButtonLink>{t('join.recommendationLinkText')}</ButtonLink>
+            </RecommendationWrapper>
+          </ShareCard>
+        </CardsWrapper>
+      </InnerWrapper>
+    </StyledSection>
   );
 };
 
