@@ -57,8 +57,14 @@ export default {
         link: 'Link to your CV or profile in social media',
         cv: 'Attach CV',
         submit: 'Submit',
-        agreement: 'By clicking the "Submit" button, you agree with our',
-        privacyPolicy: 'privacy policy',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'By clicking the "Submit" button, you agree with our '}
+            <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
+              privacy policy
+            </LinkComponent>
+          </>
+        ),
       },
       hrMessage: 'Irina replies all the emails and message from you',
       hrPhotoAlt: 'Hr photo',

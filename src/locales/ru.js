@@ -57,8 +57,14 @@ export default {
         link: 'Ссылка на CV или на профиль в социальных сетях',
         cv: 'Приложить CV',
         submit: 'Отправить',
-        agreement: 'Нажимая кнопку "Отправить", вы даёте соглашение с нашей',
-        privacyPolicy: 'политикой конфиденциальности',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'Нажимая кнопку "Отправить", вы даёте соглашение с нашей '}
+            <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
+              политикой конфиденциальности
+            </LinkComponent>
+          </>
+        ),
       },
       hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
       hrPhotoAlt: 'Hr photo',
