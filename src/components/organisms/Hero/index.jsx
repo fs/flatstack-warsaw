@@ -7,6 +7,7 @@ import { useL10n } from '../../L10nContext';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
 import ShareButton from './ShareButton';
+import { ID as JOIN_SECTION_ID } from '../Join';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
@@ -101,7 +102,10 @@ const Hero = () => {
           ))}
         </TechnologiesWrapper>
         <ActionsWrapper>
-          <ButtonLink href="#" variant={buttonLinkVariants.ACCENT}>
+          <ButtonLink
+            href={`#${JOIN_SECTION_ID}`}
+            variant={buttonLinkVariants.ACCENT}
+          >
             {t('hero.actions.apply')}
           </ButtonLink>
           <ButtonLink href="#" variant={buttonLinkVariants.BORDERED}>
