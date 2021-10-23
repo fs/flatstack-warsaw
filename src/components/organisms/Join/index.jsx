@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import Section from '../../molecules/Section';
 import { useL10n } from '../../L10nContext';
 import Input from '../../atoms/Input';
-import Button, { variants as buttonVariants } from '../../atoms/Button';
+import Button, {
+  variants as buttonVariants,
+  paddingVariants as buttonPaddingVariants,
+} from '../../atoms/Button';
 import Link from '../../atoms/Link';
 import Card from '../../atoms/Card';
 import HrPhotoJpgPath from './hr-photo.jpg';
@@ -190,7 +193,11 @@ const Join = () => {
               <RecommendationDescription>
                 {t('join.recommendationDescription')}
               </RecommendationDescription>
-              <Button variant={buttonVariants.ACCENT_TEXT} negativeMargins>
+              <Button
+                variant={buttonVariants.ACCENT_TEXT}
+                negativeMargins
+                paddingVariant={buttonPaddingVariants.SYMMETRIC}
+              >
                 {t('join.recommendationLinkText')}
               </Button>
             </RecommendationCardDescriptionWrapper>
