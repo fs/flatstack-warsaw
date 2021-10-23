@@ -98,7 +98,7 @@ const Hero = () => {
           ))}
         </TechnologiesWrapper>
         <ActionsWrapper>
-          <ButtonLink href="#">{t('hero.actions.apply')}</ButtonLink>
+          <ButtonLink href="#join">{t('hero.actions.apply')}</ButtonLink>
           <ButtonLink href="#" variant={buttonVariants.BORDERED}>
             {t('hero.actions.recommend')}
           </ButtonLink>

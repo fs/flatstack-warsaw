@@ -50,7 +50,13 @@ export default {
         agreement: 'By clicking the "Submit" button, you agree with our',
         privacyPolicy: 'privacy policy',
       },
-      managerMessage: 'Irina replies all the emails and message from you',
+      hrMessage: 'Irina replies all the emails and message from you',
+      hrPhotoAlt: 'Hr photo',
+      share: 'Share',
+      shareLinkIconAlt: 'share link',
+      recommendationDescription:
+        'Get Apple Watch for successful recommendation',
+      recommendationLinkText: 'Recommend',
     },
   },
 };
