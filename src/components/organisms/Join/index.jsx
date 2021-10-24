@@ -15,6 +15,7 @@ import AppleWatchWebpPath from './apple-watch.webp';
 import AppleWatchPngPath from './apple-watch.png';
 import TelegramIcon from '../../icons/TelegramIcon';
 import WhatsappIcon from '../../icons/WhatsappIcon';
+import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -130,6 +131,7 @@ export const ID = 'join-section';
 
 const Join = () => {
   const { t } = useL10n();
+  const { shouldBeHydrated, handleClick } = useOnClickHydrate();
 
   return (
     <Section grey id={ID}>
@@ -165,7 +167,7 @@ const Join = () => {
           </Agreement>
         </Form>
         <RightCol>
-          <HrCard>
+          <HrCard dangerouslySetInnerHTML={{ __html: '' }}>
             <Picture>
               <source srcSet={HrPhotoWebpPath} type="image/webp" />
               <source srcSet={HrPhotoAvifPath} type="image/avif" />
@@ -186,7 +188,12 @@ const Join = () => {
               </ContactLink>
             </ContactLinksWrapper>
           </HrCard>
-          <RecommendationCard>
+          <RecommendationCard
+            dangerouslySetInnerHTML={
+              shouldBeHydrated ? undefined : { __html: '' }
+            }
+            onClick={handleClick}
+          >
             <RecommendationCardDescriptionWrapper>
               <RecommendationDescription>
                 {t('join.recommendationDescription')}

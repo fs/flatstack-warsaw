@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Section from '../../molecules/Section';
 import ButtonLink, {
@@ -8,6 +9,7 @@ import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
 import ShareButton from './ShareButton';
 import { ID as JOIN_SECTION_ID } from '../Join';
+import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
@@ -88,9 +90,13 @@ const technologies = [
 
 const Hero = () => {
   const { t } = useL10n();
+  const { handleClick, shouldBeHydrated } = useOnClickHydrate();
 
   return (
-    <StyledSection>
+    <StyledSection
+      dangerouslySetInnerHTML={shouldBeHydrated ? undefined : { __html: '' }}
+      onClick={handleClick}
+    >
       <InnerWrapper>
         <Title>Fullstack Developer</Title>
         <Subtitle>
