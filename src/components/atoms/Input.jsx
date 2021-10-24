@@ -14,6 +14,7 @@ const HtmlInput = styled.input`
   padding: 0.8em;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   border-radius: 1em;
+  font-size: 0.8rem;
 `;
 
 const Input = ({ name, label, className, id, ...rest }) => {
