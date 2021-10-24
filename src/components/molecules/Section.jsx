@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import Container from '../atoms/Container';
 
@@ -7,11 +8,11 @@ const Wrapper = styled.section`
   padding: ${({ grey }) => (grey ? '2em' : '0')} 0;
 `;
 
-const Section = ({ children, ...props }) => (
-  <Wrapper {...props}>
+const Section = React.forwardRef(({ children, ...props }, ref) => (
+  <Wrapper {...props} ref={ref}>
     <Container>{children}</Container>
   </Wrapper>
-);
+));
 
 Section.Title = styled.h2`
   font-size: 2em;

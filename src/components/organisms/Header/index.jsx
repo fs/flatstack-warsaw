@@ -58,7 +58,7 @@ const Header = () => {
   const { t } = useL10n();
 
   return (
-    <Wrapper>
+    <Wrapper dangerouslySetInnerHTML={{ __html: '' }}>
       <Container>
         <InnerWrapper>
           <StyledLogo width="120" height="56" />
