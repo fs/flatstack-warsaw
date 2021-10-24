@@ -11,10 +11,10 @@ const Label = styled.label`
 
 const HtmlInput = styled.input`
   width: 100%;
-  padding: 0.8em;
+  padding: 0.6em 0.7em;
   border: 1px solid ${({ theme }) => theme.colors.secondary};
-  border-radius: 1em;
-  font-size: 0.8rem;
+  border-radius: 0.7em;
+  font-size: 1rem;
 `;
 
 const Input = ({ name, label, className, id, ...rest }) => {
