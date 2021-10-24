@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Dialog } from '@headlessui/react';
 import Button, { variants as buttonVariants } from '../atoms/Button';
 import CloseIcon from '../icons/CloseIcon';
@@ -30,6 +30,11 @@ const Window = styled.div`
   padding: 1em;
   position: relative;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0.5em 1.5em;
+  ${({ centered }) =>
+    centered &&
+    css`
+      text-align: center;
+    `}
 `;
 
 const Overlay = styled(Dialog.Overlay)`
@@ -67,11 +72,11 @@ const Title = styled(Dialog.Title)`
   margin: 0 0 1em;
 `;
 
-const Modal = ({ isOpen, onClose, title, children }) => (
+const Modal = ({ isOpen, onClose, title, centered, children }) => (
   <Wrapper open={isOpen} onClose={onClose}>
     <WindowWrapper>
       <Overlay />
-      <Window>
+      <Window centered={centered}>
         <CloseButton variant={buttonVariants.PRIMARY} onClick={onClose}>
           <StyledCloseIcon />
         </CloseButton>

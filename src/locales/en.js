@@ -65,6 +65,11 @@ export default {
             </LinkComponent>
           </>
         ),
+        error: 'Unexpected error occurred',
+        successTitle: 'Thank you for your application!',
+        successDescription:
+          'I will reply to you shortly. Looking forward to meet you on the interview!',
+        successOkButton: 'Okay',
       },
       contacts: {
         telegram: 'Telegram',
