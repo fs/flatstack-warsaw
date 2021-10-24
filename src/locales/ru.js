@@ -65,6 +65,11 @@ export default {
             </LinkComponent>
           </>
         ),
+        error: 'Произошла непредвиденная ошибка',
+        successTitle: 'Спасибо за отклик!',
+        successDescription:
+          'Я отвечу Вам в скором времени. C нетерпением ждём Вас на интервью!',
+        successOkButton: 'OK',
       },
       contacts: {
         telegram: 'Telegram',
