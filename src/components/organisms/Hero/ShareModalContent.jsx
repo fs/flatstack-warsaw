@@ -1,6 +1,9 @@
 import { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
-import ButtonLink, { variants as buttonVariants } from '../../atoms/ButtonLink';
+import ButtonLink, {
+  variants as buttonVariants,
+  paddingVariants as buttonPaddingVariants,
+} from '../../atoms/ButtonLink';
 import Button from '../../atoms/Button';
 import { useL10n } from '../../L10nContext';
 import VkIcon from '../../icons/VkIcon';
@@ -89,7 +92,7 @@ const ShareModalContent = () => {
           )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
-          symmetric
+          paddingVariant={buttonPaddingVariants.SYMMETRIC}
           centered={false}
         >
           <StyledIcon icon={FacebookIcon} />
@@ -99,7 +102,7 @@ const ShareModalContent = () => {
           href={`https://vk.com/share.php?url=${encodeURIComponent(selfLink)}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
-          symmetric
+          paddingVariant={buttonPaddingVariants.SYMMETRIC}
           centered={false}
         >
           <StyledIcon icon={VkIcon} />
@@ -111,7 +114,7 @@ const ShareModalContent = () => {
           )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
-          symmetric
+          paddingVariant={buttonPaddingVariants.SYMMETRIC}
           centered={false}
         >
           <StyledIcon icon={TwitterIcon} />
@@ -123,7 +126,7 @@ const ShareModalContent = () => {
           )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
-          symmetric
+          paddingVariant={buttonPaddingVariants.SYMMETRIC}
           centered={false}
         >
           <StyledIcon icon={LinkedInIcon} />

@@ -23,6 +23,5 @@ jobs:
         with:
           urls: |
             ${{ steps.netlify.outputs.url }}
-            ${{ steps.netlify.outputs.url }}/ru
           configPath: './lighthouserc.json'
           uploadArtifacts: true

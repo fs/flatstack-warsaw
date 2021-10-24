@@ -4,8 +4,16 @@ import { shade, tint } from 'polished';
 export const variants = {
   ACCENT: 'ACCENT',
   TEXT: 'TEXT',
+  ACCENT_TEXT: 'ACCENT_TEXT',
   BORDERED: 'BORDERED',
   PRIMARY: 'PRIMARY',
+};
+
+export const paddingVariants = {
+  NORMAL: 'NORMAL',
+  SYMMETRIC: 'SYMMETRIC',
+  BIG: 'BIG',
+  SYMMETRIC_BIG: 'SYMMETRIC_BIG',
 };
 
 const accentCss = css`
@@ -77,8 +85,77 @@ const primaryCss = css`
   }
 `;
 
+const accentTextCss = css`
+  font-weight: 600;
+  color: ${({ theme }) => theme.colors.accent};
+
+  &:focus {
+    color: ${({ theme }) => shade(0.1, theme.colors.accent)};
+    outline: none;
+  }
+
+  &:focus:not(:focus-visible) {
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  &:focus-visible {
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
+    color: ${({ theme }) => theme.colors.accent};
+  }
+
+  &&:hover {
+    color: ${({ theme }) => shade(0.1, theme.colors.accent)};
+  }
+`;
+
+const cssByConstant = {
+  [variants.ACCENT]: accentCss,
+  [variants.ACCENT_TEXT]: accentTextCss,
+  [variants.BORDERED]: borderedCss,
+  [variants.PRIMARY]: primaryCss,
+};
+
+const cssByPaddingVariant = {
+  [paddingVariants.NORMAL]: css`
+    padding: 0.7em 1.5em;
+    ${({ negativeMargins }) =>
+      negativeMargins &&
+      css`
+        margin: -0.7em -1.5em;
+      `}
+  `,
+  [paddingVariants.BIG]: css`
+    padding: 1em 2em;
+    ${({ negativeMargins }) =>
+      negativeMargins &&
+      css`
+        margin: -1em -2em;
+      `}
+  `,
+  [paddingVariants.SYMMETRIC]: css`
+    padding: 0.7em 0.8em;
+    ${({ negativeMargins }) =>
+      negativeMargins &&
+      css`
+        margin: -0.7em -0.8em;
+      `}
+  `,
+  [paddingVariants.SYMMETRIC_BIG]: css`
+    padding: 1em 1.2em;
+    ${({ negativeMargins }) =>
+      negativeMargins &&
+      css`
+        margin: -1em -1.2em;
+      `}
+  `,
+};
+
 const inlineCss = css`
   display: inline-block;
+`;
+
+const fullWidthCss = css`
+  width: 100%;
 `;
 
 const Button = styled.button`
@@ -94,11 +171,11 @@ const Button = styled.button`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0.7em 1.5em;
   margin: 0;
   color: ${({ theme }) => theme.colors.text};
   border-radius: 0.7em;
   outline-offset: 0.15em;
+  ${({ paddingVariant }) => cssByPaddingVariant[paddingVariant]};
 
   ${({ centered }) =>
     centered &&
@@ -107,6 +184,8 @@ const Button = styled.button`
       justify-content: center;
     `};
 
+  ${({ fullWidth }) => fullWidth && fullWidthCss};
+
   &:active,
   &:focus,
   &:hover {
@@ -114,37 +193,15 @@ const Button = styled.button`
     text-decoration: none;
   }
 
-  ${({ variant }) => variant === variants.ACCENT && accentCss};
-  ${({ variant }) => variant === variants.BORDERED && borderedCss};
-  ${({ variant }) => variant === variants.PRIMARY && primaryCss};
+  ${({ variant }) => cssByConstant[variant]};
 
   ${({ inline }) => inline && inlineCss};
-  ${({ big }) =>
-    big &&
-    css`
-      padding: 1em 2em;
-    `};
-
-  ${({ symmetric, big }) => {
-    if (symmetric && big) {
-      return css`
-        padding: 1em 1.2em;
-      `;
-    }
-
-    if (symmetric && !big) {
-      return css`
-        padding: 0.7em 0.8em;
-      `;
-    }
-
-    return '';
-  }};
 `;
 
 Button.defaultProps = {
   variant: variants.PRIMARY,
   centered: true,
+  paddingVariant: paddingVariants.NORMAL,
 };
 
 export default Button;

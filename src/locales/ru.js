@@ -49,5 +49,34 @@ export default {
       shareViaTwitter: 'Поделиться в Twitter',
       shareViaLinkedIn: 'Поделиться в LinkedIn',
     },
+    join: {
+      title: 'Присоединиться к команде',
+      form: {
+        name: 'Имя',
+        email: 'Email',
+        link: 'Ссылка на CV или на профиль в социальных сетях',
+        cv: 'Приложить CV',
+        submit: 'Отправить',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'Нажимая кнопку "Отправить", вы даёте соглашение с нашей '}
+            <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
+              политикой конфиденциальности
+            </LinkComponent>
+          </>
+        ),
+      },
+      contacts: {
+        telegram: 'Telegram',
+        whatsapp: 'WhatsApp',
+      },
+      hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
+      hrPhotoAlt: 'Hr photo',
+      share: 'Поделиться',
+      shareLink: 'поделиться ссылкой',
+      recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
+      recommendationLinkText: 'Рекомендовать',
+      appleWatchImageAlt: 'Apple Watch',
+    },
   },
 };

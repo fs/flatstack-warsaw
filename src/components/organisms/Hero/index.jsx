@@ -7,6 +7,8 @@ import { useL10n } from '../../L10nContext';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
 import ShareButton from './ShareButton';
+import { ID as JOIN_SECTION_ID } from '../Join';
+import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
@@ -87,9 +89,13 @@ const technologies = [
 
 const Hero = () => {
   const { t } = useL10n();
+  const { handleClick, shouldBeHydrated } = useOnClickHydrate();
 
   return (
-    <StyledSection>
+    <StyledSection
+      dangerouslySetInnerHTML={shouldBeHydrated ? undefined : { __html: '' }}
+      onClick={handleClick}
+    >
       <InnerWrapper>
         <Title>Fullstack Developer</Title>
         <Subtitle>
@@ -101,7 +107,10 @@ const Hero = () => {
           ))}
         </TechnologiesWrapper>
         <ActionsWrapper>
-          <ButtonLink href="#" variant={buttonLinkVariants.ACCENT}>
+          <ButtonLink
+            href={`#${JOIN_SECTION_ID}`}
+            variant={buttonLinkVariants.ACCENT}
+          >
             {t('hero.actions.apply')}
           </ButtonLink>
           <ButtonLink href="#" variant={buttonLinkVariants.BORDERED}>
