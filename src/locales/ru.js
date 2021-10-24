@@ -65,6 +65,7 @@ export default {
             </LinkComponent>
           </>
         ),
+        error: 'Произошла непредвиденная ошибка',
       },
       contacts: {
         telegram: 'Telegram',
