@@ -19,7 +19,7 @@ const HtmlInput = styled.input`
 const Input = ({ name, label, className, id, ...rest }) => {
   return (
     <InputWrapper className={className}>
-      <Label for={id}>{label}</Label>
+      {label ? <Label for={id}>{label}</Label> : null}
       <HtmlInput name={name} id={id} {...rest} />
     </InputWrapper>
   );
