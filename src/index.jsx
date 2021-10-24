@@ -1,4 +1,3 @@
-import 'webp-in-css/polyfill';
 import 'regenerator-runtime/runtime';
 
 import ReactDOM from 'react-dom';
