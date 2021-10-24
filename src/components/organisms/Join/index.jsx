@@ -137,7 +137,7 @@ const Join = () => {
     <Section grey id={ID}>
       <Section.Title>{t('join.title')}</Section.Title>
       <InnerWrapper>
-        <Form>
+        <Form name="join" netlify>
           <StyledInput
             type="text"
             name="name"
