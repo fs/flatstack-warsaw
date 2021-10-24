@@ -1,11 +1,12 @@
 import { useState, useEffect, useMemo } from 'react';
 import styled from 'styled-components';
+import { useL10n } from '../../L10nContext';
 import ButtonLink, {
   variants as buttonVariants,
   paddingVariants as buttonPaddingVariants,
 } from '../../atoms/ButtonLink';
 import Button from '../../atoms/Button';
-import { useL10n } from '../../L10nContext';
+import Input from '../../atoms/Input';
 import VkIcon from '../../icons/VkIcon';
 import FacebookIcon from '../../icons/FacebookIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
@@ -37,7 +38,7 @@ const CopyRow = styled.div`
   gap: 0.5em;
 `;
 
-const CopyInput = styled('input')`
+const CopyInput = styled(Input)`
   flex: 1 1 auto;
 `;
 
@@ -135,7 +136,7 @@ const ShareModalContent = () => {
       </LinksWrapper>
 
       <CopyRow>
-        <CopyInput type="text" value={selfLink} />
+        <CopyInput type="text" value={selfLink} readOnly aria-label="URL" />
         <CopyButton onClick={handleCopy}>{copyButtonText}</CopyButton>
       </CopyRow>
     </>
