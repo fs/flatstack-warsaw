@@ -6,7 +6,7 @@ export const ID = 'warsaw-section';
 const Warsaw = () => {
   const { t } = useL10n();
   return (
-    <Section id={ID}>
+    <Section id={ID} dangerouslySetInnerHTML={{ __html: '' }}>
       <Section.Title>{t('warsaw.title')}</Section.Title>
     </Section>
   );

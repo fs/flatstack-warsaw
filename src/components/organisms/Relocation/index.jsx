@@ -6,7 +6,7 @@ export const ID = 'relocation-section';
 const Relocation = () => {
   const { t } = useL10n();
   return (
-    <Section id={ID}>
+    <Section id={ID} dangerouslySetInnerHTML={{ __html: '' }}>
       <Section.Title>{t('relocation.title')}</Section.Title>
     </Section>
   );
