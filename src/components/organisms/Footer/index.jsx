@@ -7,7 +7,7 @@ const Wrapper = styled.footer`
 `;
 
 const Footer = () => (
-  <Wrapper>
+  <Wrapper dangerouslySetInnerHTML={{ __html: '' }}>
     <Container>
       <p>&copy; 2021 Flatstack LLC</p>
     </Container>

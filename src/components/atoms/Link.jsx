@@ -1,26 +1,11 @@
 import styled, { css } from 'styled-components';
 
-const underlineTypes = {
+export const underlineTypes = {
   SHOW_ON_HOVER: 'SHOW_ON_HOVER',
   HIDE_ON_HOVER: 'HIDE_ON_HOVER',
   NEVER: 'NEVER',
   ALWAYS: 'ALWAYS',
 };
-
-const ChildrenWrapper = styled.span`
-  display: inline-block;
-  text-decoration: ${({ underlineType }) =>
-    underlineType === underlineTypes.HIDE_ON_HOVER ||
-    underlineType === underlineTypes.ALWAYS
-      ? 'underline'
-      : 'none'};
-`;
-
-const Link = ({ children, underlineType, ...props }) => (
-  <a {...props}>
-    <ChildrenWrapper underlineType={underlineType}>{children}</ChildrenWrapper>
-  </a>
-);
 
 const hoverEffect = css`
   &::before {
@@ -44,29 +29,31 @@ const hoverEffect = css`
   }
 `;
 
-const StyledLink = styled(Link)`
+const Link = styled.a`
   position: relative;
   display: inline-block;
   color: ${({ theme }) => theme.colors.text};
+  cursor: pointer;
+  text-decoration: ${({ underlineType }) =>
+    underlineType === underlineTypes.HIDE_ON_HOVER ||
+    underlineType === underlineTypes.ALWAYS
+      ? 'underline'
+      : 'none'};
 
   &:hover,
   &:focus {
-    ${ChildrenWrapper} {
-      text-decoration: ${({ underlineType }) =>
-        underlineType === underlineTypes.SHOW_ON_HOVER ||
-        underlineType === underlineTypes.ALWAYS
-          ? 'underline'
-          : 'none'};
-    }
+    text-decoration: ${({ underlineType }) =>
+      underlineType === underlineTypes.SHOW_ON_HOVER ||
+      underlineType === underlineTypes.ALWAYS
+        ? 'underline'
+        : 'none'};
   }
 
   ${({ noHoverEffect }) => !noHoverEffect && hoverEffect};
 `;
 
-StyledLink.underlineTypes = underlineTypes;
-
-StyledLink.defaultProps = {
+Link.defaultProps = {
   underlineType: underlineTypes.ALWAYS,
 };
 
-export default StyledLink;
+export default Link;

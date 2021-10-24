@@ -6,8 +6,8 @@ export const ID = 'feedbacks-section';
 const Feedbacks = () => {
   const { t } = useL10n();
   return (
-    <Section id={ID}>
-      <h1>{t('feedbacks.title')}</h1>
+    <Section id={ID} dangerouslySetInnerHTML={{ __html: '' }}>
+      <Section.Title>{t('feedbacks.title')}</Section.Title>
     </Section>
   );
 };

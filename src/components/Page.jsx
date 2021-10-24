@@ -8,10 +8,15 @@ import Vacancy from './organisms/Vacancy';
 import Relocation from './organisms/Relocation';
 import Feedbacks from './organisms/Feedbacks';
 import Warsaw from './organisms/Warsaw';
+import Join from './organisms/Join';
 
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -56,6 +61,7 @@ const Page = () => {
       <Relocation />
       <Feedbacks />
       <Warsaw />
+      <Join />
       <Footer />
     </>
   );
