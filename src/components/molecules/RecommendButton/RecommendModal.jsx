@@ -1,106 +1,54 @@
+import { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
 import Modal from '../Modal';
 import Button, { variants as buttonVariants } from '../../atoms/Button';
 import Link from '../../atoms/Link';
-import Input from '../../atoms/Input';
-
-const Agreement = styled.p`
-  color: ${({ theme }) => theme.colors.paleText};
-`;
-
-const Fieldset = styled.fieldset`
-  display: block;
-  margin: 0 0 2em 0;
-  padding: 0;
-  border: none;
-`;
-
-const FieldsetLegend = styled.legend`
-  display: block;
-  margin: 0 0 1em 0;
-  padding: 0;
-  font-weight: bold;
-  font-size: 1em;
-`;
-
-const StyledInput = styled(Input)`
-  margin: 0 0 1em 0;
-`;
+import RecommendForm, { statuses } from './RecommendForm';
 
 const RecommendModal = ({ isOpen, onClose }) => {
   const { t } = useL10n();
+  const formRef = useRef();
+  const [formStatus, setFormStatus] = useState(statuses.IDLE);
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (event) => {
+    if (
+      typeof window.FormData === 'undefined' ||
+      typeof window.fetch === 'undefined' ||
+      typeof window.URLSearchParams === 'undefined'
+    ) {
+      return;
+    }
+
+    event.preventDefault();
+
+    setFormStatus(statuses.SUBMITTING);
+
+    const formData = new FormData(formRef.current);
+
+    try {
+      const { ok } = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+      setFormStatus(ok ? statuses.SUCCESS : statuses.FAIL);
+    } catch (err) {
+      setFormStatus(statuses.FAIL);
+    }
+  };
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={t('recommendModal.title')}>
-      <form method="POST" onSubmit={handleSubmit}>
-        <Fieldset>
-          <FieldsetLegend>{t('recommendModal.form.aboutYou')}</FieldsetLegend>
-          <StyledInput
-            type="text"
-            name="name"
-            label={t('recommendModal.form.yourName')}
-            id="recommend-form-your-name-input"
-            required
-          />
-          <StyledInput
-            type="email"
-            name="email"
-            label={t('recommendModal.form.yourEmail')}
-            id="recommend-form-your-email-input"
-            required
-          />
-          <StyledInput
-            type="tel"
-            name="phone"
-            label={t('recommendModal.form.yourPhone')}
-            id="recommend-form-your-phone-input"
-          />
-        </Fieldset>
-        <Fieldset>
-          <FieldsetLegend>
-            {t('recommendModal.form.aboutRecommendee')}
-          </FieldsetLegend>
-          <StyledInput
-            type="text"
-            name="name"
-            label={t('recommendModal.form.recommendeeName')}
-            id="recommend-form-recommendee-name-input"
-            required
-          />
-          <StyledInput
-            type="email"
-            name="email"
-            label={t('recommendModal.form.recommendeeEmail')}
-            id="recommend-form-recommendee-email-input"
-            required
-          />
-          <StyledInput
-            type="tel"
-            name="phone"
-            label={t('recommendModal.form.recommendeePhone')}
-            id="recommend-form-recommendee-phone-input"
-          />
-
-          <StyledInput
-            textarea
-            name="comment"
-            label={t('recommendModal.form.recommendeeComment')}
-            id="recommend-form-recommendee-comment-textarea"
-          />
-        </Fieldset>
-        <Button type="submit" variant={buttonVariants.ACCENT} fullWidth>
-          {t('recommendModal.form.submit')}
-        </Button>
-        <Agreement>
-          {t('join.form.agreement', {
-            LinkComponent: Link,
-            url: '/privacy-policy.pdf',
-          })}
-        </Agreement>
-      </form>
+      {formStatus !== statuses.SUCCESS ? (
+        <RecommendForm
+          onSubmit={handleSubmit}
+          status={formStatus}
+          ref={formRef}
+        />
+      ) : (
+        <p>{t('recommendModal.form.successMessage')}</p>
+      )}
     </Modal>
   );
 };

@@ -70,6 +70,9 @@ export default {
         recommendeeEmail: 'Email',
         recommendeePhone: 'Phone (optional)',
         recommendeeComment: 'Comment (optional)',
+        error: 'Unexpected error occurred',
+        successMessage:
+          'Thank you for your recommendation. We will contact you and a person you recommended in near future.',
       },
     },
     join: {
