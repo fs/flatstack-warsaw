@@ -3,6 +3,10 @@ import { useL10n } from '../../L10nContext';
 import Section from '../../molecules/Section';
 import Card from '../../atoms/Card';
 import VacancyDescriptionCard from './VacancyDescriptionCard';
+import ButtonLink, {
+  variants as buttonLinkVariants,
+} from '../../atoms/ButtonLink';
+import { ID as JOIN_SECTION_ID } from '../Join';
 
 export const ID = 'vacancy-section';
 
@@ -12,6 +16,7 @@ const InnerWrapper = styled.div`
   flex-wrap: wrap;
   gap: 3em 15%;
   margin-top: 3em;
+  justify-content: center;
 `;
 
 const VacancyCard = styled(Card)`
@@ -65,6 +70,12 @@ const Vacancy = () => {
           title={t('vacancy.benefits.title')}
           description={t('vacancy.benefits.description')}
         />
+        <ButtonLink
+          href={`#${JOIN_SECTION_ID}`}
+          variant={buttonLinkVariants.ACCENT}
+        >
+          {t('hero.actions.apply')}
+        </ButtonLink>
       </InnerWrapper>
     </Section>
   );
