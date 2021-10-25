@@ -1,14 +1,14 @@
 import styled from 'styled-components';
+import { useL10n } from '../../L10nContext';
+import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
 import Section from '../../molecules/Section';
+import ShareButton from '../../molecules/ShareButton';
 import ButtonLink, {
   variants as buttonLinkVariants,
 } from '../../atoms/ButtonLink';
-import { useL10n } from '../../L10nContext';
+import { ID as JOIN_SECTION_ID } from '../Join';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
-import ShareButton from './ShareButton';
-import { ID as JOIN_SECTION_ID } from '../Join';
-import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
