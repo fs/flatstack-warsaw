@@ -17,11 +17,20 @@ const HtmlInput = styled.input`
   font-size: 1rem;
 `;
 
-const Input = ({ textarea, name, label, className, id, ...rest }) => {
+const Input = ({
+  textarea,
+  name,
+  label,
+  className,
+  inputClassName,
+  id,
+  ...rest
+}) => {
   return (
     <InputWrapper className={className}>
       {label ? <Label for={id}>{label}</Label> : null}
       <HtmlInput
+        className={inputClassName}
         as={textarea ? 'textarea' : 'input'}
         name={name}
         id={id}
