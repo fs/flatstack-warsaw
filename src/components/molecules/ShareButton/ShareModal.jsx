@@ -11,6 +11,7 @@ import VkIcon from '../../icons/VkIcon';
 import FacebookIcon from '../../icons/FacebookIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
 import LinkedInIcon from '../../icons/LinkedInIcon';
+import Modal from '../Modal';
 
 const LinksWrapper = styled.div`
   display: flex;
@@ -46,7 +47,7 @@ const CopyButton = styled(Button)`
   flex: none;
 `;
 
-const ShareModalContent = () => {
+const ShareModal = ({ isOpen, onClose }) => {
   const { t } = useL10n();
   const [copyStatus, setCopyStatus] = useState(null);
 
@@ -85,7 +86,7 @@ const ShareModalContent = () => {
   }, [copyStatus, t]);
 
   return (
-    <>
+    <Modal isOpen={isOpen} onClose={onClose} title={t('shareModal.title')}>
       <LinksWrapper>
         <Link
           href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
@@ -139,8 +140,8 @@ const ShareModalContent = () => {
         <CopyInput type="text" value={selfLink} readOnly aria-label="URL" />
         <CopyButton onClick={handleCopy}>{copyButtonText}</CopyButton>
       </CopyRow>
-    </>
+    </Modal>
   );
 };
 
-export default ShareModalContent;
+export default ShareModal;

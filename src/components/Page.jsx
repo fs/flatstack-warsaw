@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet-async';
 import { useL10n } from './L10nContext';
+import HiddenFormForNetlify from './molecules/RecommendButton/HiddenFormForNetlify';
 import Header from './organisms/Header';
 import Hero from './organisms/Hero';
 import Footer from './organisms/Footer';
@@ -63,6 +64,7 @@ const Page = () => {
       <Warsaw />
       <Join />
       <Footer />
+      <HiddenFormForNetlify />
     </>
   );
 };

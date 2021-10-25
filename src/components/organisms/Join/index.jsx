@@ -17,7 +17,8 @@ import LoadingIcon from '../../icons/LoadingIcon';
 import AppleWatchWebpPath from './apple-watch.webp';
 import AppleWatchPngPath from './apple-watch.png';
 import HrDecoratedPhoto from './HrDecoratedPhoto';
-import SuccessModalContent from './SuccessModalContent';
+import ShareButton from '../../molecules/ShareButton';
+import RecommendButton from '../../molecules/RecommendButton';
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -57,7 +58,7 @@ const RightCol = styled.div`
   flex: 1 0 16em;
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
   max-width: 100%;
 `;
 
@@ -117,7 +118,7 @@ const formStatuses = {
   FAIL: 'FAIL',
 };
 
-const Modal = lazy(() => import('../../molecules/Modal'));
+const SuccessModal = lazy(() => import('./SuccessModal'));
 
 const Join = () => {
   const { t } = useL10n();
@@ -223,14 +224,7 @@ const Join = () => {
               >
                 {t('join.form.submit')}
               </StyledButton>
-              <Modal
-                isOpen
-                onClose={handleClose}
-                title={t('join.form.successTitle')}
-                centered
-              >
-                <SuccessModalContent handleClose={handleClose} />
-              </Modal>
+              <SuccessModal isOpen onClose={handleClose} />
             </Suspense>
           )}
 
@@ -267,13 +261,11 @@ const Join = () => {
               <RecommendationDescription>
                 {t('join.recommendationDescription')}
               </RecommendationDescription>
-              <Button
+              <RecommendButton
                 variant={buttonVariants.ACCENT_TEXT}
                 negativeMargins
                 paddingVariant={buttonPaddingVariants.SYMMETRIC}
-              >
-                {t('join.recommendationLinkText')}
-              </Button>
+              />
             </RecommendationCardDescriptionWrapper>
             <picture>
               <source srcSet={AppleWatchWebpPath} type="image/webp" />
@@ -285,6 +277,7 @@ const Join = () => {
               />
             </picture>
           </RecommendationCard>
+          <ShareButton variant={buttonVariants.BORDERED} />
         </RightCol>
       </InnerWrapper>
     </Section>
