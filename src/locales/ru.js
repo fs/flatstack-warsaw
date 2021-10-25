@@ -51,6 +51,26 @@ export default {
     recommendModal: {
       triggerButtonText: 'Рекомендовать',
       title: 'Рекомендация',
+      form: {
+        submit: 'Отправить',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'Нажимая кнопку "Отправить", вы даёте соглашение с нашей '}
+            <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
+              политикой конфиденциальности
+            </LinkComponent>
+          </>
+        ),
+        aboutYou: 'О Вас',
+        aboutRecommendee: 'О рекомендуемом',
+        yourName: 'Ваше имя',
+        yourEmail: 'Ваш Email',
+        yourPhone: 'Ваш номер телефона (не обязательно)',
+        recommendeeName: 'Имя рекомендуемого',
+        recommendeeEmail: 'Email рекомендуемого',
+        recommendeePhone: 'Номер телефона рекомендуемого (не обязательно)',
+        recommendeeComment: 'Комментарий (не обязательно)',
+      },
     },
     join: {
       title: 'Присоединиться к команде',

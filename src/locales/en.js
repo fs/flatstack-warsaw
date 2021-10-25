@@ -51,6 +51,26 @@ export default {
     recommendModal: {
       triggerButtonText: 'Recommend',
       title: 'Recommendation',
+      form: {
+        submit: 'Submit',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'By clicking the "Submit" button, you agree with our '}
+            <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
+              privacy policy
+            </LinkComponent>
+          </>
+        ),
+        aboutYou: 'About you',
+        aboutRecommendee: 'About a person you recommend',
+        yourName: 'Name',
+        yourEmail: 'Email',
+        yourPhone: 'Phone (optional)',
+        recommendeeName: 'Name',
+        recommendeeEmail: 'Email',
+        recommendeePhone: 'Phone (optional)',
+        recommendeeComment: 'Comment (optional)',
+      },
     },
     join: {
       title: 'Join the team',
