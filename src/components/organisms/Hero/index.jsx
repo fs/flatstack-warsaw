@@ -6,9 +6,11 @@ import ShareButton from '../../molecules/ShareButton';
 import ButtonLink, {
   variants as buttonLinkVariants,
 } from '../../atoms/ButtonLink';
+import { variants as buttonVariants } from '../../atoms/Button';
 import { ID as JOIN_SECTION_ID } from '../Join';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
+import RecommendButton from '../../molecules/RecommendButton';
 
 const StyledSection = styled(Section)`
   margin: 5em 0;
@@ -113,10 +115,8 @@ const Hero = () => {
           >
             {t('hero.actions.apply')}
           </ButtonLink>
-          <ButtonLink href="#" variant={buttonLinkVariants.BORDERED}>
-            {t('hero.actions.recommend')}
-          </ButtonLink>
-          <ShareButton>{t('hero.actions.share')}</ShareButton>
+          <RecommendButton variant={buttonVariants.BORDERED} />
+          <ShareButton variant={buttonVariants.BORDERED} />
         </ActionsWrapper>
       </InnerWrapper>
     </StyledSection>

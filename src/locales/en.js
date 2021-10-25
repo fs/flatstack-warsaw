@@ -23,8 +23,6 @@ export default {
       ),
       actions: {
         apply: 'Apply now',
-        recommend: 'Recommend',
-        share: 'Share',
       },
     },
     vacancy: {
@@ -40,6 +38,7 @@ export default {
       title: 'Warsaw',
     },
     shareModal: {
+      triggerButtonText: 'Share',
       title: 'Share',
       copy: 'Copy',
       copySuccess: 'Copied!',
@@ -48,6 +47,10 @@ export default {
       shareViaVk: 'Share via VK',
       shareViaTwitter: 'Share via Twitter',
       shareViaLinkedIn: 'Share via LinkedIn',
+    },
+    recommendModal: {
+      triggerButtonText: 'Recommend',
+      title: 'Recommendation',
     },
     join: {
       title: 'Join the team',
@@ -77,11 +80,9 @@ export default {
       },
       hrMessage: 'Irina replies all the emails and message from you',
       hrPhotoAlt: 'Hr photo',
-      share: 'Share',
       shareLinkIconAlt: 'share link',
       recommendationDescription:
         'Get Apple Watch for successful recommendation',
-      recommendationLinkText: 'Recommend',
       appleWatchImageAlt: 'Apple Watch',
     },
   },
