@@ -29,6 +29,15 @@ const StyledInput = styled(Input)`
   margin: 0 0 1em 0;
 `;
 
+const StyledTextarea = styled(({ className, ...restProps }) => (
+  <StyledInput {...restProps} inputClassName={className} />
+)).attrs(() => ({
+  textarea: true,
+}))`
+  min-height: 5em;
+  resize: vertical;
+`;
+
 const ErrorMessage = styled.p`
   color: red;
 `;
@@ -99,8 +108,7 @@ const RecommendForm = forwardRef(({ onSubmit, status }, ref) => {
           id="recommend-form-recommendee-phone-input"
         />
 
-        <StyledInput
-          textarea
+        <StyledTextarea
           name="comment"
           label={t('recommendModal.form.recommendeeComment')}
           id="recommend-form-recommendee-comment-textarea"
