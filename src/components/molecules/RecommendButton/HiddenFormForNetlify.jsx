@@ -2,7 +2,13 @@ import React from 'react';
 
 const HiddenFormForNetlify = () => {
   return (
-    <form method="POST" data-netlify="recommend" hidden>
+    <form
+      name="recommend"
+      method="POST"
+      data-netlify="recommend"
+      hidden
+      dangerouslySetInnerHTML={{ __html: '' }}
+    >
       <input type="hidden" name="form-name" value="recommend" />
       <fieldset>
         <input type="text" name="your_name" required />
