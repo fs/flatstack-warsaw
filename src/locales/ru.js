@@ -23,8 +23,6 @@ export default {
       ),
       actions: {
         apply: 'Откликнуться',
-        recommend: 'Рекомендовать',
-        share: 'Поделиться',
       },
     },
     vacancy: {
@@ -40,6 +38,7 @@ export default {
       title: 'Варшава',
     },
     shareModal: {
+      triggerButtonText: 'Поделиться',
       title: 'Поделиться',
       copy: 'Копировать',
       copySuccess: 'Скопировано!',
@@ -48,6 +47,33 @@ export default {
       shareViaVk: 'Поделиться в ВКонтакте',
       shareViaTwitter: 'Поделиться в Twitter',
       shareViaLinkedIn: 'Поделиться в LinkedIn',
+    },
+    recommendModal: {
+      triggerButtonText: 'Рекомендовать',
+      title: 'Рекомендация',
+      form: {
+        submit: 'Отправить',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'Нажимая кнопку "Отправить", вы даёте соглашение с нашей '}
+            <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
+              политикой конфиденциальности
+            </LinkComponent>
+          </>
+        ),
+        aboutYou: 'О Вас',
+        aboutRecommendee: 'О рекомендуемом',
+        yourName: 'Ваше имя',
+        yourEmail: 'Ваш Email',
+        yourPhone: 'Ваш номер телефона (не обязательно)',
+        recommendeeName: 'Имя рекомендуемого',
+        recommendeeEmail: 'Email рекомендуемого',
+        recommendeePhone: 'Номер телефона рекомендуемого (не обязательно)',
+        recommendeeComment: 'Комментарий (не обязательно)',
+        error: 'Произошла непредвиденная ошибка',
+        successMessage:
+          'Спасибо за рекомендацию. В ближайшее время мы свяжемся с Вами и человеком, которого Вы порекомендовали.',
+      },
     },
     join: {
       title: 'Присоединиться к команде',
@@ -77,10 +103,8 @@ export default {
       },
       hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
       hrPhotoAlt: 'Hr photo',
-      share: 'Поделиться',
       shareLink: 'поделиться ссылкой',
       recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
-      recommendationLinkText: 'Рекомендовать',
       appleWatchImageAlt: 'Apple Watch',
     },
   },

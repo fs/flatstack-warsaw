@@ -23,8 +23,6 @@ export default {
       ),
       actions: {
         apply: 'Apply now',
-        recommend: 'Recommend',
-        share: 'Share',
       },
     },
     vacancy: {
@@ -40,6 +38,7 @@ export default {
       title: 'Warsaw',
     },
     shareModal: {
+      triggerButtonText: 'Share',
       title: 'Share',
       copy: 'Copy',
       copySuccess: 'Copied!',
@@ -48,6 +47,33 @@ export default {
       shareViaVk: 'Share via VK',
       shareViaTwitter: 'Share via Twitter',
       shareViaLinkedIn: 'Share via LinkedIn',
+    },
+    recommendModal: {
+      triggerButtonText: 'Recommend',
+      title: 'Recommendation',
+      form: {
+        submit: 'Submit',
+        agreement: ({ LinkComponent }) => (
+          <>
+            {'By clicking the "Submit" button, you agree with our '}
+            <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
+              privacy policy
+            </LinkComponent>
+          </>
+        ),
+        aboutYou: 'About you',
+        aboutRecommendee: 'About a person you recommend',
+        yourName: 'Name',
+        yourEmail: 'Email',
+        yourPhone: 'Phone (optional)',
+        recommendeeName: 'Name',
+        recommendeeEmail: 'Email',
+        recommendeePhone: 'Phone (optional)',
+        recommendeeComment: 'Comment (optional)',
+        error: 'Unexpected error occurred',
+        successMessage:
+          'Thank you for your recommendation. We will contact you and a person you recommended in near future.',
+      },
     },
     join: {
       title: 'Join the team',
@@ -77,11 +103,9 @@ export default {
       },
       hrMessage: 'Irina replies all the emails and message from you',
       hrPhotoAlt: 'Hr photo',
-      share: 'Share',
       shareLinkIconAlt: 'share link',
       recommendationDescription:
         'Get Apple Watch for successful recommendation',
-      recommendationLinkText: 'Recommend',
       appleWatchImageAlt: 'Apple Watch',
     },
   },

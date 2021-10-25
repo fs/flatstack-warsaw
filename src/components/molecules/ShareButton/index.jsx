@@ -2,13 +2,10 @@ import { useState, lazy, Suspense } from 'react';
 import { useErrorBoundary } from 'preact/hooks';
 import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
-import Button, { variants as buttonVariants } from '../../atoms/Button';
-import ShareModalContent from './ShareModalContent';
+import Button from '../../atoms/Button';
 import LoadingIcon from '../../icons/LoadingIcon';
 
-const Modal = lazy(() => import('../../molecules/Modal'));
-
-const StyledButton = styled(Button)``;
+const ShareModal = lazy(() => import('./ShareModal'));
 
 const StyledLoadingIcon = styled(LoadingIcon)`
   font-size: 1.5em;
@@ -16,7 +13,7 @@ const StyledLoadingIcon = styled(LoadingIcon)`
   color: ${({ theme }) => theme.colors.accent};
 `;
 
-const ShareButton = ({ children }) => {
+const ShareButton = (props) => {
   const { t } = useL10n();
   const [isModalOpen, setIsModalOpen] = useState(false);
   useErrorBoundary(() => {
@@ -49,29 +46,20 @@ const ShareButton = ({ children }) => {
       {isModalOpen ? (
         <Suspense
           fallback={
-            <StyledButton
-              variant={buttonVariants.BORDERED}
-              onClick={handleShare}
-            >
-              {children} <StyledLoadingIcon />
-            </StyledButton>
+            <Button {...props} onClick={handleShare}>
+              {t('shareModal.triggerButtonText')} <StyledLoadingIcon />
+            </Button>
           }
         >
-          <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
-            {children}
-          </StyledButton>
-          <Modal
-            isOpen
-            onClose={() => setIsModalOpen(false)}
-            title={t('shareModal.title')}
-          >
-            <ShareModalContent />
-          </Modal>
+          <Button {...props} onClick={handleShare}>
+            {t('shareModal.triggerButtonText')}
+          </Button>
+          <ShareModal isOpen onClose={() => setIsModalOpen(false)} />
         </Suspense>
       ) : (
-        <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
-          {children}
-        </StyledButton>
+        <Button {...props} onClick={handleShare}>
+          {t('shareModal.triggerButtonText')}
+        </Button>
       )}
     </>
   );
