@@ -2,12 +2,10 @@ import { useState, lazy, Suspense } from 'react';
 import { useErrorBoundary } from 'preact/hooks';
 import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
-import Button, { variants as buttonVariants } from '../../atoms/Button';
+import Button from '../../atoms/Button';
 import LoadingIcon from '../../icons/LoadingIcon';
 
 const ShareModal = lazy(() => import('./ShareModal'));
-
-const StyledButton = styled(Button)``;
 
 const StyledLoadingIcon = styled(LoadingIcon)`
   font-size: 1.5em;
@@ -48,20 +46,20 @@ const ShareButton = (props) => {
       {isModalOpen ? (
         <Suspense
           fallback={
-            <StyledButton {...props} onClick={handleShare}>
+            <Button {...props} onClick={handleShare}>
               {t('shareModal.triggerButtonText')} <StyledLoadingIcon />
-            </StyledButton>
+            </Button>
           }
         >
-          <StyledButton {...props} onClick={handleShare}>
+          <Button {...props} onClick={handleShare}>
             {t('shareModal.triggerButtonText')}
-          </StyledButton>
+          </Button>
           <ShareModal isOpen onClose={() => setIsModalOpen(false)} />
         </Suspense>
       ) : (
-        <StyledButton {...props} onClick={handleShare}>
+        <Button {...props} onClick={handleShare}>
           {t('shareModal.triggerButtonText')}
-        </StyledButton>
+        </Button>
       )}
     </>
   );

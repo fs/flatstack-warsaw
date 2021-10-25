@@ -1,9 +1,6 @@
 import { useState, useRef } from 'react';
-import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
 import Modal from '../Modal';
-import Button, { variants as buttonVariants } from '../../atoms/Button';
-import Link from '../../atoms/Link';
 import RecommendForm, { statuses } from './RecommendForm';
 
 const RecommendModal = ({ isOpen, onClose }) => {
