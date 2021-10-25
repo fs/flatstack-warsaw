@@ -15,7 +15,7 @@ const StyledLoadingIcon = styled(LoadingIcon)`
   color: ${({ theme }) => theme.colors.accent};
 `;
 
-const ShareButton = ({ children }) => {
+const ShareButton = (props) => {
   const { t } = useL10n();
   const [isModalOpen, setIsModalOpen] = useState(false);
   useErrorBoundary(() => {
@@ -48,22 +48,19 @@ const ShareButton = ({ children }) => {
       {isModalOpen ? (
         <Suspense
           fallback={
-            <StyledButton
-              variant={buttonVariants.BORDERED}
-              onClick={handleShare}
-            >
-              {children} <StyledLoadingIcon />
+            <StyledButton {...props} onClick={handleShare}>
+              {t('shareModal.triggerButtonText')} <StyledLoadingIcon />
             </StyledButton>
           }
         >
-          <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
-            {children}
+          <StyledButton {...props} onClick={handleShare}>
+            {t('shareModal.triggerButtonText')}
           </StyledButton>
           <ShareModal isOpen onClose={() => setIsModalOpen(false)} />
         </Suspense>
       ) : (
-        <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
-          {children}
+        <StyledButton {...props} onClick={handleShare}>
+          {t('shareModal.triggerButtonText')}
         </StyledButton>
       )}
     </>

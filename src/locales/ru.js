@@ -23,8 +23,6 @@ export default {
       ),
       actions: {
         apply: 'Откликнуться',
-        recommend: 'Рекомендовать',
-        share: 'Поделиться',
       },
     },
     vacancy: {
@@ -40,6 +38,7 @@ export default {
       title: 'Варшава',
     },
     shareModal: {
+      triggerButtonText: 'Поделиться',
       title: 'Поделиться',
       copy: 'Копировать',
       copySuccess: 'Скопировано!',
@@ -48,6 +47,10 @@ export default {
       shareViaVk: 'Поделиться в ВКонтакте',
       shareViaTwitter: 'Поделиться в Twitter',
       shareViaLinkedIn: 'Поделиться в LinkedIn',
+    },
+    recommendModal: {
+      triggerButtonText: 'Рекомендовать',
+      title: 'Рекомендация',
     },
     join: {
       title: 'Присоединиться к команде',
@@ -77,10 +80,8 @@ export default {
       },
       hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
       hrPhotoAlt: 'Hr photo',
-      share: 'Поделиться',
       shareLink: 'поделиться ссылкой',
       recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
-      recommendationLinkText: 'Рекомендовать',
       appleWatchImageAlt: 'Apple Watch',
     },
   },

@@ -18,6 +18,7 @@ import AppleWatchWebpPath from './apple-watch.webp';
 import AppleWatchPngPath from './apple-watch.png';
 import HrDecoratedPhoto from './HrDecoratedPhoto';
 import ShareButton from '../../molecules/ShareButton';
+import RecommendButton from '../../molecules/RecommendButton';
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -260,13 +261,11 @@ const Join = () => {
               <RecommendationDescription>
                 {t('join.recommendationDescription')}
               </RecommendationDescription>
-              <Button
+              <RecommendButton
                 variant={buttonVariants.ACCENT_TEXT}
                 negativeMargins
                 paddingVariant={buttonPaddingVariants.SYMMETRIC}
-              >
-                {t('join.recommendationLinkText')}
-              </Button>
+              />
             </RecommendationCardDescriptionWrapper>
             <picture>
               <source srcSet={AppleWatchWebpPath} type="image/webp" />
@@ -278,7 +277,7 @@ const Join = () => {
               />
             </picture>
           </RecommendationCard>
-          <ShareButton>{t('join.share')}</ShareButton>
+          <ShareButton variant={buttonVariants.BORDERED} />
         </RightCol>
       </InnerWrapper>
     </Section>
