@@ -24,7 +24,7 @@ const InnerWrapper = styled.div`
 
 const Title = styled.h1`
   // depend on viewport width, but not bigger than 5em and not smaller than 3em
-  font-size: max(min(5em, 15vw), 3em);
+  font-size: clamp(3em, 15vw, 5em);
   font-weight: 900;
   margin: 0 0 0.3em;
   line-height: 1;
@@ -48,7 +48,7 @@ const Title = styled.h1`
 
 const Subtitle = styled.span`
   // depend on viewport width, but not bigger than 2em and not smaller than 1.25em
-  font-size: max(min(2em, 6vw), 1.25em);
+  font-size: clamp(1.25em, 6vw, 2em);
 `;
 
 const SubtitleHighlight = styled.span`
