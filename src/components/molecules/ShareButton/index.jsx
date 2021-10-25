@@ -3,10 +3,9 @@ import { useErrorBoundary } from 'preact/hooks';
 import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
 import Button, { variants as buttonVariants } from '../../atoms/Button';
-import ShareModalContent from './ShareModalContent';
 import LoadingIcon from '../../icons/LoadingIcon';
 
-const Modal = lazy(() => import('../../molecules/Modal'));
+const ShareModal = lazy(() => import('./ShareModal'));
 
 const StyledButton = styled(Button)``;
 
@@ -60,13 +59,7 @@ const ShareButton = ({ children }) => {
           <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
             {children}
           </StyledButton>
-          <Modal
-            isOpen
-            onClose={() => setIsModalOpen(false)}
-            title={t('shareModal.title')}
-          >
-            <ShareModalContent />
-          </Modal>
+          <ShareModal isOpen onClose={() => setIsModalOpen(false)} />
         </Suspense>
       ) : (
         <StyledButton variant={buttonVariants.BORDERED} onClick={handleShare}>
