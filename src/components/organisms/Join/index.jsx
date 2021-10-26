@@ -11,9 +11,10 @@ import Button, {
 import Link from '../../atoms/Link';
 import Card from '../../atoms/Card';
 import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
-import WhatsappIcon from '../../icons/WhatsappIcon';
+import FacebookIcon from '../../icons/FacebookIcon';
 import TelegramIcon from '../../icons/TelegramIcon';
 import LoadingIcon from '../../icons/LoadingIcon';
+import EmailIcon from '../../icons/EmailIcon';
 import AppleWatchWebpPath from './apple-watch.webp';
 import AppleWatchPngPath from './apple-watch.png';
 import HrDecoratedPhoto from './HrDecoratedPhoto';
@@ -243,11 +244,22 @@ const Join = () => {
             <HrPicture />
             <HrCardText>{t('join.hrMessage')}</HrCardText>
             <ContactLinksWrapper>
-              <ContactLink href="tel:000-000-000" noHoverEffect>
+              <ContactLink
+                href="https://t.me/irina_lenchevskaia"
+                noHoverEffect
+                target="_blank"
+              >
                 <StyledIcon icon={TelegramIcon} /> {t('join.contacts.telegram')}
               </ContactLink>
-              <ContactLink href="tel:000-000-000" noHoverEffect>
-                <StyledIcon icon={WhatsappIcon} /> {t('join.contacts.whatsapp')}
+              <ContactLink
+                href="https://www.facebook.com/profile.php?id=100001889437321"
+                noHoverEffect
+                target="_blank"
+              >
+                <StyledIcon icon={FacebookIcon} /> {t('join.contacts.facebook')}
+              </ContactLink>
+              <ContactLink href="mailto: join@flatstack.com" noHoverEffect>
+                <StyledIcon icon={EmailIcon} /> {t('join.contacts.email')}
               </ContactLink>
             </ContactLinksWrapper>
           </HrCard>
