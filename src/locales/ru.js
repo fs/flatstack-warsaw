@@ -149,7 +149,8 @@ export default {
       },
       contacts: {
         telegram: 'Telegram',
-        whatsapp: 'WhatsApp',
+        facebook: 'Facebook',
+        email: 'join@flatstack.com',
       },
       hrMessage: 'Ирина ответит на все эмейлы и сообщения от вас',
       hrPhotoAlt: 'Hr photo',
