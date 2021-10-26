@@ -1,11 +1,11 @@
 import styled from 'styled-components';
+import config from '../../../config';
 import { useL10n } from '../../L10nContext';
 import Card, { types as cardTypes } from '../../atoms/Card';
 import ButtonLink, {
   paddingVariants as buttonPaddingVariants,
   variants as buttonLinkVariants,
 } from '../../atoms/ButtonLink';
-import { ID as JOIN_SECTION_ID } from '../Join';
 
 const StyledCard = styled(Card)`
   margin-bottom: 2em;
@@ -79,7 +79,7 @@ const Content = () => {
       ))}
       <ButtonWrapper>
         <ButtonLink
-          href={`#${JOIN_SECTION_ID}`}
+          href={`#${config.sectionIds.join}`}
           variant={buttonLinkVariants.ACCENT}
           paddingVariant={buttonPaddingVariants.BIG}
         >
