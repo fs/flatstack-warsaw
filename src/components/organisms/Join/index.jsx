@@ -248,6 +248,7 @@ const Join = () => {
                 href="https://t.me/irina_lenchevskaia"
                 noHoverEffect
                 target="_blank"
+                rel="noopener"
               >
                 <StyledIcon icon={TelegramIcon} /> {t('join.contacts.telegram')}
               </ContactLink>
@@ -255,6 +256,7 @@ const Join = () => {
                 href="https://www.facebook.com/profile.php?id=100001889437321"
                 noHoverEffect
                 target="_blank"
+                rel="noopener"
               >
                 <StyledIcon icon={FacebookIcon} /> {t('join.contacts.facebook')}
               </ContactLink>
