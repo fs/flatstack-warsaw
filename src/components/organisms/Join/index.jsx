@@ -260,7 +260,11 @@ const Join = () => {
               >
                 <StyledIcon icon={FacebookIcon} /> {t('join.contacts.facebook')}
               </ContactLink>
-              <ContactLink href="mailto:join@flatstack.com" noHoverEffect>
+              <ContactLink
+                title="Email"
+                href="mailto:join@flatstack.com"
+                noHoverEffect
+              >
                 <StyledIcon icon={EmailIcon} /> {t('join.contacts.email')}
               </ContactLink>
             </ContactLinksWrapper>
