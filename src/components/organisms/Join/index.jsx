@@ -246,7 +246,6 @@ const Join = () => {
             <ContactLinksWrapper>
               <ContactLink
                 href="https://t.me/irina_lenchevskaia"
-                title="Telegram"
                 noHoverEffect
                 target="_blank"
                 rel="noopener"
@@ -255,18 +254,13 @@ const Join = () => {
               </ContactLink>
               <ContactLink
                 href="https://www.facebook.com/profile.php?id=100001889437321"
-                title="Facebook"
                 noHoverEffect
                 target="_blank"
                 rel="noopener"
               >
                 <StyledIcon icon={FacebookIcon} /> {t('join.contacts.facebook')}
               </ContactLink>
-              <ContactLink
-                href="mailto:join@flatstack.com"
-                title="Email"
-                noHoverEffect
-              >
+              <ContactLink href="mailto:join@flatstack.com" noHoverEffect>
                 <StyledIcon icon={EmailIcon} /> {t('join.contacts.email')}
               </ContactLink>
             </ContactLinksWrapper>
