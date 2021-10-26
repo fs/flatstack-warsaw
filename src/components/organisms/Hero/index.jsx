@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import config from '../../../config';
 import { useL10n } from '../../L10nContext';
 import useOnClickHydrate from '../../../hooks/useOnClickHydrate';
 import Section from '../../molecules/Section';
@@ -7,7 +8,6 @@ import ButtonLink, {
   variants as buttonLinkVariants,
 } from '../../atoms/ButtonLink';
 import { variants as buttonVariants } from '../../atoms/Button';
-import { ID as JOIN_SECTION_ID } from '../Join';
 import titleBgJpgPath from './title-bg.jpg?inline';
 import titleBgWebpPath from './title-bg.webp?inline';
 import RecommendButton from '../../molecules/RecommendButton';
@@ -110,7 +110,7 @@ const Hero = () => {
         </TechnologiesWrapper>
         <ActionsWrapper>
           <ButtonLink
-            href={`#${JOIN_SECTION_ID}`}
+            href={`#${config.sectionIds.join}`}
             variant={buttonLinkVariants.ACCENT}
           >
             {t('hero.actions.apply')}

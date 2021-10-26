@@ -1,12 +1,14 @@
 import { useL10n } from '../../L10nContext';
 import Section from '../../molecules/Section';
-
-export const ID = 'warsaw-section';
+import config from '../../../config';
 
 const Warsaw = () => {
   const { t } = useL10n();
   return (
-    <Section id={ID} dangerouslySetInnerHTML={{ __html: '' }}>
+    <Section
+      id={config.sectionIds.warsaw}
+      dangerouslySetInnerHTML={{ __html: '' }}
+    >
       <Section.Title>{t('warsaw.title')}</Section.Title>
     </Section>
   );
