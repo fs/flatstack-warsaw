@@ -26,6 +26,26 @@ module.exports = function (api) {
         },
       ],
     ],
-    plugins: ['polished', ['babel-plugin-styled-components', { ssr: true }]],
+    plugins: [
+      ...(isStatic
+        ? [
+            [
+              'transform-define',
+              {
+                'typeof window': 'undefined',
+              },
+            ],
+          ]
+        : [
+            [
+              'transform-define',
+              {
+                'typeof window': 'object',
+              },
+            ],
+          ]),
+      'polished',
+      ['babel-plugin-styled-components', { ssr: true }],
+    ],
   };
 };
