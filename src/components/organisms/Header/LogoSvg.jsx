@@ -1,4 +1,3 @@
-import React from 'react';
 import { useL10n } from '../../L10nContext';
 
 const LogoSvg = (props) => {

@@ -1,6 +1,7 @@
 import { useRef, useState, lazy, Suspense } from 'react';
 import { useErrorBoundary } from 'preact/hooks';
 import styled from 'styled-components';
+import config from '../../../config';
 import Section from '../../molecules/Section';
 import { useL10n } from '../../L10nContext';
 import Input from '../../atoms/Input';
@@ -110,8 +111,6 @@ const RecommendationCardDescriptionWrapper = styled.div`
 
 const RecommendationDescription = styled.p``;
 
-export const ID = 'join-section';
-
 const formStatuses = {
   IDLE: 'IDLE',
   SUBMITTING: 'SUBMITTING',
@@ -160,7 +159,7 @@ const Join = () => {
   };
 
   return (
-    <Section grey id={ID}>
+    <Section grey id={config.sectionIds.join}>
       <Section.Title>{t('join.title')}</Section.Title>
       <InnerWrapper>
         <Form
