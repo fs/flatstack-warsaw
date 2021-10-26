@@ -4,10 +4,7 @@ import { useL10n } from '../../L10nContext';
 import LogoSvg from './LogoSvg';
 import LangSwitcher from './LangSwitcher';
 import Link, { underlineTypes } from '../../atoms/Link';
-import { ID as VACANCY_SECTION_ID } from '../Vacancy';
-import { ID as RELOCATION_SECTION_ID } from '../Relocation';
-import { ID as FEEDBACKS_SECTION_ID } from '../Feedbacks';
-import { ID as WARSAW_SECTION_ID } from '../Warsaw';
+import config from '../../../config';
 
 const Wrapper = styled.header``;
 
@@ -67,7 +64,7 @@ const Header = () => {
               <Ul>
                 <li>
                   <Link
-                    href={`#${VACANCY_SECTION_ID}`}
+                    href={`#${config.sectionIds.vacancy}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.vacancy')}
@@ -75,7 +72,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    href={`#${RELOCATION_SECTION_ID}`}
+                    href={`#${config.sectionIds.relocation}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.relocation')}
@@ -83,7 +80,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    href={`#${FEEDBACKS_SECTION_ID}`}
+                    href={`#${config.sectionIds.feedbacks}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.feedbacks')}
@@ -91,7 +88,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
-                    href={`#${WARSAW_SECTION_ID}`}
+                    href={`#${config.sectionIds.warsaw}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.warsaw')}

@@ -6,6 +6,10 @@ const Wrapper = styled.section`
   margin-bottom: 2em;
   background-color: ${({ theme, grey }) => grey && theme.colors.primary};
   padding: ${({ grey }) => (grey ? '2em' : '0')} 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 `;
 
 const Section = React.forwardRef(({ children, ...props }, ref) => (
