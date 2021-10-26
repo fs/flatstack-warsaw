@@ -1,4 +1,4 @@
-const ApplePodcastIcon = ({ currentColor, ...restProps }) => {
+const ApplePodcastsIcon = ({ currentColor, ...restProps }) => {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -15,4 +15,4 @@ const ApplePodcastIcon = ({ currentColor, ...restProps }) => {
   );
 };
 
-export default ApplePodcastIcon;
+export default ApplePodcastsIcon;
