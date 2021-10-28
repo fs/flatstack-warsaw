@@ -80,7 +80,21 @@ export default {
     },
     relocation: {
       title: 'Relocation',
+      fsPhotoAlt: 'Flatstack in Polish mountains',
+      requirement:
+        "To work on our cool project you must live in Europe. This is a client's requirement.",
+      relocationFrom:
+        'Are you living in Russia, Belarus, Ukraine or other CIS country? We can help you with relocation to Poland (Warsaw).',
+      helpWith: {
+        title: 'And we do it with care:',
+        items: [
+          'We help with visa, residence card, all relevant docs and its translation',
+          'We connect you with a lawyer who supports you with legal details',
+          'We go through the whole process together!',
+        ],
+      },
     },
+
     feedbacks: {
       title: 'Feedbacks',
     },
