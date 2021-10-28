@@ -21,6 +21,7 @@ const Picture = styled.picture`
 const Image = styled.img`
   width: 100%;
   border-radius: 1em;
+  display: block;
 `;
 
 const TextWrapper = styled.div`
