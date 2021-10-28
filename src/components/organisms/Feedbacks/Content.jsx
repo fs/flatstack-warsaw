@@ -1,19 +1,17 @@
 import styled from 'styled-components';
-import Card from '../../atoms/Card';
+import Card, { variants as cardVariants } from '../../atoms/Card';
 import { useL10n } from '../../L10nContext';
 
 const CardsWrapper = styled.div`
-  display: flex;
-  gap: 1em;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  columns: 25em auto;
+  column-gap: 2em;
 `;
+
 const FeedbackCard = styled(Card)`
-  background-color: ${({ theme }) => theme.colors.accentPale};
-  border: none;
-  width: min(100px, 25%, 50vh, 30ch);
-  flex: none;
-  flex: 1 1 49%;
+  break-inside: avoid;
+  page-break-inside: avoid;
+  max-width: 100%;
+  margin-bottom: 2em;
 `;
 
 const Photo = styled.div`
@@ -32,16 +30,12 @@ const Person = styled.div`
   flex-wrap: wrap;
 `;
 
-const PersonDescription = styled.div`
-  display: flex;
-  gap: 0.5em;
-  flex-direction: column;
-`;
+const PersonDescription = styled.div``;
 
 const Title = styled.h3`
-  font-weight: 600;
+  font-weight: bold;
   color: ${({ theme }) => theme.colors.text};
-  margin: 0;
+  margin: 0 0 0.5em;
 `;
 
 const SubTitle = styled.p`
@@ -57,7 +51,7 @@ const Content = () => {
   return (
     <CardsWrapper>
       {t('feedbacks.items').map(({ title, teamTime, feedback }) => (
-        <FeedbackCard>
+        <FeedbackCard variant={cardVariants.FILL_ACCENT_PALE}>
           <Person>
             <Photo />
             <PersonDescription>

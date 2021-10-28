@@ -2,8 +2,6 @@ import config from '../../../config';
 import { useL10n } from '../../L10nContext';
 import Section from '../../molecules/Section';
 
-export const ID = 'feedbacks-section';
-
 const Content =
   typeof window === 'undefined' ? require('./Content').default : () => null;
 
