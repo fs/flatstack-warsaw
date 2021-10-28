@@ -24,7 +24,7 @@ const Image = styled.img`
 `;
 
 const TextWrapper = styled.div`
-  flex: 999 1 20em;
+  flex: 1 1 20em;
 `;
 
 const Content = () => {
