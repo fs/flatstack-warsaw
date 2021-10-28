@@ -35,7 +35,12 @@ const Content = () => {
       <Picture>
         <source srcSet={imagePathAvif} type="image/avif" />
         <source srcSet={imagePathWebp} type="image/webp" />
-        <Image src={imagePathJpg} alt={t('relocation.imageAlt')} />
+        <Image
+          src={imagePathJpg}
+          width="256"
+          height="310"
+          alt={t('relocation.imageAlt')}
+        />
       </Picture>
       <TextWrapper>
         <Alert>{t('relocation.alert')}</Alert>
