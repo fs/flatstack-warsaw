@@ -6,6 +6,7 @@ import ButtonLink, {
   paddingVariants as buttonPaddingVariants,
   variants as buttonLinkVariants,
 } from '../../atoms/ButtonLink';
+import List from '../../atoms/List';
 
 const StyledCard = styled(Card)`
   margin-bottom: 2em;
@@ -37,16 +38,10 @@ const CardTitle = styled.h3`
   max-width: 100%;
 `;
 
-const List = styled.ul`
+const StyledList = styled(List)`
   flex: 1 1 20em;
   max-width: 100%;
   margin: 0;
-  padding: 0 0 0 2em;
-  list-style: disc;
-`;
-
-const ListItem = styled.li`
-  margin: 0 0 0.5em 0;
 `;
 
 const ButtonWrapper = styled.div`
@@ -69,11 +64,11 @@ const Content = () => {
         <StyledCard>
           <CardContent>
             <CardTitle>{t(`vacancy.${block}.title`)}</CardTitle>
-            <List>
+            <StyledList>
               {t(`vacancy.${block}.items`).map((item) => (
-                <ListItem>{item}</ListItem>
+                <List.Item>{item}</List.Item>
               ))}
-            </List>
+            </StyledList>
           </CardContent>
         </StyledCard>
       ))}
