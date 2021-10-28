@@ -108,7 +108,7 @@ export default {
           title: 'Askar, Fullstack Developer',
           teamTime: '9+ years in the team',
           feedback:
-            "Good office, good colleagues, fruits every Wednesday, democratic work organisation. Opportunity to work with modern companies. The decisions made are justified and reasoned criticism will always be heard. That's what I experienced here. \n" +
+            "Good office, good colleagues, fruits every Wednesday, democratic work organisation. The decisions made are justified and reasoned criticism will always be heard. That's what I experienced here. \n" +
             'Flatstack is associated to me with people who I was lucky to work with, with professionals in their field and with smart guys.',
         },
       ],
