@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
-import imagePathJpg from './image.jpg';
 import Alert from '../../molecules/Alert';
 import List from '../../atoms/List';
+import imagePathJpg from './image.jpg';
 import imagePathWebp from './image.webp';
 import imagePathAvif from './image.avif';
 
