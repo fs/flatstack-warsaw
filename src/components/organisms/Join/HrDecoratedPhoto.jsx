@@ -43,8 +43,8 @@ const HrDecoratedPhoto = (props) => {
 
   return (
     <Picture {...props}>
-      <source srcSet={HrPhotoWebpPath} type="image/webp" />
       <source srcSet={HrPhotoAvifPath} type="image/avif" />
+      <source srcSet={HrPhotoWebpPath} type="image/webp" />
       <Image
         src={HrPhotoJpgPath}
         alt={t('join.hrPhotoAlt')}

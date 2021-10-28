@@ -17,6 +17,10 @@ class PatchHtmlWebpackPluginPlugin {
             }
 
             const optionsCopy = { ...childCompiler.options };
+            optionsCopy.optimization = {
+              ...optionsCopy.optimization,
+              concatenateModules: false,
+            };
             optionsCopy.resolve = {
               ...optionsCopy.resolve,
             };
