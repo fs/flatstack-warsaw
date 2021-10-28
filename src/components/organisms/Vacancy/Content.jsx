@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import config from '../../../config';
 import { useL10n } from '../../L10nContext';
-import Card, { types as cardTypes } from '../../atoms/Card';
+import Card, { variants as cardVariants } from '../../atoms/Card';
 import ButtonLink, {
   paddingVariants as buttonPaddingVariants,
   variants as buttonLinkVariants,
@@ -56,7 +56,7 @@ const Content = () => {
 
   return (
     <>
-      <StyledCard type={cardTypes.FILL}>
+      <StyledCard variant={cardVariants.FILL_PRIMARY}>
         <VacancyTitle>{t('vacancy.vacancyDescription')}</VacancyTitle>
         <VacancyDescription>{t('vacancy.aboutProduct')}</VacancyDescription>
       </StyledCard>
