@@ -41,6 +41,7 @@ const Page = () => {
         <meta charSet="utf-8" />
         <title>{t('title')}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="apple-touch-icon" sizes="138x138" href="/logo138.png" />
         <link
           rel="icon"
           type="image/x-icon"
