@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useCallback } from 'preact/compat';
 
-const useOnClickHydrate = ({ repeatClickAfterHydrate } = {}) => {
+const useOnClickHydrate = ({ repeatClickAfterHydrate = true } = {}) => {
   const [firstClick, setFirstClick] = useState(null);
 
   const handleClick = useCallback(
