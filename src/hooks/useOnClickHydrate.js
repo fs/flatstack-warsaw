@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useCallback } from 'preact/compat';
 
-const useOnClickHydrate = () => {
+const useOnClickHydrate = ({ repeatClickAfterHydrate } = {}) => {
   const [firstClick, setFirstClick] = useState(null);
 
   const handleClick = useCallback(
@@ -27,14 +27,14 @@ const useOnClickHydrate = () => {
   );
 
   useEffect(() => {
-    if (!firstClick) {
+    if (!firstClick || !repeatClickAfterHydrate) {
       return;
     }
 
     document
       .elementFromPoint(firstClick.x, firstClick.y)
       .dispatchEvent(new Event('click'));
-  }, [firstClick]);
+  }, [repeatClickAfterHydrate, firstClick]);
 
   return { shouldBeHydrated: !!firstClick, handleClick };
 };
