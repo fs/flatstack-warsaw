@@ -198,5 +198,8 @@ export default {
       recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
       appleWatchImageAlt: 'Apple Watch',
     },
+    video: {
+      play: 'Воспроизвести видео',
+    },
   },
 };
