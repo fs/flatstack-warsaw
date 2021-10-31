@@ -127,7 +127,7 @@ export default {
     warsaw: {
       title: 'Warsaw',
       description:
-        'We are working in the modern office, where you will always find the right athmosphere for your tasks, whether you need a soletude place or need to switch your mind. Here we have parking places for bikes, cafee zone, swing and even sleepy room with climit control.',
+        'We are working in the modern office, where you will always find the right atmosphere for your tasks, whether you need a solitude place or need to switch your mind. Here we have parking places for bikes, cafe zone, swing and even sleepy room with climate control.',
       videoAlt: 'Video about Warsaw',
     },
     shareModal: {
