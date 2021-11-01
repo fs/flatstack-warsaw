@@ -46,7 +46,7 @@ const TechnologiesWrapper = styled.div`
 
 const Technology = styled.div`
   font-size: 1em;
-  padding: 0.5em 1em;
+  padding: 0.3em 0.8em;
   border-radius: 0.7em;
   background-color: ${({ theme }) => theme.colors.primary};
 `;
