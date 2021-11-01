@@ -11,6 +11,7 @@ export default {
     logoAlt: 'Логотип Flatstack',
     menu: {
       vacancy: 'Вакансии',
+      company: 'Компания',
       relocation: 'Релокация',
       feedbacks: 'Отзывы',
       warsaw: 'Варшава',
@@ -24,6 +25,12 @@ export default {
       actions: {
         apply: 'Откликнуться',
       },
+    },
+    flatstack: {
+      sectionTitle: 'О "Flatstack"',
+      menuTitle: 'Компания',
+      description:
+        'We have been building software since 2006 for clients in the USA, Europe, Russia and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
     },
     vacancy: {
       vacancyDescription:
