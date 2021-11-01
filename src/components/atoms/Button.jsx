@@ -117,11 +117,11 @@ const cssByConstant = {
 
 const cssByPaddingVariant = {
   [paddingVariants.NORMAL]: css`
-    padding: 0.7em 1.5em;
+    padding: 0.5em 1.5em;
     ${({ negativeMargins }) =>
       negativeMargins &&
       css`
-        margin: -0.7em -1.5em;
+        margin: -0.5em -1.5em;
       `}
   `,
   [paddingVariants.BIG]: css`
@@ -133,11 +133,11 @@ const cssByPaddingVariant = {
       `}
   `,
   [paddingVariants.SYMMETRIC]: css`
-    padding: 0.7em 0.8em;
+    padding: 0.5em 0.8em;
     ${({ negativeMargins }) =>
       negativeMargins &&
       css`
-        margin: -0.7em -0.8em;
+        margin: -0.5em -0.8em;
       `}
   `,
   [paddingVariants.SYMMETRIC_BIG]: css`
