@@ -9,7 +9,7 @@ import Relocation from './organisms/Relocation';
 import Feedbacks from './organisms/Feedbacks';
 import Warsaw from './organisms/Warsaw';
 import Join from './organisms/Join';
-import Flatstack from './organisms/Flatstack';
+import Company from './organisms/Company';
 
 const Helmet =
   typeof window === 'undefined'
@@ -78,7 +78,7 @@ const Page = () => {
       <Header />
       <Hero />
       <Vacancy />
-      <Flatstack />
+      <Company />
       <Relocation />
       <Feedbacks />
       <Warsaw />

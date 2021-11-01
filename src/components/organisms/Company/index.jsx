@@ -4,7 +4,7 @@ import Section from '../../molecules/Section';
 const Content =
   typeof window === 'undefined' ? require('./Content').default : () => null;
 
-const Flatstack = () => {
+const Company = () => {
   return (
     <Section
       id={config.sectionIds.company}
@@ -15,4 +15,4 @@ const Flatstack = () => {
   );
 };
 
-export default Flatstack;
+export default Company;
