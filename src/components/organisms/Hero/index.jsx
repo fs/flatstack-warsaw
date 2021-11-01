@@ -15,6 +15,9 @@ const StyledSection = styled(Section)`
 `;
 
 const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 3em;
 `;
 
