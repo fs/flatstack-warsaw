@@ -30,7 +30,7 @@ export default {
       sectionTitle: 'О "Flatstack"',
       menuTitle: 'Компания',
       description:
-        'We have been building software since 2006 for clients in the USA, Europe, Russia and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
+        'Мы создаем программное обеспечение с 2006 года для клиентов в США, Европе, России и других странах. Наши проекты меняют ситуацию и помогают людям в реальной жизни. У нас более 100 талантливых программистов, дизайнеров, менеджеров проектов и QA, которые работают вместе, создавая потрясающие вещи.',
     },
     vacancy: {
       vacancyDescription:
