@@ -5,5 +5,6 @@ export default {
     warsaw: 'warsaw-section',
     relocation: 'relocation-section',
     feedbacks: 'feedbacks-section',
+    company: 'company-section',
   },
 };

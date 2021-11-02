@@ -9,6 +9,7 @@ import Relocation from './organisms/Relocation';
 import Feedbacks from './organisms/Feedbacks';
 import Warsaw from './organisms/Warsaw';
 import Join from './organisms/Join';
+import Company from './organisms/Company';
 
 const Helmet =
   typeof window === 'undefined'
@@ -77,6 +78,7 @@ const Page = () => {
       <Header />
       <Hero />
       <Vacancy />
+      <Company />
       <Relocation />
       <Feedbacks />
       <Warsaw />
