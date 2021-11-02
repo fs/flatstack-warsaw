@@ -11,6 +11,7 @@ export default {
     logoAlt: 'Flatstack logo',
     menu: {
       vacancy: 'Vacancy',
+      company: 'Company',
       relocation: 'Relocation',
       feedbacks: 'Feedbacks',
       warsaw: 'Warsaw',
@@ -77,6 +78,15 @@ export default {
         ],
       },
       apply: 'Apply now',
+    },
+    company: {
+      title: 'About "Flatstack"',
+      description:
+        'We have been building software since 2006 for clients in the USA, Europe, Russia and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
+      flatstackImageAlt: 'Flatstack team',
+      flatstackWarsawImageAlt: 'Warsaw office',
+      flatstackNewOrleansImageAlt: 'New Orleans office',
+      flatstackKazanImageAlt: 'Kazan office',
     },
     relocation: {
       title: 'Relocation',

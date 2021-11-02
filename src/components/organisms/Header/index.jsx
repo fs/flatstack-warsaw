@@ -72,6 +72,14 @@ const Header = () => {
                 </li>
                 <li>
                   <Link
+                    href={`#${config.sectionIds.company}`}
+                    underlineType={underlineTypes.NEVER}
+                  >
+                    {t('menu.company')}
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={`#${config.sectionIds.relocation}`}
                     underlineType={underlineTypes.NEVER}
                   >
