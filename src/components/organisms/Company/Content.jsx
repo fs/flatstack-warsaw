@@ -83,6 +83,7 @@ const Content = () => {
             width="568"
             height="274"
             alt={t('company.flatstackImageAlt')}
+            loading="lazy"
           />
         </FlatstackPicture>
       </Row>
@@ -96,6 +97,7 @@ const Content = () => {
               width="568"
               height="274"
               alt={t('company.flatstackWarsawImageAlt')}
+              loading="lazy"
             />
           </OfficePicture>
           <Figcaption>{t('company.flatstackWarsawImageAlt')}</Figcaption>
@@ -115,6 +117,7 @@ const Content = () => {
               width="568"
               height="274"
               alt={t('company.flatstackNewOrleansImageAlt')}
+              loading="lazy"
             />
           </OfficePicture>
           <Figcaption>{t('company.flatstackNewOrleansImageAlt')}</Figcaption>
@@ -128,6 +131,7 @@ const Content = () => {
               width="568"
               height="274"
               alt={t('company.flatstackKazanImageAlt')}
+              loading="lazy"
             />
           </OfficePicture>
           <Figcaption>{t('company.flatstackKazanImageAlt')}</Figcaption>
