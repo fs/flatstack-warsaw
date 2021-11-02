@@ -57,12 +57,12 @@ export default {
       requirements: {
         title: 'Skills and experience',
         items: [
-          'Stack: Rails, PostgreSQL, React.js., REST, TDD, Docker, AWS, Terraform, TypeScript, Serverless.',
+          'Stack: Rails, PostgreSQL, React.js., REST, TDD, Docker, AWS, Terraform, TypeScript, Serverless',
           'You may not have all knowledges from the list, but should be eager to learn',
           'You create a high quality code and understand how it appears and operates in production',
           'Your experience in building robust, scalable, and secure RESTful APIs will be an advantage',
           'You have creative ideas, a collaborative attitude, and a strong work ethic',
-          'Your English covers the need to communicate about business needs, work organisation and technical details. Speaking, writing, reading are a must.',
+          'Your English covers the need to communicate about business needs, work organisation and technical details. Speaking, writing, reading are a must',
         ],
       },
       benefits: {
@@ -80,7 +80,7 @@ export default {
       apply: 'Apply now',
     },
     company: {
-      title: 'About "Flatstack"',
+      title: 'About Flatstack',
       description:
         'We have been building software since 2006 for clients in the USA, Europe, Russia and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
       flatstackImageAlt: 'Flatstack team',
@@ -97,9 +97,11 @@ export default {
         'Are you living in Russia, Belarus, Ukraine or other CIS country? We can help you with relocation to Poland (Warsaw).',
       listTitle: 'And we do it with care:',
       listItems: [
-        'We help with visa, residence card, all relevant docs and its translation',
+        'We help with visa, all relevant docs and its translation',
+        'We help with accommodation and transfer',
+        'We make a residence card for you',
         'We connect you with a lawyer who supports you with legal details',
-        'We go through the whole process together!',
+        'We go through the whole process together to make it seamless and comfortable for you!',
       ],
     },
     feedbacks: {
@@ -135,7 +137,7 @@ export default {
       ],
     },
     warsaw: {
-      title: 'Warsaw',
+      title: 'Visit us in Warsaw',
       description:
         'We are working in the modern office, where you will always find the right atmosphere for your tasks, whether you need a solitude place or need to switch your mind. Here we have parking places for bikes, cafe zone, swing and even sleepy room with climate control.',
       videoAlt: 'Video about Warsaw',
