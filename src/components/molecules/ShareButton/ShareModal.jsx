@@ -16,31 +16,33 @@ import Modal from '../Modal';
 const LinksWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
-  margin-bottom: 1em;
+  margin: -0.5em -0.5em 0.5em -0.5em;
 
   & > * {
     flex: 1 0 15em;
+    max-width: calc(100% - 1em);
+    margin: 0.5em;
   }
 `;
 
 const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
   font-size: 1.5em;
+  flex: none;
+  margin-right: 0.4em;
 `;
 
 const Link = styled(ButtonLink)`
   display: flex;
-  gap: 0.5em;
   align-items: center;
 `;
 
 const CopyRow = styled.div`
   display: flex;
-  gap: 0.5em;
 `;
 
 const CopyInput = styled(Input)`
   flex: 1 1 auto;
+  margin-right: 0.5em;
 `;
 
 const CopyButton = styled(Button)`
