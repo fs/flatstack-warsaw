@@ -9,13 +9,14 @@ import imagePathAvif from './image.avif';
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  margin: -1em;
 `;
 
 const Picture = styled.picture`
   display: block;
   flex: 0 0 16em;
-  max-width: 100%;
+  max-width: calc(100% - 2em);
+  margin: 1em;
 `;
 
 const Image = styled.img`
@@ -27,6 +28,7 @@ const Image = styled.img`
 
 const TextWrapper = styled.div`
   flex: 1 1 20em;
+  margin: 1em;
 `;
 
 const Content = () => {

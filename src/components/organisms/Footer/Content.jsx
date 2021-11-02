@@ -11,19 +11,23 @@ import GitHubIcon from '../../icons/GitHubIcon';
 
 const InnerWrapper = styled.div`
   display: flex;
-  gap: 2em;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: -1em;
 `;
 
 const CopyrightText = styled.p`
-  margin: 0;
+  margin: 1em;
 `;
 
 const SocialLinksWrapper = styled.div`
+  margin: 0.5em;
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+
+  & > * {
+    margin: 0.5em;
+  }
 `;
 
 const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`

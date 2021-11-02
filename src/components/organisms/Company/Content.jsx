@@ -17,19 +17,20 @@ import flatstackKazanAvifPhotoPath from './fs-kazan.avif';
 
 const Row = styled.div`
   display: flex;
-  gap: 2em;
+  margin: -1em -1em 1em -1em;
   flex-wrap: wrap;
-  margin-bottom: 2em;
 `;
 
 const TextWrapper = styled.div`
   flex: 1 0 30em;
-  max-width: 100%;
+  margin: 1em;
+  max-width: calc(100% - 2em);
 `;
 
 const FlatstackPicture = styled.picture`
   display: block;
   flex: 1 1 40em;
+  margin: 1em;
 `;
 
 const Image = styled.img`
@@ -43,7 +44,8 @@ const Description = styled.p``;
 
 const ImagesRow = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(20em, 100%), 1fr));
+  grid-gap: 2em;
   gap: 2em;
   margin-bottom: 2em;
 `;
