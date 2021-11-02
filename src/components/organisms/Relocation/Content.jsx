@@ -42,6 +42,7 @@ const Content = () => {
           width="256"
           height="310"
           alt={t('relocation.imageAlt')}
+          loading="lazy"
         />
       </Picture>
       <TextWrapper>

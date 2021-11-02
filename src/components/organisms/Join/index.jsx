@@ -290,6 +290,7 @@ const Join = () => {
                 alt={t('join.appleWatchImageAlt')}
                 width="80"
                 height="94"
+                loading="lazy"
               />
             </picture>
           </RecommendationCard>

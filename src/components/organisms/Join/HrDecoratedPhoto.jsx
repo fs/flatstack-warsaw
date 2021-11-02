@@ -50,6 +50,7 @@ const HrDecoratedPhoto = (props) => {
         alt={t('join.hrPhotoAlt')}
         width="128"
         height="128"
+        loading="lazy"
       />
     </Picture>
   );

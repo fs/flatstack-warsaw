@@ -85,6 +85,7 @@ const Video = () => {
                 width="800"
                 height="450"
                 alt={t('warsaw.videoAlt')}
+                loading="lazy"
               />
             </Picture>
           </VideoLink>
