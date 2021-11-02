@@ -27,13 +27,14 @@ const InnerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 10em 15%;
-  margin-top: 3em;
+  column-gap: calc(15% - 2.3em);
+  margin: 3em -1em -10em;
 `;
 
 const Form = styled.form`
   flex: 3 0 22em;
-  max-width: 100%;
+  max-width: calc(100% - 2em);
+  margin: 0 1em 10em;
 `;
 
 const StyledInput = styled(Input)`
@@ -61,13 +62,14 @@ const RightCol = styled.div`
   flex: 1 0 16em;
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  max-width: 100%;
+  max-width: calc(100% - 2em);
+  margin: 0 1em 10em;
 `;
 
 const HrCard = styled(Card)`
   padding-top: 4.5em;
   position: relative;
+  margin-bottom: 1em;
 `;
 
 const HrPicture = styled(HrDecoratedPhoto)`
@@ -89,26 +91,27 @@ const ContactLinksWrapper = styled.div`
 const ContactLink = styled(Link)`
   display: flex;
   align-items: center;
-  gap: 1em;
   margin: 0.5em 0;
 `;
 
 const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
   font-size: 1.5em;
+  margin-right: 0.5em;
 `;
 
 const RecommendationCard = styled(Card)`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1em;
   justify-content: space-between;
+  margin-bottom: 1em;
 `;
 
 const RecommendationCardDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-right: 1em;
 `;
 
 const RecommendationDescription = styled.p``;
