@@ -4,6 +4,7 @@ import Section from '../../molecules/Section';
 import flatstackJpgPhotoPath from './flatstack.jpg';
 import flatstackWebpPhotoPath from './flatstack.webp';
 import flatstackAvifPhotoPath from './flatstack.avif';
+import flatstackAvif2xPhotoPath from './flatstack2x.avif';
 import flatstackWarsawJpgPhotoPath from './fs-warsaw.jpg';
 import flatstackWarsawWebpPhotoPath from './fs-warsaw.webp';
 import flatstackWarsawAvifPhotoPath from './fs-warsaw.avif';
@@ -72,7 +73,10 @@ const Content = () => {
           <Description>{t('company.description')}</Description>
         </TextWrapper>
         <FlatstackPicture>
-          <source srcSet={flatstackAvifPhotoPath} type="image/avif" />
+          <source
+            srcSet={`${flatstackAvifPhotoPath} 800w, ${flatstackAvif2xPhotoPath} 1600w`}
+            type="image/avif"
+          />
           <source srcSet={flatstackWebpPhotoPath} type="image/webp" />
           <Image
             src={flatstackJpgPhotoPath}
