@@ -58,7 +58,14 @@ const Content = () => {
     <>
       <StyledCard variant={cardVariants.FILL_PRIMARY}>
         <VacancyTitle>{t('vacancy.vacancyDescription')}</VacancyTitle>
-        <VacancyDescription>{t('vacancy.aboutProduct')}</VacancyDescription>
+        <VacancyDescription>
+          {t('vacancy.aboutProduct.description')}
+        </VacancyDescription>
+        <List>
+          {t(`vacancy.aboutProduct.items`).map((item) => (
+            <List.Item>{item}</List.Item>
+          ))}
+        </List>
       </StyledCard>
       {BLOCKS.map((block) => (
         <StyledCard>
