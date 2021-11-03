@@ -224,7 +224,11 @@ export default {
       play: 'Воспроизвести видео',
     },
     form: {
-      requiredText: ' - обязательные поля',
+      requiredText: ({ AsteriskWrapper }) => (
+        <>
+          <AsteriskWrapper>*</AsteriskWrapper> - обязательные поля
+        </>
+      ),
     },
   },
 };

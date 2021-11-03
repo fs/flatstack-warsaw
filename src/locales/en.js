@@ -226,7 +226,11 @@ export default {
       play: 'Play video',
     },
     form: {
-      requiredText: ' - required fields',
+      requiredText: ({ AsteriskWrapper }) => (
+        <>
+          <AsteriskWrapper>*</AsteriskWrapper> - required fields
+        </>
+      ),
     },
   },
 };

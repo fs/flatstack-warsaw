@@ -5,19 +5,14 @@ const RequiredText = styled.p`
   color: ${({ theme }) => theme.colors.paleText};
 `;
 
-const StarSymbol = styled.span`
+const AsteriskWrapper = styled.span`
   color: red;
 `;
-
-const Text = styled.span``;
 
 const RequiredFormText = () => {
   const { t } = useL10n();
   return (
-    <RequiredText>
-      <StarSymbol>*</StarSymbol>
-      <Text>{t('form.requiredText')}</Text>
-    </RequiredText>
+    <RequiredText>{t('form.requiredText', { AsteriskWrapper })}</RequiredText>
   );
 };
 
