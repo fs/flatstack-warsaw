@@ -225,5 +225,8 @@ export default {
     video: {
       play: 'Play video',
     },
+    form: {
+      requiredText: ' - required fields',
+    },
   },
 };

@@ -223,5 +223,8 @@ export default {
     video: {
       play: 'Воспроизвести видео',
     },
+    form: {
+      requiredText: ' - обязательные поля',
+    },
   },
 };
