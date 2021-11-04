@@ -16,6 +16,10 @@ const HtmlInput = styled.input`
   font-size: 1rem;
 `;
 
+const RequiredMark = styled.span`
+  color: red;
+`;
+
 const Input = ({
   textarea,
   name,
@@ -23,16 +27,22 @@ const Input = ({
   className,
   inputClassName,
   id,
+  required,
   ...rest
 }) => {
   return (
     <InputWrapper className={className}>
-      {label ? <Label for={id}>{label}</Label> : null}
+      {label ? (
+        <Label for={id}>
+          {label} {required ? <RequiredMark>*</RequiredMark> : null}
+        </Label>
+      ) : null}
       <HtmlInput
         className={inputClassName}
         as={textarea ? 'textarea' : 'input'}
         name={name}
         id={id}
+        required={required}
         {...rest}
       />
     </InputWrapper>

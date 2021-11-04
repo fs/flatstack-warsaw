@@ -22,6 +22,7 @@ import appleWatchPngPath from './apple-watch.png';
 import HrDecoratedPhoto from './HrDecoratedPhoto';
 import ShareButton from '../../molecules/ShareButton';
 import RecommendButton from '../../molecules/RecommendButton';
+import RequiredFormText from '../../atoms/RequiredFormText';
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -242,6 +243,7 @@ const Join = () => {
               url: '/privacy-policy.pdf',
             })}
           </Agreement>
+          <RequiredFormText />
         </Form>
         <RightCol>
           <HrCard dangerouslySetInnerHTML={{ __html: '' }}>

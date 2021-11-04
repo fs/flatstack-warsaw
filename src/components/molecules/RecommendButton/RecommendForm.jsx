@@ -5,6 +5,7 @@ import Link from '../../atoms/Link';
 import Input from '../../atoms/Input';
 import LoadingIcon from '../../icons/LoadingIcon';
 import { useL10n } from '../../L10nContext';
+import RequiredFormText from '../../atoms/RequiredFormText';
 
 const Agreement = styled.p`
   color: ${({ theme }) => theme.colors.paleText};
@@ -127,6 +128,7 @@ const RecommendForm = forwardRef(({ onSubmit, status }, ref) => {
           url: '/privacy-policy.pdf',
         })}
       </Agreement>
+      <RequiredFormText />
     </form>
   );
 });
