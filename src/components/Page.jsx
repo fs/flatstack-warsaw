@@ -34,6 +34,10 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     line-height: 1.5;
   }
+
+  img {
+    background-color: ${({ theme }) => theme.colors.secondary};;
+  }
 `;
 
 const Page = () => {
