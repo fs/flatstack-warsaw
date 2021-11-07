@@ -1,13 +1,15 @@
 export default {
   translations: {
-    title: 'Flatstack Warsaw',
+    title:
+      'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
     metaDescription:
-      'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
+      'Software Engineer vacancy at Flatstack in Warsaw office. We help with relocation for RU & CIS. Remote work is possible from EU only. Technically complex project, string team. Join us!',
     metaKeywords:
-      'flatstack, software engineer, ruby on rails, warsaw, hiring, relocate',
-    'og:title': 'Flatstack Warsaw. Join us!',
+      'flatstack, software engineer, fullstack developer, ruby on rails, typescript, aws, job in Warsaw, vacancy, relocate',
+    'og:title':
+      'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
     'og:description':
-      'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
+      'Looking for a big, technically complex project with beautiful architecture? Join our team in Warsaw! Relocation support for RU&CIS, remote work from EU only. MacBook, 38 vacation days, med.insurance.',
     logoAlt: 'Flatstack logo',
     menu: {
       vacancy: 'Vacancy',

@@ -1,13 +1,15 @@
 export default {
   translations: {
-    title: 'Flatstack Варшава',
+    title:
+      'Вакансия – Fullstack Developer (Rails, TypeScript), Варшава (релокация)',
     metaDescription:
-      'Мы — Flatstack и мы нанимает инженеров для нашего офиса в Варшаве. Присоединяйся к нам!',
+      'Вакансия в офисе Flatstack в Варшаве. Помогаем с релокацией из RU&CIS, удаленка возможна только из EU. Технически сложный проект, сильная команда. Присоединяйся!',
     metaKeywords:
-      'flatstack, software engineer, ruby on rails, warsaw, hiring, вакансия, релокейт',
-    'og:title': 'Flatstack Варшава. Присоединяйся к нам!',
+      'flatstack, software engineer, fullstack разработчик, ruby on rails, typescript, aws, работа в Варшава, hiring, вакансия, релокейт',
+    'og:title':
+      'Вакансия – Fullstack Developer (Rails, TypeScript), Варшава (релокация)',
     'og:description':
-      'Мы — Flatstack и мы нанимает инженеров для нашего офиса в Варшаве. Присоединяйся к нам!',
+      'Ищешь большой, технически сложный проект с красивой архитектурой? Присоединяйся к нашей команде в Варшаве! Помогаем с переездом, даем MacBook, отпуск 38 дней, мед. страховка. Удаленка только из EU.',
     logoAlt: 'Логотип Flatstack',
     menu: {
       vacancy: 'Вакансии',
