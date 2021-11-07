@@ -149,8 +149,8 @@ export default {
       title: 'Visit us in Warsaw',
       description:
         'We are working in the modern office, where you will always find the right atmosphere for your tasks, whether you need a solitude place or need to switch your mind. Here we have parking places for bikes, cafe zone, swing and even sleepy room with climate control.',
-      videoAlt: 'Video about Warsaw',
       address: 'Warsaw, Konstruktorska 11, 02-673',
+      imageAlt: 'Our Warsaw office',
     },
     shareModal: {
       triggerButtonText: 'Share',
