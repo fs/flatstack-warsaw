@@ -117,6 +117,10 @@ const RecommendationCardDescriptionWrapper = styled.div`
 
 const RecommendationDescription = styled.p``;
 
+const AppleWatchImg = styled.img`
+  background: none;
+`;
+
 const formStatuses = {
   IDLE: 'IDLE',
   SUBMITTING: 'SUBMITTING',
@@ -290,7 +294,7 @@ const Join = () => {
             <picture>
               <source srcSet={appleWatchAvifPath} type="image/avif" />
               <source srcSet={appleWatchWebpPath} type="image/webp" />
-              <img
+              <AppleWatchImg
                 src={appleWatchPngPath}
                 alt={t('join.appleWatchImageAlt')}
                 width="80"
