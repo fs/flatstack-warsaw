@@ -92,7 +92,8 @@ const Page = () => {
             property="og:image"
             content="https://warsaw.flatstack.com/logo500.png"
           />
-          {process.env.NODE_ENV === 'production' ? (
+          {process.env.NODE_ENV === 'production' &&
+          process.env.CONTEXT === 'production' ? (
             <>
               <script
                 type="text/javascript"
