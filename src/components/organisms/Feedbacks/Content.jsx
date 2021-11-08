@@ -25,9 +25,13 @@ const Photo = styled.div`
 const Person = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 1em;
   align-items: center;
   flex-wrap: wrap;
+  margin: -0.5em;
+
+  & > * {
+    margin: 0.5em;
+  }
 `;
 
 const PersonDescription = styled.div``;

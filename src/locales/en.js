@@ -1,16 +1,19 @@
 export default {
   translations: {
-    title: 'Flatstack Warsaw',
+    title:
+      'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
     metaDescription:
-      'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
+      'Software Engineer vacancy at Flatstack in Warsaw office. We help with relocation for RU & CIS. Remote work is possible from EU only. Technically complex project, string team. Join us!',
     metaKeywords:
-      'flatstack, software engineer, ruby on rails, warsaw, hiring, relocate',
-    'og:title': 'Flatstack Warsaw. Join us!',
+      'flatstack, software engineer, fullstack developer, ruby on rails, typescript, aws, job in Warsaw, vacancy, relocate',
+    'og:title':
+      'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
     'og:description':
-      'We are Flatstack and we are hiring software engineers for our Warsaw office. Join us!',
+      'Looking for a big, technically complex project with beautiful architecture? Join our team in Warsaw! Relocation support for RU&CIS, remote work from EU only. MacBook, 38 vacation days, med.insurance.',
     logoAlt: 'Flatstack logo',
     menu: {
       vacancy: 'Vacancy',
+      company: 'Company',
       relocation: 'Relocation',
       feedbacks: 'Feedbacks',
       warsaw: 'Warsaw',
@@ -28,8 +31,15 @@ export default {
     vacancy: {
       vacancyDescription:
         'We are looking for a Software Engineer experienced with a large codebase, complex architecture, Infrastructure as Code.',
-      aboutProduct:
-        'The product is at GRC sphere (Governance, Risk Management, Compliance) for global market.',
+      aboutProduct: {
+        description:
+          'The product we are working on is from the area of GRC (Governance, Risk Management, Compliance):',
+        items: [
+          'optimizes risk assessment processes',
+          'automates regulatory compliance review processes (SOX, GDPR, etc.)',
+          'optimizes the processes of developing corporate policies',
+        ],
+      },
       role: {
         title: 'Role',
         items: [
@@ -56,12 +66,12 @@ export default {
       requirements: {
         title: 'Skills and experience',
         items: [
-          'Stack: Rails, PostgreSQL, React.js., REST, TDD, Docker, AWS, Terraform, TypeScript, Serverless.',
+          'Stack: Rails, PostgreSQL, React.js., REST, TDD, Docker, AWS, Terraform, TypeScript, Serverless',
           'You may not have all knowledges from the list, but should be eager to learn',
           'You create a high quality code and understand how it appears and operates in production',
           'Your experience in building robust, scalable, and secure RESTful APIs will be an advantage',
           'You have creative ideas, a collaborative attitude, and a strong work ethic',
-          'Your English covers the need to communicate about business needs, work organisation and technical details. Speaking, writing, reading are a must.',
+          'Your English covers the need to communicate about business needs, work organisation and technical details. Speaking, writing, reading are a must',
         ],
       },
       benefits: {
@@ -69,14 +79,23 @@ export default {
         items: [
           '38 PTO (paid time off) per year. You can use even 3 weeks in a row to travel, or 1-3 days to fix some household needs',
           'MacBook for every employee',
-          'Private healthcare yearly',
-          'Budget for additional benefits of your choice',
+          'Health insurance and year budget for private medical care',
+          'Budget for additional benefits of your choice (conferences, courses, you can even buy a bicycle if you need it)',
           'Modern office',
           'Ability to work remotely (from Europe)',
           'Relocation leadership and support if you need it (see details below)',
         ],
       },
       apply: 'Apply now',
+    },
+    company: {
+      title: 'About Flatstack',
+      description:
+        'We have been building software since 2006 for clients in the USA, Europe, Russia and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
+      flatstackImageAlt: 'Flatstack team',
+      flatstackWarsawImageAlt: 'Warsaw office',
+      flatstackNewOrleansImageAlt: 'New Orleans office',
+      flatstackKazanImageAlt: 'Kazan office',
     },
     relocation: {
       title: 'Relocation',
@@ -87,9 +106,11 @@ export default {
         'Are you living in Russia, Belarus, Ukraine or other CIS country? We can help you with relocation to Poland (Warsaw).',
       listTitle: 'And we do it with care:',
       listItems: [
-        'We help with visa, residence card, all relevant docs and its translation',
+        'We help with visa, all relevant docs and its translation',
+        'We help with accommodation and transfer',
+        'We make a residence card for you',
         'We connect you with a lawyer who supports you with legal details',
-        'We go through the whole process together!',
+        'We go through the whole process together to make it seamless and comfortable for you!',
       ],
     },
     feedbacks: {
@@ -113,7 +134,7 @@ export default {
           teamTime: '7+ years in the team',
           feedback:
             'Cool client and the project. Cool cut-of-the-edge technologies. Cool processes that really work. \n' +
-            'Here you can grow easily and gain diverse and varied experience. Comfort and well organised relocation to Poland. Overall everything is well democratic.',
+            'Here you can grow easily and gain diverse and varied experience. Comfortable and well organised relocation to Poland. Overall everything is well democratic.',
         },
         {
           title: 'Askar, Fullstack Developer',
@@ -125,10 +146,11 @@ export default {
       ],
     },
     warsaw: {
-      title: 'Warsaw',
+      title: 'Visit us in Warsaw',
       description:
         'We are working in the modern office, where you will always find the right atmosphere for your tasks, whether you need a solitude place or need to switch your mind. Here we have parking places for bikes, cafe zone, swing and even sleepy room with climate control.',
-      videoAlt: 'Video about Warsaw',
+      address: 'Warsaw, Konstruktorska 11, 02-673',
+      imageAlt: 'Our Warsaw office',
     },
     shareModal: {
       triggerButtonText: 'Share',
@@ -180,7 +202,7 @@ export default {
           <>
             {'By clicking the "Submit" button, you agree with our '}
             <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
-              privacy policy
+              Privacy Policy
             </LinkComponent>
           </>
         ),
@@ -204,6 +226,13 @@ export default {
     },
     video: {
       play: 'Play video',
+    },
+    form: {
+      requiredText: ({ AsteriskWrapper }) => (
+        <>
+          <AsteriskWrapper>*</AsteriskWrapper> - required fields
+        </>
+      ),
     },
   },
 };

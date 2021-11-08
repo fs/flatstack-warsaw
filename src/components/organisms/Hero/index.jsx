@@ -23,8 +23,12 @@ const ContentWrapper = styled.div`
 
 const ActionsWrapper = styled.div`
   display: flex;
-  gap: 1em;
   flex-wrap: wrap;
+  margin: -0.5em;
+
+  & > * {
+    margin: 0.5em;
+  }
 `;
 
 const Content =

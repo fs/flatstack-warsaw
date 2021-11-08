@@ -27,21 +27,21 @@ const VacancyDescription = styled.p`
 const CardContent = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 2em;
+  margin: -1rem;
 `;
 
 const CardTitle = styled.h3`
   font-weight: bold;
   font-size: clamp(1.5em, 5vw, 2em);
-  margin: 0;
+  margin: 1rem;
   flex: 0 0 15rem;
-  max-width: 100%;
+  max-width: calc(100% - 2rem);
 `;
 
 const StyledList = styled(List)`
   flex: 1 1 20em;
-  max-width: 100%;
-  margin: 0;
+  max-width: calc(100% - 2rem);
+  margin: 1rem;
 `;
 
 const ButtonWrapper = styled.div`
@@ -58,7 +58,14 @@ const Content = () => {
     <>
       <StyledCard variant={cardVariants.FILL_PRIMARY}>
         <VacancyTitle>{t('vacancy.vacancyDescription')}</VacancyTitle>
-        <VacancyDescription>{t('vacancy.aboutProduct')}</VacancyDescription>
+        <VacancyDescription>
+          {t('vacancy.aboutProduct.description')}
+        </VacancyDescription>
+        <List>
+          {t(`vacancy.aboutProduct.items`).map((item) => (
+            <List.Item>{item}</List.Item>
+          ))}
+        </List>
       </StyledCard>
       {BLOCKS.map((block) => (
         <StyledCard>

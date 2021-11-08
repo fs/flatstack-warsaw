@@ -12,13 +12,13 @@ const InnerWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 2rem;
   flex-wrap: wrap;
-  margin: 1.5rem 0;
+  margin: 0.5rem -1em -1em;
 `;
 
 const StyledLogo = styled(LogoSvg)`
   flex: none;
+  margin: 1em;
 `;
 
 const Menu = styled.nav``;
@@ -30,7 +30,14 @@ const Ul = styled.ul`
   padding: 0;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+`;
+
+const Li = styled.li`
+  margin-right: 0.8em;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
 `;
 
 const Delimiter = styled.div`
@@ -39,15 +46,15 @@ const Delimiter = styled.div`
   background-color: ${({ theme }) => theme.colors.secondary};
   align-self: center;
   flex: none;
+  margin: 0 1.5em;
 `;
 
 const RightCol = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 1.5em;
   overflow: auto;
-  margin: -0.5em;
+  margin: 0.5em;
   padding: 0.5em;
 `;
 
@@ -62,38 +69,46 @@ const Header = () => {
           <RightCol>
             <Menu>
               <Ul>
-                <li>
+                <Li>
                   <Link
                     href={`#${config.sectionIds.vacancy}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.vacancy')}
                   </Link>
-                </li>
-                <li>
+                </Li>
+                <Li>
+                  <Link
+                    href={`#${config.sectionIds.company}`}
+                    underlineType={underlineTypes.NEVER}
+                  >
+                    {t('menu.company')}
+                  </Link>
+                </Li>
+                <Li>
                   <Link
                     href={`#${config.sectionIds.relocation}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.relocation')}
                   </Link>
-                </li>
-                <li>
+                </Li>
+                <Li>
                   <Link
                     href={`#${config.sectionIds.feedbacks}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.feedbacks')}
                   </Link>
-                </li>
-                <li>
+                </Li>
+                <Li>
                   <Link
                     href={`#${config.sectionIds.warsaw}`}
                     underlineType={underlineTypes.NEVER}
                   >
                     {t('menu.warsaw')}
                   </Link>
-                </li>
+                </Li>
               </Ul>
             </Menu>
             <Delimiter />
