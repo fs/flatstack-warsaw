@@ -72,6 +72,16 @@ const Page = () => {
             property="og:image"
             content="https://warsaw.flatstack.com/logo500.png"
           />
+          {process.env.NODE_ENV === 'production' ? (
+            <>
+              <script
+                type="text/javascript"
+                async
+                src="https://www.googletagmanager.com/gtag/js?id=G-8Y5DBL7M3F"
+              />
+              <script type="text/javascript">{`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);}; gtag('js', new Date()); gtag('config', 'G-8Y5DBL7M3F');`}</script>
+            </>
+          ) : null}
         </Helmet>
       ) : null}
       <Header />
