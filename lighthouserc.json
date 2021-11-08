@@ -44,7 +44,8 @@
         "splash-screen": "off",
         "themed-omnibox": "off",
         "offline-start-url": "off",
-        "csp-xss": "off"
+        "csp-xss": "off",
+        "canonical": "off"
       }
     }
   }

@@ -39,9 +39,12 @@ const SubtitleHighlight = styled.span`
 const TechnologiesWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5em;
-  margin-top: 2em;
-  max-width: 35em;
+  margin: 1.75em -0.25em -0.25em;
+  max-width: 36em;
+
+  & > * {
+    margin: 0.25em;
+  }
 `;
 
 const Technology = styled.div`
