@@ -9,7 +9,7 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
   context: path.resolve(__dirname, 'src'),
-  entry: './index.jsx',
+  entry: { 'index-ru': './index-ru.jsx', 'index-en': './index-en.jsx' },
   mode: NODE_ENV,
   devtool: NODE_ENV === 'production' ? 'source-map' : 'eval-source-map',
   resolve: {
@@ -50,10 +50,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: `./webpack-templates/index.js`,
+      chunks: ['index-en'],
     }),
     new HtmlWebpackPlugin({
       filename: 'ru.html',
       template: `./webpack-templates/ru.js`,
+      chunks: ['index-ru'],
     }),
     new CleanWebpackPlugin(),
     new CopyPlugin({
