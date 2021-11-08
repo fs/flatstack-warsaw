@@ -8,6 +8,7 @@ const Document = ({ children, styles, helmet }) => (
       {helmet.meta.toComponent()}
       {helmet.link.toComponent()}
       {styles}
+      {helmet.script.toComponent()}
     </head>
     <body {...helmet.bodyAttributes.toComponent()}>
       <script
