@@ -6,11 +6,18 @@ import imagePathWebp700 from './office_700.webp';
 import imagePathWebp1400 from './office_1400.webp';
 import imagePathJpg700 from './office_700.jpg';
 import imagePathJpg1400 from './office_1400.jpg';
+import Section from '../../molecules/Section';
 
-const Wrapper = styled.div`
+const Row = styled.div`
   display: flex;
+  margin: -1em -1em 1em -1em;
   flex-wrap: wrap;
-  margin: -1em;
+`;
+
+const TextWrapper = styled.div`
+  flex: 1 0 20em;
+  max-width: calc(100% - 2em);
+  margin: 1em;
 `;
 
 const Figure = styled.figure`
@@ -41,42 +48,39 @@ const Image = styled.img`
   display: block;
 `;
 
-const TextWrapper = styled.div`
-  flex: 1 0 20em;
-  max-width: calc(100% - 2em);
-  margin: 1em;
-`;
-
 const Content = () => {
   const { t } = useL10n();
 
   return (
-    <Wrapper>
-      <Figure>
-        <Picture>
-          <source
-            srcSet={`${imagePathAvif700} 700w, ${imagePathAvif1400} 1400w`}
-            type="image/avif"
-          />
-          <source
-            srcSet={`${imagePathWebp700} 700w, ${imagePathWebp1400} 1400w`}
-            type="image/webp"
-          />
-          <Image
-            srcSet={`${imagePathJpg700} 700w, ${imagePathJpg1400} 1400w`}
-            src={imagePathJpg1400}
-            alt={t('warsaw.imageAlt')}
-            width="568"
-            height="454"
-            loading="lazy"
-          />
-        </Picture>
-        <Figcaption>{t('warsaw.address')}</Figcaption>
-      </Figure>
-      <TextWrapper>
-        <p>{t('warsaw.description')}</p>
-      </TextWrapper>
-    </Wrapper>
+    <>
+      <Row>
+        <TextWrapper>
+          <Section.Title>{t('warsaw.title')}</Section.Title>
+          <p>{t('warsaw.description')}</p>
+        </TextWrapper>
+        <Figure>
+          <Picture>
+            <source
+              srcSet={`${imagePathAvif700} 700w, ${imagePathAvif1400} 1400w`}
+              type="image/avif"
+            />
+            <source
+              srcSet={`${imagePathWebp700} 700w, ${imagePathWebp1400} 1400w`}
+              type="image/webp"
+            />
+            <Image
+              srcSet={`${imagePathJpg700} 700w, ${imagePathJpg1400} 1400w`}
+              src={imagePathJpg1400}
+              alt={t('warsaw.imageAlt')}
+              width="568"
+              height="454"
+              loading="lazy"
+            />
+          </Picture>
+          <Figcaption>{t('warsaw.address')}</Figcaption>
+        </Figure>
+      </Row>
+    </>
   );
 };
 
