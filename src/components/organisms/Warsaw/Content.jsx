@@ -11,8 +11,8 @@ import imagePathJpg1400 from './office_1400.jpg';
 
 const Wrapper = styled.div`
   display: flex;
-  margin: -1em;
   flex-wrap: wrap;
+  margin: -1em;
 `;
 
 const Figure = styled.figure`
