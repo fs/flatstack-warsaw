@@ -90,7 +90,7 @@ const Page = () => {
           <meta property="og:url" content="https://warsaw.flatstack.com/" />
           <meta
             property="og:image"
-            content="https://warsaw.flatstack.com/logo500.png"
+            content="https://warsaw.flatstack.com/social.png"
           />
         </Helmet>
       ) : null}
