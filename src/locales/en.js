@@ -24,6 +24,7 @@ export default {
           to Warsaw <Highlight>&#123;with relocation&#125;</Highlight>
         </>
       ),
+      salary: '$3,500–4,000 net',
       actions: {
         apply: 'Apply now',
       },

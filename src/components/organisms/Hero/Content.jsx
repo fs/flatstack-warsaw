@@ -76,6 +76,7 @@ const Content = () => {
       <Subtitle>
         {t('hero.subtitle', { Highlight: SubtitleHighlight })}
       </Subtitle>
+      <Subtitle>{t('hero.salary')}</Subtitle>
       <TechnologiesWrapper>
         {technologies.map((technology) => (
           <Technology>{technology}</Technology>
