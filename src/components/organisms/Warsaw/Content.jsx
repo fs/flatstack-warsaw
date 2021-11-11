@@ -11,14 +11,8 @@ import imagePathJpg1400 from './office_1400.jpg';
 
 const Wrapper = styled.div`
   display: flex;
-  margin: -1em -1em 1em -1em;
+  margin: -1em;
   flex-wrap: wrap;
-`;
-
-const TextWrapper = styled.div`
-  flex: 1 0 20em;
-  max-width: calc(100% - 2em);
-  margin: 1em;
 `;
 
 const Figure = styled.figure`
@@ -47,6 +41,12 @@ const Image = styled.img`
   height: auto;
   border-radius: 1em;
   display: block;
+`;
+
+const TextWrapper = styled.div`
+  flex: 1 0 20em;
+  max-width: calc(100% - 2em);
+  margin: 1em;
 `;
 
 const Content = () => {
