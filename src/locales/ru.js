@@ -24,6 +24,7 @@ export default {
           в Варшаву <Highlight>&#123;с релокацией&#125;</Highlight>
         </>
       ),
+      salary: '$3,500–4,000 net',
       actions: {
         apply: 'Откликнуться',
       },
