@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import { useL10n } from '../../L10nContext';
+
+import Section from '../../molecules/Section';
 import imagePathAvif700 from './office_700.avif';
 import imagePathAvif1400 from './office_1400.avif';
 import imagePathWebp700 from './office_700.webp';
@@ -52,6 +54,10 @@ const Content = () => {
 
   return (
     <Wrapper>
+      <TextWrapper>
+        <Section.Title>{t('warsaw.title')}</Section.Title>
+        <p>{t('warsaw.description')}</p>
+      </TextWrapper>
       <Figure>
         <Picture>
           <source
@@ -73,9 +79,6 @@ const Content = () => {
         </Picture>
         <Figcaption>{t('warsaw.address')}</Figcaption>
       </Figure>
-      <TextWrapper>
-        <p>{t('warsaw.description')}</p>
-      </TextWrapper>
     </Wrapper>
   );
 };
