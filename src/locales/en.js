@@ -131,7 +131,7 @@ export default {
             'Funny, tight-knit team, interesting "not-boring" job, newest technologies are in use. Good office space, I value my colleagues and the atmosphere very much! ',
         },
         {
-          title: 'Arkadiy, Fullstack Developer',
+          title: 'Arkadii, Fullstack Developer',
           teamTime: '7+ years in the team',
           feedback:
             'Cool client and the project. Cool cut-of-the-edge technologies. Cool processes that really work. \n' +

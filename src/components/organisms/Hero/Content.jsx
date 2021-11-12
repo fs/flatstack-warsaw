@@ -55,7 +55,7 @@ const Technology = styled.div`
 `;
 
 const technologies = [
-  'RubyOnRail',
+  'Ruby on Rails',
   'PostgreSQL',
   'React.js',
   'REST',
