@@ -20,10 +20,11 @@ const Picture = styled.picture`
 `;
 
 const Image = styled.img`
+  display: block;
   width: 100%;
   height: auto;
+
   border-radius: 1em;
-  display: block;
 `;
 
 const TextWrapper = styled.div`

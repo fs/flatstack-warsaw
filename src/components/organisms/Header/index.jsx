@@ -10,9 +10,9 @@ const Wrapper = styled.header``;
 
 const InnerWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   margin: 0.5rem -1em -1em;
 `;
 
@@ -24,12 +24,14 @@ const StyledLogo = styled(LogoSvg)`
 const Menu = styled.nav``;
 
 const Ul = styled.ul`
-  list-style-type: none;
-  font-size: 1.25em;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
+
+  font-size: 1.25em;
+
+  list-style-type: none;
 `;
 
 const Li = styled.li`
@@ -41,21 +43,22 @@ const Li = styled.li`
 `;
 
 const Delimiter = styled.div`
-  height: 2em;
-  width: 1px;
-  background-color: ${({ theme }) => theme.colors.secondary};
-  align-self: center;
   flex: none;
+  align-self: center;
+  width: 1px;
+  height: 2em;
   margin: 0 1.5em;
+
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const RightCol = styled.div`
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  overflow: auto;
   margin: 0.5em;
   padding: 0.5em;
+  overflow: auto;
 `;
 
 const Header = () => {

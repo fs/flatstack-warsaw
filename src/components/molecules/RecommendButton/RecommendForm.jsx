@@ -15,6 +15,7 @@ const Fieldset = styled.fieldset`
   display: block;
   margin: 0 0 2em 0;
   padding: 0;
+
   border: none;
 `;
 
@@ -22,6 +23,7 @@ const FieldsetLegend = styled.legend`
   display: block;
   margin: 0 0 1em 0;
   padding: 0;
+
   font-weight: bold;
   font-size: 1em;
 `;
@@ -36,6 +38,7 @@ const StyledTextarea = styled(({ className, ...restProps }) => (
   textarea: true,
 }))`
   min-height: 5em;
+
   resize: vertical;
 `;
 
@@ -44,8 +47,9 @@ const ErrorMessage = styled.p`
 `;
 
 const StyledLoadingIcon = styled(LoadingIcon)`
-  font-size: 1.5em;
   margin: -0.5em -1.5em -0.5em 0.5em;
+
+  font-size: 1.5em;
 `;
 
 export const statuses = {

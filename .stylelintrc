@@ -6,5 +6,11 @@
     "stylelint-config-recommended",
     "stylelint-config-rational-order",
     "stylelint-config-styled-components"
-  ]
+  ],
+  "rules": {
+    "order/properties-order": [],
+    "plugin/rational-order": [true, {
+      "empty-line-between-groups": true
+    }]
+  }
 }

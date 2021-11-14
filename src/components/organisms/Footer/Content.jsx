@@ -21,9 +21,9 @@ const CopyrightText = styled.p`
 `;
 
 const SocialLinksWrapper = styled.div`
-  margin: 0.5em;
   display: flex;
   flex-wrap: wrap;
+  margin: 0.5em;
 
   & > * {
     margin: 0.5em;
@@ -32,8 +32,9 @@ const SocialLinksWrapper = styled.div`
 
 const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
   display: block;
-  font-size: 1.5em;
+
   color: ${({ theme }) => theme.colors.secondary};
+  font-size: 1.5em;
 `;
 
 const Content = () => {

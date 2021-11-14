@@ -13,10 +13,11 @@ const StyledCard = styled(Card)`
 `;
 
 const VacancyTitle = styled.h2`
-  font-weight: bold;
-  font-size: clamp(1.5em, 5vw, 2em);
   max-width: 40rem;
   margin: 0 0 1em 0;
+
+  font-weight: bold;
+  font-size: clamp(1.5em, 5vw, 2em);
 `;
 
 const VacancyDescription = styled.p`
@@ -31,11 +32,12 @@ const CardContent = styled.div`
 `;
 
 const CardTitle = styled.h3`
-  font-weight: bold;
-  font-size: clamp(1.5em, 5vw, 2em);
-  margin: 1rem;
   flex: 0 0 15rem;
   max-width: calc(100% - 2rem);
+  margin: 1rem;
+
+  font-weight: bold;
+  font-size: clamp(1.5em, 5vw, 2em);
 `;
 
 const StyledList = styled(List)`

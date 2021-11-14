@@ -8,9 +8,10 @@ import LoadingIcon from '../../icons/LoadingIcon';
 const ShareModal = lazy(() => import('./ShareModal'));
 
 const StyledLoadingIcon = styled(LoadingIcon)`
-  font-size: 1.5em;
   margin: -0.5em -0.5em -0.5em 0.5em;
+
   color: ${({ theme }) => theme.colors.accent};
+  font-size: 1.5em;
 `;
 
 const ShareButton = (props) => {
