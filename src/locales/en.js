@@ -225,9 +225,6 @@ export default {
         'Get Apple Watch for successful recommendation',
       appleWatchImageAlt: 'Apple Watch',
     },
-    video: {
-      play: 'Play video',
-    },
     form: {
       requiredText: ({ AsteriskWrapper }) => (
         <>
