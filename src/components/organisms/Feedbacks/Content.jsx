@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Card, { variants as cardVariants } from '../../atoms/Card';
 import { useL10n } from '../../L10nContext';
+import Section from '../../molecules/Section';
 
 const CardsWrapper = styled.div`
   columns: 25em auto;
@@ -58,20 +59,23 @@ const Content = () => {
   const { t } = useL10n();
 
   return (
-    <CardsWrapper>
-      {t('feedbacks.items').map(({ title, teamTime, feedback }) => (
-        <FeedbackCard variant={cardVariants.FILL_ACCENT_PALE}>
-          <Person>
-            <Photo />
-            <PersonDescription>
-              <Title>{title}</Title>
-              <SubTitle>{teamTime}</SubTitle>
-            </PersonDescription>
-          </Person>
-          <Feedback>{feedback}</Feedback>
-        </FeedbackCard>
-      ))}
-    </CardsWrapper>
+    <>
+      <Section.Title>{t('feedbacks.title')}</Section.Title>
+      <CardsWrapper>
+        {t('feedbacks.items').map(({ title, teamTime, feedback }) => (
+          <FeedbackCard variant={cardVariants.FILL_ACCENT_PALE}>
+            <Person>
+              <Photo />
+              <PersonDescription>
+                <Title>{title}</Title>
+                <SubTitle>{teamTime}</SubTitle>
+              </PersonDescription>
+            </Person>
+            <Feedback>{feedback}</Feedback>
+          </FeedbackCard>
+        ))}
+      </CardsWrapper>
+    </>
   );
 };
 
