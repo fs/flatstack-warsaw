@@ -1,4 +1,8 @@
 const translations = {
+  'og:title':
+    'Вакансия – Fullstack Developer (Rails, TypeScript), Варшава (релокация)',
+  'og:description':
+    'Ищешь большой, технически сложный проект с красивой архитектурой? Присоединяйся к нашей команде в Варшаве! Помогаем с переездом, даем MacBook, отпуск 38 дней, мед. страховка. Удаленка только из EU.',
   hero: {
     subtitle: ({ Highlight }) => (
       <>
@@ -100,10 +104,6 @@ if (typeof window === 'undefined') {
       'Вакансия в офисе Flatstack в Варшаве. Помогаем с релокацией из RU&CIS, удаленка возможна только из EU. Технически сложный проект, сильная команда. Присоединяйся!',
     metaKeywords:
       'flatstack, software engineer, fullstack разработчик, ruby on rails, typescript, aws, работа в Варшава, hiring, вакансия, релокейт',
-    'og:title':
-      'Вакансия – Fullstack Developer (Rails, TypeScript), Варшава (релокация)',
-    'og:description':
-      'Ищешь большой, технически сложный проект с красивой архитектурой? Присоединяйся к нашей команде в Варшаве! Помогаем с переездом, даем MacBook, отпуск 38 дней, мед. страховка. Удаленка только из EU.',
     logoAlt: 'Логотип Flatstack',
     menu: {
       vacancy: 'Вакансии',

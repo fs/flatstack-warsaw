@@ -1,4 +1,8 @@
 const translations = {
+  'og:title':
+    'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
+  'og:description':
+    'Looking for a big, technically complex project with beautiful architecture? Join our team in Warsaw! Relocation support for RU&CIS, remote work from EU only. MacBook, 38 vacation days, med.insurance.',
   hero: {
     subtitle: ({ Highlight }) => (
       <>
@@ -100,10 +104,6 @@ if (typeof window === 'undefined') {
       'Software Engineer vacancy at Flatstack in Warsaw office. We help with relocation for RU & CIS. Remote work is possible from EU only. Technically complex project, string team. Join us!',
     metaKeywords:
       'flatstack, software engineer, fullstack developer, ruby on rails, typescript, aws, job in Warsaw, vacancy, relocate',
-    'og:title':
-      'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
-    'og:description':
-      'Looking for a big, technically complex project with beautiful architecture? Join our team in Warsaw! Relocation support for RU&CIS, remote work from EU only. MacBook, 38 vacation days, med.insurance.',
     logoAlt: 'Flatstack logo',
     menu: {
       vacancy: 'Vacancy',
