@@ -1,5 +1,99 @@
-export default {
-  translations: {
+const translations = {
+  hero: {
+    subtitle: ({ Highlight }) => (
+      <>
+        to Warsaw <Highlight>&#123;with relocation&#125;</Highlight>
+      </>
+    ),
+    salary: '$3,500–4,000 net',
+    actions: {
+      apply: 'Apply now',
+    },
+  },
+  shareModal: {
+    triggerButtonText: 'Share',
+    title: 'Share',
+    copy: 'Copy',
+    copySuccess: 'Copied!',
+    copyFailed: 'Failed!',
+    shareViaFacebook: 'Share via Facebook',
+    shareViaVk: 'Share via VK',
+    shareViaTwitter: 'Share via Twitter',
+    shareViaLinkedIn: 'Share via LinkedIn',
+  },
+  recommendModal: {
+    triggerButtonText: 'Recommend',
+    title: 'Recommendation',
+    form: {
+      submit: 'Submit',
+      agreement: ({ LinkComponent }) => (
+        <>
+          {'By clicking the "Submit" button, you agree with our '}
+          <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
+            privacy policy
+          </LinkComponent>
+        </>
+      ),
+      aboutYou: 'About you',
+      aboutRecommendee: 'About a person you recommend',
+      yourName: 'Name',
+      yourEmail: 'Email',
+      yourPhone: 'Phone (optional)',
+      recommendeeName: 'Name',
+      recommendeeEmail: 'Email',
+      recommendeePhone: 'Phone (optional)',
+      recommendeeComment: 'Comment (optional)',
+      error: 'Unexpected error occurred',
+      successMessage:
+        'Thank you for your recommendation. We will contact you and a person you recommended in near future.',
+    },
+  },
+  join: {
+    title: 'Join the team',
+    form: {
+      name: 'Name',
+      email: 'Email',
+      link: 'Link to your CV or profile in social media',
+      cv: 'Attach CV',
+      submit: 'Submit',
+      agreement: ({ LinkComponent }) => (
+        <>
+          {'By clicking the "Submit" button, you agree with our '}
+          <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
+            Privacy Policy
+          </LinkComponent>
+        </>
+      ),
+      error: 'Unexpected error occurred',
+      successTitle: 'Thank you for your application!',
+      successDescription:
+        'I will reply to you shortly. Looking forward to meet you on the interview!',
+      successOkButton: 'Okay',
+    },
+    contacts: {
+      telegram: 'Telegram',
+      facebook: 'Facebook',
+      email: 'join@flatstack.com',
+    },
+    hrMessage: 'Irina replies all the emails and message from you',
+    hrPhotoAlt: 'Hr photo',
+    shareLinkIconAlt: 'share link',
+    recommendationDescription: 'Get Apple Watch for successful recommendation',
+    appleWatchImageAlt: 'Apple Watch',
+  },
+  form: {
+    requiredText: ({ AsteriskWrapper }) => (
+      <>
+        <AsteriskWrapper>*</AsteriskWrapper> - required fields
+      </>
+    ),
+  },
+};
+
+// we need some values only during build-time while generating HTML
+// and we don't need them in browser
+if (typeof window === 'undefined') {
+  Object.assign(translations, {
     title:
       'Vacancy – Fullstack Developer (Rails, TypeScript), Warsaw (relocation)',
     metaDescription:
@@ -17,17 +111,6 @@ export default {
       relocation: 'Relocation',
       feedbacks: 'Feedbacks',
       warsaw: 'Warsaw',
-    },
-    hero: {
-      subtitle: ({ Highlight }) => (
-        <>
-          to Warsaw <Highlight>&#123;with relocation&#125;</Highlight>
-        </>
-      ),
-      salary: '$3,500–4,000 net',
-      actions: {
-        apply: 'Apply now',
-      },
     },
     vacancy: {
       vacancyDescription:
@@ -153,84 +236,9 @@ export default {
       address: 'Warsaw, Konstruktorska 11, 02-673',
       imageAlt: 'Our Warsaw office',
     },
-    shareModal: {
-      triggerButtonText: 'Share',
-      title: 'Share',
-      copy: 'Copy',
-      copySuccess: 'Copied!',
-      copyFailed: 'Failed!',
-      shareViaFacebook: 'Share via Facebook',
-      shareViaVk: 'Share via VK',
-      shareViaTwitter: 'Share via Twitter',
-      shareViaLinkedIn: 'Share via LinkedIn',
-    },
-    recommendModal: {
-      triggerButtonText: 'Recommend',
-      title: 'Recommendation',
-      form: {
-        submit: 'Submit',
-        agreement: ({ LinkComponent }) => (
-          <>
-            {'By clicking the "Submit" button, you agree with our '}
-            <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
-              privacy policy
-            </LinkComponent>
-          </>
-        ),
-        aboutYou: 'About you',
-        aboutRecommendee: 'About a person you recommend',
-        yourName: 'Name',
-        yourEmail: 'Email',
-        yourPhone: 'Phone (optional)',
-        recommendeeName: 'Name',
-        recommendeeEmail: 'Email',
-        recommendeePhone: 'Phone (optional)',
-        recommendeeComment: 'Comment (optional)',
-        error: 'Unexpected error occurred',
-        successMessage:
-          'Thank you for your recommendation. We will contact you and a person you recommended in near future.',
-      },
-    },
-    join: {
-      title: 'Join the team',
-      form: {
-        name: 'Name',
-        email: 'Email',
-        link: 'Link to your CV or profile in social media',
-        cv: 'Attach CV',
-        submit: 'Submit',
-        agreement: ({ LinkComponent }) => (
-          <>
-            {'By clicking the "Submit" button, you agree with our '}
-            <LinkComponent href="/privacy-policy-en.pdf" target="_blank">
-              Privacy Policy
-            </LinkComponent>
-          </>
-        ),
-        error: 'Unexpected error occurred',
-        successTitle: 'Thank you for your application!',
-        successDescription:
-          'I will reply to you shortly. Looking forward to meet you on the interview!',
-        successOkButton: 'Okay',
-      },
-      contacts: {
-        telegram: 'Telegram',
-        facebook: 'Facebook',
-        email: 'join@flatstack.com',
-      },
-      hrMessage: 'Irina replies all the emails and message from you',
-      hrPhotoAlt: 'Hr photo',
-      shareLinkIconAlt: 'share link',
-      recommendationDescription:
-        'Get Apple Watch for successful recommendation',
-      appleWatchImageAlt: 'Apple Watch',
-    },
-    form: {
-      requiredText: ({ AsteriskWrapper }) => (
-        <>
-          <AsteriskWrapper>*</AsteriskWrapper> - required fields
-        </>
-      ),
-    },
-  },
+  });
+}
+
+export default {
+  translations,
 };

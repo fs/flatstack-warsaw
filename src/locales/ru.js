@@ -1,5 +1,99 @@
-export default {
-  translations: {
+const translations = {
+  hero: {
+    subtitle: ({ Highlight }) => (
+      <>
+        в Варшаву <Highlight>&#123;с релокацией&#125;</Highlight>
+      </>
+    ),
+    salary: '$3,500–4,000 net',
+    actions: {
+      apply: 'Откликнуться',
+    },
+  },
+  shareModal: {
+    triggerButtonText: 'Поделиться',
+    title: 'Поделиться',
+    copy: 'Копировать',
+    copySuccess: 'Скопировано!',
+    copyFailed: 'Ошибка!',
+    shareViaFacebook: 'Поделиться в Facebook',
+    shareViaVk: 'Поделиться в ВКонтакте',
+    shareViaTwitter: 'Поделиться в Twitter',
+    shareViaLinkedIn: 'Поделиться в LinkedIn',
+  },
+  recommendModal: {
+    triggerButtonText: 'Рекомендовать',
+    title: 'Рекомендация',
+    form: {
+      submit: 'Отправить',
+      agreement: ({ LinkComponent }) => (
+        <>
+          {'Нажимая кнопку "Отправить", вы даёте соглашение с нашей '}
+          <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
+            политикой конфиденциальности
+          </LinkComponent>
+        </>
+      ),
+      aboutYou: 'О Вас',
+      aboutRecommendee: 'О рекомендуемом',
+      yourName: 'Ваше имя',
+      yourEmail: 'Ваш Email',
+      yourPhone: 'Ваш номер телефона (не обязательно)',
+      recommendeeName: 'Имя рекомендуемого',
+      recommendeeEmail: 'Email рекомендуемого',
+      recommendeePhone: 'Номер телефона рекомендуемого (не обязательно)',
+      recommendeeComment: 'Комментарий (не обязательно)',
+      error: 'Произошла непредвиденная ошибка',
+      successMessage:
+        'Спасибо за рекомендацию. В ближайшее время мы свяжемся с Вами и человеком, которого Вы порекомендовали.',
+    },
+  },
+  join: {
+    title: 'Присоединиться к команде',
+    form: {
+      name: 'Имя',
+      email: 'Email',
+      link: 'Ссылка на CV или на профиль в социальных сетях',
+      cv: 'Приложить CV',
+      submit: 'Отправить',
+      agreement: ({ LinkComponent }) => (
+        <>
+          {'Нажимая кнопку "Отправить", вы соглашаетесь с нашей '}
+          <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
+            Политикой конфиденциальности
+          </LinkComponent>
+        </>
+      ),
+      error: 'Произошла непредвиденная ошибка',
+      successTitle: 'Спасибо за отклик!',
+      successDescription:
+        'Я отвечу Вам в скором времени. C нетерпением ждём Вас на интервью!',
+      successOkButton: 'OK',
+    },
+    contacts: {
+      telegram: 'Telegram',
+      facebook: 'Facebook',
+      email: 'join@flatstack.com',
+    },
+    hrMessage: 'Ирина отвечает на все письма и сообщения от вас',
+    hrPhotoAlt: 'Hr photo',
+    shareLink: 'поделиться ссылкой',
+    recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
+    appleWatchImageAlt: 'Apple Watch',
+  },
+  form: {
+    requiredText: ({ AsteriskWrapper }) => (
+      <>
+        <AsteriskWrapper>*</AsteriskWrapper> - обязательные поля
+      </>
+    ),
+  },
+};
+
+// we need some values only during build-time while generating HTML
+// and we don't need them in browser
+if (typeof window === 'undefined') {
+  Object.assign(translations, {
     title:
       'Вакансия – Fullstack Developer (Rails, TypeScript), Варшава (релокация)',
     metaDescription:
@@ -17,17 +111,6 @@ export default {
       relocation: 'Релокация',
       feedbacks: 'Отзывы',
       warsaw: 'Варшава',
-    },
-    hero: {
-      subtitle: ({ Highlight }) => (
-        <>
-          в Варшаву <Highlight>&#123;с релокацией&#125;</Highlight>
-        </>
-      ),
-      salary: '$3,500–4,000 net',
-      actions: {
-        apply: 'Откликнуться',
-      },
     },
     company: {
       title: 'О Flatstack',
@@ -152,83 +235,9 @@ export default {
       address: 'Варшава, Konstruktorska 11, 02-673',
       imageAlt: 'Наш офис в Варшаве',
     },
-    shareModal: {
-      triggerButtonText: 'Поделиться',
-      title: 'Поделиться',
-      copy: 'Копировать',
-      copySuccess: 'Скопировано!',
-      copyFailed: 'Ошибка!',
-      shareViaFacebook: 'Поделиться в Facebook',
-      shareViaVk: 'Поделиться в ВКонтакте',
-      shareViaTwitter: 'Поделиться в Twitter',
-      shareViaLinkedIn: 'Поделиться в LinkedIn',
-    },
-    recommendModal: {
-      triggerButtonText: 'Рекомендовать',
-      title: 'Рекомендация',
-      form: {
-        submit: 'Отправить',
-        agreement: ({ LinkComponent }) => (
-          <>
-            {'Нажимая кнопку "Отправить", вы даёте соглашение с нашей '}
-            <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
-              политикой конфиденциальности
-            </LinkComponent>
-          </>
-        ),
-        aboutYou: 'О Вас',
-        aboutRecommendee: 'О рекомендуемом',
-        yourName: 'Ваше имя',
-        yourEmail: 'Ваш Email',
-        yourPhone: 'Ваш номер телефона (не обязательно)',
-        recommendeeName: 'Имя рекомендуемого',
-        recommendeeEmail: 'Email рекомендуемого',
-        recommendeePhone: 'Номер телефона рекомендуемого (не обязательно)',
-        recommendeeComment: 'Комментарий (не обязательно)',
-        error: 'Произошла непредвиденная ошибка',
-        successMessage:
-          'Спасибо за рекомендацию. В ближайшее время мы свяжемся с Вами и человеком, которого Вы порекомендовали.',
-      },
-    },
-    join: {
-      title: 'Присоединиться к команде',
-      form: {
-        name: 'Имя',
-        email: 'Email',
-        link: 'Ссылка на CV или на профиль в социальных сетях',
-        cv: 'Приложить CV',
-        submit: 'Отправить',
-        agreement: ({ LinkComponent }) => (
-          <>
-            {'Нажимая кнопку "Отправить", вы соглашаетесь с нашей '}
-            <LinkComponent href="/privacy-policy-ru.pdf" target="_blank">
-              Политикой конфиденциальности
-            </LinkComponent>
-          </>
-        ),
-        error: 'Произошла непредвиденная ошибка',
-        successTitle: 'Спасибо за отклик!',
-        successDescription:
-          'Я отвечу Вам в скором времени. C нетерпением ждём Вас на интервью!',
-        successOkButton: 'OK',
-      },
-      contacts: {
-        telegram: 'Telegram',
-        facebook: 'Facebook',
-        email: 'join@flatstack.com',
-      },
-      hrMessage: 'Ирина отвечает на все письма и сообщения от вас',
-      hrPhotoAlt: 'Hr photo',
-      shareLink: 'поделиться ссылкой',
-      recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
-      appleWatchImageAlt: 'Apple Watch',
-    },
-    form: {
-      requiredText: ({ AsteriskWrapper }) => (
-        <>
-          <AsteriskWrapper>*</AsteriskWrapper> - обязательные поля
-        </>
-      ),
-    },
-  },
+  });
+}
+
+export default {
+  translations,
 };
