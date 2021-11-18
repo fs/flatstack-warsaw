@@ -94,6 +94,13 @@ const Page = () => {
             property="og:image"
             content="https://warsaw.flatstack.com/social.png"
           />
+          {process.env.NODE_ENV === 'production' ? (
+            <script
+              defer
+              data-domain="warsaw.flatstack.com"
+              src="https://plausible.io/js/plausible.js"
+            />
+          ) : null}
         </Helmet>
       ) : null}
       <Header />
