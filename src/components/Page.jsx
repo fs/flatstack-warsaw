@@ -98,7 +98,7 @@ const Page = () => {
             <script
               defer
               data-domain="warsaw.flatstack.com"
-              src="https://plausible.io/js/plausible.js"
+              src="/js/script.js"
             />
           ) : null}
         </Helmet>
