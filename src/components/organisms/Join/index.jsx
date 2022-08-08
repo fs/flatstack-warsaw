@@ -16,9 +16,6 @@ import FacebookIcon from '../../icons/FacebookIcon';
 import TelegramIcon from '../../icons/TelegramIcon';
 import LoadingIcon from '../../icons/LoadingIcon';
 import EmailIcon from '../../icons/EmailIcon';
-import appleWatchAvifPath from './apple-watch.avif';
-import appleWatchWebpPath from './apple-watch.webp';
-import appleWatchPngPath from './apple-watch.png';
 import HrDecoratedPhoto from './HrDecoratedPhoto';
 import ShareButton from '../../molecules/ShareButton';
 import RecommendButton from '../../molecules/RecommendButton';
@@ -121,10 +118,6 @@ const RecommendationCardDescriptionWrapper = styled.div`
 `;
 
 const RecommendationDescription = styled.p``;
-
-const AppleWatchImg = styled.img`
-  background: none;
-`;
 
 const formStatuses = {
   IDLE: 'IDLE',
@@ -296,17 +289,6 @@ const Join = () => {
                 paddingVariant={buttonPaddingVariants.SYMMETRIC}
               />
             </RecommendationCardDescriptionWrapper>
-            <picture>
-              <source srcSet={appleWatchAvifPath} type="image/avif" />
-              <source srcSet={appleWatchWebpPath} type="image/webp" />
-              <AppleWatchImg
-                src={appleWatchPngPath}
-                alt={t('join.appleWatchImageAlt')}
-                width="80"
-                height="94"
-                loading="lazy"
-              />
-            </picture>
           </RecommendationCard>
           <ShareButton variant={buttonVariants.BORDERED} />
         </RightCol>
