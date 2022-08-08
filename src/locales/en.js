@@ -180,7 +180,7 @@ if (typeof window === 'undefined') {
       flatstackWarsawImageAlt: 'Warsaw office',
       flatstackNewOrleansImageAlt: 'New Orleans office',
       flatstackAntalyaImageAlt: 'Antalya office',
-      flatstackGlobalImageAlt: 'Global office'
+      flatstackGlobalImageAlt: 'Global office',
     },
     relocation: {
       title: 'Relocation',
