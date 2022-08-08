@@ -120,7 +120,7 @@ if (typeof window === 'undefined') {
       flatstackWarsawImageAlt: 'Офис в Варшаве',
       flatstackNewOrleansImageAlt: 'Офис в Новом Орлеане',
       flatstackAntalyaImageAlt: 'Офис в Анталии',
-      flatstackKazanImageAlt: 'Глобальный офис'
+      flatstackGlobalImageAlt: 'Глобальный офис'
     },
     vacancy: {
       vacancyDescription:

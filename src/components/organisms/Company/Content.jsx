@@ -14,9 +14,9 @@ import flatstackNewOrleansAvifPhotoPath from './fs-no.avif';
 import flatstackAntalyaJpgPhotoPath from './fs-antalya.jpg';
 import flatstackAntalyaWebpPhotoPath from './fs-antalya.webp';
 import flatstackAntalyaAvifPhotoPath from './fs-antalya.avif';
-import flatstackKazanJpgPhotoPath from './fs-kazan.jpg';
-import flatstackKazanWebpPhotoPath from './fs-kazan.webp';
-import flatstackKazanAvifPhotoPath from './fs-kazan.avif';
+import flatstackGlobalJpgPhotoPath from './fs-global.jpg';
+import flatstackGlobalWebpPhotoPath from './fs-global.webp';
+import flatstackGlobalAvifPhotoPath from './fs-global.avif';
 
 const Row = styled.div`
   display: flex;
@@ -145,17 +145,17 @@ const Content = () => {
         </Figure>
         <Figure>
           <OfficePicture>
-            <source srcSet={flatstackKazanAvifPhotoPath} type="image/avif" />
-            <source srcSet={flatstackKazanWebpPhotoPath} type="image/webp" />
+            <source srcSet={flatstackGlobalAvifPhotoPath} type="image/avif" />
+            <source srcSet={flatstackGlobalWebpPhotoPath} type="image/webp" />
             <Image
-              src={flatstackKazanJpgPhotoPath}
+              src={flatstackGlobalJpgPhotoPath}
               width="568"
               height="274"
-              alt={t('company.flatstackKazanImageAlt')}
+              alt={t('company.flatstackGlobalImageAlt')}
               loading="lazy"
             />
           </OfficePicture>
-          <Figcaption>{t('company.flatstackKazanImageAlt')}</Figcaption>
+          <Figcaption>{t('company.flatstackGlobalImageAlt')}</Figcaption>
         </Figure>
       </ImagesRow>
     </>
