@@ -75,6 +75,7 @@ const FeedbackCard = ({ items, photos }) => {
           <Image
             srcSet={`${photos.jpgSmall} 64w, ${photos.jpgBig} 128w`}
             src={photos.jpgSmall}
+            alt={items.photoAlt}
             width="568"
             height="454"
             loading="lazy"
