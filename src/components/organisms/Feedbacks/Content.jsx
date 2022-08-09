@@ -77,7 +77,10 @@ const Content = () => {
     <CardsWrapper>
       <FeedbackCard items={t('feedbacks.items.dmitry')} photos={dmitryPhotos} />
       <FeedbackCard items={t('feedbacks.items.alina')} photos={alinaPhotos} />
-      <FeedbackCard items={t('feedbacks.items.arkadii')} photos={arkadiiPhotos} />
+      <FeedbackCard
+        items={t('feedbacks.items.arkadii')}
+        photos={arkadiiPhotos}
+      />
       <FeedbackCard items={t('feedbacks.items.askar')} photos={askarPhotos} />
     </CardsWrapper>
   );
