@@ -2,25 +2,29 @@ import styled from 'styled-components';
 import Card, { variants as cardVariants } from '../../atoms/Card';
 
 const Photo = styled.div`
-  height: 4em;
-  width: 4em;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.secondary};
   flex: none;
+
+  width: 4em;
+  height: 4em;
+
+  background-color: ${({ theme }) => theme.colors.secondary};
+
+  border-radius: 50%;
 `;
 
 const Image = styled.img`
   display: block;
   width: 100%;
   height: auto;
+
   border-radius: 1em;
 `;
 
 const Person = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   margin: -0.5em;
 
   & > * {
@@ -31,21 +35,26 @@ const Person = styled.div`
 const PersonDescription = styled.div``;
 
 const Title = styled.h3`
-  font-weight: bold;
-  color: ${({ theme }) => theme.colors.text};
   margin: 0 0 0.5em;
+
+  color: ${({ theme }) => theme.colors.text};
+  font-weight: bold;
 `;
 
 const SubTitle = styled.p`
-  color: ${({ theme }) => theme.colors.paleText};
   margin: 0;
+
+  color: ${({ theme }) => theme.colors.paleText};
 `;
 
 const FeedbackCardWrapper = styled(Card)`
   break-inside: avoid;
-  page-break-inside: avoid;
+
   max-width: 100%;
+
   margin-bottom: 2em;
+
+  page-break-inside: avoid;
 `;
 
 const Feedback = styled.p``;
