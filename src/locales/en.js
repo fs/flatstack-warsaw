@@ -116,35 +116,35 @@ export default {
     },
     feedbacks: {
       title: 'Feedbacks',
-      items: [
-        {
+      items: {
+        dmitry: {
           title: 'Dima, Fullstack Developer',
           teamTime: '1 year in the team',
           feedback:
             'Young modern team of professionals, friendly atmosphere, you always feel support from the colleagues. \n' +
             'Flatstack is associated to me with modern IT company, with newest technologies and newest approaches in development, with very interesting ways of people and project management. If you work here, you always find interesting start-ups, trainings for your skills development and cool corporate events.',
         },
-        {
+        alina: {
           title: 'Alina, Fullstack Developer',
           teamTime: '3+ years in the team',
           feedback:
             'Funny, tight-knit team, interesting "not-boring" job, newest technologies are in use. Good office space, I value my colleagues and the atmosphere very much! ',
         },
-        {
+        arkadii: {
           title: 'Arkadii, Fullstack Developer',
           teamTime: '7+ years in the team',
           feedback:
             'Cool client and the project. Cool cut-of-the-edge technologies. Cool processes that really work. \n' +
             'Here you can grow easily and gain diverse and varied experience. Comfortable and well organised relocation to Poland. Overall everything is well democratic.',
         },
-        {
+        askar: {
           title: 'Askar, Fullstack Developer',
           teamTime: '9+ years in the team',
           feedback:
             "Good office, good colleagues, fruits every Wednesday, democratic work organisation. The decisions made are justified and reasoned criticism will always be heard. That's what I experienced here. \n" +
             'Flatstack is associated to me with people who I was lucky to work with, with professionals in their field and with smart guys.',
         },
-      ],
+      },
     },
     warsaw: {
       title: 'Visit us in Warsaw',
