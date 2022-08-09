@@ -17,27 +17,30 @@ export const paddingVariants = {
 };
 
 const accentCss = css`
-  background-color: ${({ theme }) => theme.colors.accent};
-  font-weight: 600;
   color: ${({ theme }) => theme.colors.invertedText};
+  font-weight: 600;
+
+  background-color: ${({ theme }) => theme.colors.accent};
 
   &:focus {
     color: ${({ theme }) => theme.colors.invertedText};
+
     background-color: ${({ theme }) => shade(0.1, theme.colors.accent)};
     outline: none;
+  }
+
+  &:focus-visible {
+    background-color: ${({ theme }) => theme.colors.accent};
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
   }
 
   &:focus:not(:focus-visible) {
     background-color: ${({ theme }) => theme.colors.accent};
   }
 
-  &:focus-visible {
-    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
-    background-color: ${({ theme }) => theme.colors.accent};
-  }
-
   &&:hover {
     color: ${({ theme }) => theme.colors.invertedText};
+
     background-color: ${({ theme }) => shade(0.1, theme.colors.accent)};
   }
 `;
@@ -49,12 +52,12 @@ const borderedCss = css`
     outline: none;
   }
 
-  &:focus:not(:focus-visible) {
+  &:focus-visible {
     background-color: transparent;
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
   }
 
-  &:focus-visible {
-    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
+  &:focus:not(:focus-visible) {
     background-color: transparent;
   }
 
@@ -71,12 +74,12 @@ const primaryCss = css`
     outline: none;
   }
 
-  &:focus:not(:focus-visible) {
+  &:focus-visible {
     background-color: ${({ theme }) => theme.colors.primary};
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
   }
 
-  &:focus-visible {
-    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
+  &:focus:not(:focus-visible) {
     background-color: ${({ theme }) => theme.colors.primary};
   }
 
@@ -86,20 +89,22 @@ const primaryCss = css`
 `;
 
 const accentTextCss = css`
-  font-weight: 600;
   color: ${({ theme }) => theme.colors.accent};
+  font-weight: 600;
 
   &:focus {
     color: ${({ theme }) => shade(0.1, theme.colors.accent)};
+
     outline: none;
   }
 
-  &:focus:not(:focus-visible) {
+  &:focus-visible {
     color: ${({ theme }) => theme.colors.accent};
+
+    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
   }
 
-  &:focus-visible {
-    outline: ${({ theme }) => theme.colors.outline} solid 0.15em;
+  &:focus:not(:focus-visible) {
     color: ${({ theme }) => theme.colors.accent};
   }
 
@@ -159,22 +164,26 @@ const fullWidthCss = css`
 `;
 
 const Button = styled.button`
-  border: none;
-  background: none;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: inherit;
-  text-decoration: none;
-  user-select: none;
-  cursor: pointer;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   margin: 0;
+
   color: ${({ theme }) => theme.colors.text};
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  text-decoration: none;
+
+  background: none;
+  border: none;
   border-radius: 0.7em;
   outline-offset: 0.15em;
+  cursor: pointer;
+
+  user-select: none;
+
   ${({ paddingVariant }) => cssByPaddingVariant[paddingVariant]};
 
   ${({ centered }) =>

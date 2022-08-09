@@ -6,6 +6,7 @@ const Content =
 
 const Wrapper = styled.footer`
   padding: 3em 0;
+
   color: ${({ theme }) => theme.colors.paleText};
 `;
 

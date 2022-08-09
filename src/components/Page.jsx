@@ -27,16 +27,18 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+
     color: ${({ theme }) => theme.colors.text};
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
     font-size: 1rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    line-height: 1.5;
+
     fill: currentColor;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
   }
 
   img {
-    background-color: ${({ theme }) => theme.colors.secondary};;
+    background-color: ${({ theme }) => theme.colors.secondary};
   }
 `;
 
@@ -92,6 +94,13 @@ const Page = () => {
             property="og:image"
             content="https://warsaw.flatstack.com/social.png"
           />
+          {process.env.NODE_ENV === 'production' ? (
+            <script
+              defer
+              data-domain="warsaw.flatstack.com"
+              src="/js/script.js"
+            />
+          ) : null}
         </Helmet>
       ) : null}
       <Header />

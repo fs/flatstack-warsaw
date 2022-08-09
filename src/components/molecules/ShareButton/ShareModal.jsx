@@ -26,9 +26,10 @@ const LinksWrapper = styled.div`
 `;
 
 const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
-  font-size: 1.5em;
   flex: none;
   margin-right: 0.4em;
+
+  font-size: 1.5em;
 `;
 
 const Link = styled(ButtonLink)`

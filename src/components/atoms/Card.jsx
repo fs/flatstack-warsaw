@@ -20,7 +20,9 @@ const cssByVariant = {
 
 const Card = styled.div`
   padding: 2em;
+
   border-radius: 1em;
+
   ${({ variant }) => cssByVariant[variant]}
 `;
 

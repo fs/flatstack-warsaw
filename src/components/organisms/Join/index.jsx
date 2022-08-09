@@ -28,8 +28,9 @@ const InnerWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  column-gap: calc(15% - 2.3em);
   margin: 3em -1em -10em;
+
+  column-gap: calc(15% - 2.3em);
 `;
 
 const Form = styled.form`
@@ -51,8 +52,9 @@ const Agreement = styled.span`
 `;
 
 const StyledLoadingIcon = styled(LoadingIcon)`
-  font-size: 1.5em;
   margin: -0.5em -1.5em -0.5em 0.5em;
+
+  font-size: 1.5em;
 `;
 
 const ErrorMessage = styled.p`
@@ -60,23 +62,25 @@ const ErrorMessage = styled.p`
 `;
 
 const RightCol = styled.div`
-  flex: 1 0 16em;
   display: flex;
+  flex: 1 0 16em;
   flex-direction: column;
   max-width: calc(100% - 2em);
   margin: 0 1em 10em;
 `;
 
 const HrCard = styled(Card)`
-  padding-top: 4.5em;
   position: relative;
+
   margin-bottom: 1em;
+  padding-top: 4.5em;
 `;
 
 const HrPicture = styled(HrDecoratedPhoto)`
   position: absolute;
   top: -4.5em;
   left: 50%;
+
   transform: translateX(-50%);
 `;
 
@@ -96,8 +100,9 @@ const ContactLink = styled(Link)`
 `;
 
 const StyledIcon = styled(({ icon: Icon, ...props }) => <Icon {...props} />)`
-  font-size: 1.5em;
   margin-right: 0.5em;
+
+  font-size: 1.5em;
 `;
 
 const RecommendationCard = styled(Card)`

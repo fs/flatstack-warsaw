@@ -3,10 +3,11 @@ import AlertIcon from '../icons/AlertIcon';
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
+  padding: 0.5em;
+
   background-color: ${({ theme }) => theme.colors.accentPale};
   border-radius: 0.7em;
-  padding: 0.5em;
-  align-items: center;
 
   & > * {
     margin: 0.5em;

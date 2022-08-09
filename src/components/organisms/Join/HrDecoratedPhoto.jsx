@@ -5,36 +5,44 @@ import HrPhotoAvifPath from './hr-photo.avif';
 import HrPhotoJpgPath from './hr-photo.jpg';
 
 const Picture = styled.picture`
-  display: block;
   position: relative;
 
+  display: block;
+
   &::before {
-    display: block;
-    content: '';
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-    background-color: ${({ theme }) => theme.colors.accent};
     position: absolute;
     top: -0.5em;
     left: -1em;
+
+    display: block;
+    width: 3em;
+    height: 3em;
+
+    background-color: ${({ theme }) => theme.colors.accent};
+    border-radius: 50%;
+
+    content: '';
   }
 
   &::after {
+    position: absolute;
+    right: 0;
+    bottom: -1em;
+
     display: block;
-    content: '';
     width: 1.5em;
     height: 1.5em;
-    border-radius: 50%;
+
     background-color: ${({ theme }) => theme.colors.accent};
-    position: absolute;
-    bottom: -1em;
-    right: 0;
+    border-radius: 50%;
+
+    content: '';
   }
 `;
 
 const Image = styled.img`
   display: block;
+
   border-radius: 50%;
 `;
 

@@ -11,9 +11,11 @@ const Label = styled.label`
 const HtmlInput = styled.input`
   width: 100%;
   padding: 0.6em 0.7em;
+
+  font-size: 1rem;
+
   border: 1px solid ${({ theme }) => theme.colors.secondary};
   border-radius: 0.7em;
-  font-size: 1rem;
 `;
 
 const RequiredMark = styled.span`
