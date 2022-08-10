@@ -175,19 +175,19 @@ if (typeof window === 'undefined') {
     company: {
       title: 'About Flatstack',
       description:
-        'We have been building software since 2006 for clients in the USA, Europe, Russia and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
+        'We have been building software since 2006 for clients in the USA, Europe and other countries. Our projects make the difference and help people in real life. We are over 100 talented programmers, designers, project managers and QA, working together, creating awesomeness.',
       flatstackImageAlt: 'Flatstack team',
       flatstackWarsawImageAlt: 'Warsaw office',
       flatstackNewOrleansImageAlt: 'New Orleans office',
-      flatstackKazanImageAlt: 'Kazan office',
+      flatstackAntalyaImageAlt: 'Antalya office',
     },
     relocation: {
       title: 'Relocation',
       imageAlt: 'Our team',
       alert:
-        "To work on our cool project you must live in Europe. This is a client's requirement.",
+        "To work on our cool project you must live in Europe or Turkey. This is a client's requirement.",
       description:
-        'Are you living in Russia, Belarus, Ukraine or other CIS country? We can help you with relocation to Poland (Warsaw).',
+        'Would you like to live in Europe? We can help you with relocation to Poland (Warsaw).',
       listTitle: 'And we do it with care:',
       listItems: [
         'We help with visa, all relevant docs and its translation',

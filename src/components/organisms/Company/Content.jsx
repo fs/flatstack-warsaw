@@ -11,9 +11,9 @@ import flatstackWarsawAvifPhotoPath from './fs-warsaw.avif';
 import flatstackNewOrleansJpgPhotoPath from './fs-no.jpg';
 import flatstackNewOrleansWebpPhotoPath from './fs-no.webp';
 import flatstackNewOrleansAvifPhotoPath from './fs-no.avif';
-import flatstackKazanJpgPhotoPath from './fs-kazan.jpg';
-import flatstackKazanWebpPhotoPath from './fs-kazan.webp';
-import flatstackKazanAvifPhotoPath from './fs-kazan.avif';
+import flatstackAntalyaJpgPhotoPath from './fs-antalya.jpg';
+import flatstackAntalyaWebpPhotoPath from './fs-antalya.webp';
+import flatstackAntalyaAvifPhotoPath from './fs-antalya.avif';
 
 const Row = styled.div`
   display: flex;
@@ -128,17 +128,17 @@ const Content = () => {
         </Figure>
         <Figure>
           <OfficePicture>
-            <source srcSet={flatstackKazanAvifPhotoPath} type="image/avif" />
-            <source srcSet={flatstackKazanWebpPhotoPath} type="image/webp" />
+            <source srcSet={flatstackAntalyaAvifPhotoPath} type="image/avif" />
+            <source srcSet={flatstackAntalyaWebpPhotoPath} type="image/webp" />
             <Image
-              src={flatstackKazanJpgPhotoPath}
+              src={flatstackAntalyaJpgPhotoPath}
               width="568"
               height="274"
-              alt={t('company.flatstackKazanImageAlt')}
+              alt={t('company.flatstackAntalyaImageAlt')}
               loading="lazy"
             />
           </OfficePicture>
-          <Figcaption>{t('company.flatstackKazanImageAlt')}</Figcaption>
+          <Figcaption>{t('company.flatstackAntalyaImageAlt')}</Figcaption>
         </Figure>
       </ImagesRow>
     </>
