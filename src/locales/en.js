@@ -187,7 +187,7 @@ if (typeof window === 'undefined') {
       alert:
         "To work on our cool project you must live in Europe or Turkey. This is a client's requirement.",
       description:
-        'Are you living in Russia, Belarus, Ukraine or other CIS country? We can help you with relocation to Poland (Warsaw).',
+        'Would you like to live in Europe? We can help you with relocation to Poland (Warsaw).',
       listTitle: 'And we do it with care:',
       listItems: [
         'We help with visa, all relevant docs and its translation',
