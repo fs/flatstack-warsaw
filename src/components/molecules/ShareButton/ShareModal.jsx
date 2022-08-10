@@ -7,8 +7,8 @@ import ButtonLink, {
 } from '../../atoms/ButtonLink';
 import Button from '../../atoms/Button';
 import Input from '../../atoms/Input';
-import VkIcon from '../../icons/VkIcon';
 import FacebookIcon from '../../icons/FacebookIcon';
+import TelegramIcon from '../../icons/TelegramIcon';
 import TwitterIcon from '../../icons/TwitterIcon';
 import LinkedInIcon from '../../icons/LinkedInIcon';
 import Modal from '../Modal';
@@ -104,14 +104,16 @@ const ShareModal = ({ isOpen, onClose }) => {
           {t('shareModal.shareViaFacebook')}
         </Link>
         <Link
-          href={`https://vk.com/share.php?url=${encodeURIComponent(selfLink)}`}
+          href={`https://t.me/share/url?url=${encodeURIComponent(
+            selfLink,
+          )}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
           paddingVariant={buttonPaddingVariants.SYMMETRIC}
           centered={false}
         >
-          <StyledIcon icon={VkIcon} />
-          {t('shareModal.shareViaVk')}
+          <StyledIcon icon={TelegramIcon} />
+          {t('shareModal.shareViaTelegram')}
         </Link>
         <Link
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(

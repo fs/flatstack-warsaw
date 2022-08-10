@@ -21,7 +21,7 @@ const translations = {
     copySuccess: 'Copied!',
     copyFailed: 'Failed!',
     shareViaFacebook: 'Share via Facebook',
-    shareViaVk: 'Share via VK',
+    shareViaTelegram: 'Share via Telegram',
     shareViaTwitter: 'Share via Twitter',
     shareViaLinkedIn: 'Share via LinkedIn',
   },
