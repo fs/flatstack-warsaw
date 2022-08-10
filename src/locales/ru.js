@@ -6,7 +6,7 @@ const translations = {
   hero: {
     subtitle: ({ Highlight }) => (
       <>
-        в Варшаву/Турцию <Highlight>&#123;с релокацией&#125;</Highlight>
+        в Варшаву <Highlight>&#123;с релокацией&#125;</Highlight>
       </>
     ),
     salary: '$3,500–5,000 net',
@@ -120,7 +120,6 @@ if (typeof window === 'undefined') {
       flatstackWarsawImageAlt: 'Офис в Варшаве',
       flatstackNewOrleansImageAlt: 'Офис в Новом Орлеане',
       flatstackAntalyaImageAlt: 'Офис в Анталии',
-      flatstackGlobalImageAlt: 'Глобальный офис',
     },
     vacancy: {
       vacancyDescription:
