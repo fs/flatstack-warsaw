@@ -104,9 +104,7 @@ const ShareModal = ({ isOpen, onClose }) => {
           {t('shareModal.shareViaFacebook')}
         </Link>
         <Link
-          href={`https://t.me/share/url?url=${encodeURIComponent(
-            selfLink,
-          )}`}
+          href={`https://t.me/share/url?url=${encodeURIComponent(selfLink)}`}
           target="_blank"
           variant={buttonVariants.BORDERED}
           paddingVariant={buttonPaddingVariants.SYMMETRIC}
