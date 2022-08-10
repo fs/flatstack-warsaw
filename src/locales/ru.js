@@ -82,8 +82,8 @@ const translations = {
     hrMessage: 'Ирина отвечает на все письма и сообщения от вас',
     hrPhotoAlt: 'Hr photo',
     shareLink: 'поделиться ссылкой',
-    recommendationDescription: 'Получи Apple Watch за успешную рекомендацию',
-    appleWatchImageAlt: 'Apple Watch',
+    recommendationDescription:
+      'Получи денежный бонус $700 - $1,700 за успешную рекомендацию',
   },
   form: {
     requiredText: ({ AsteriskWrapper }) => (

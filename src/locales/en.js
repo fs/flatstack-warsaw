@@ -82,8 +82,8 @@ const translations = {
     hrMessage: 'Irina replies all the emails and message from you',
     hrPhotoAlt: 'Hr photo',
     shareLinkIconAlt: 'share link',
-    recommendationDescription: 'Get Apple Watch for successful recommendation',
-    appleWatchImageAlt: 'Apple Watch',
+    recommendationDescription:
+      'Get a $700 - $1,700 cash bonus for successful recommendation',
   },
   form: {
     requiredText: ({ AsteriskWrapper }) => (
