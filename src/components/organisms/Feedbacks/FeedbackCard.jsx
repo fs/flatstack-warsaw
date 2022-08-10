@@ -47,11 +47,7 @@ const SubTitle = styled.p`
   color: ${({ theme }) => theme.colors.paleText};
 `;
 
-const Wrapper = styled(Card)`
-  break-inside: avoid;
-
-  page-break-inside: avoid;
-`;
+const Wrapper = styled(Card)``;
 
 const Feedback = styled.p``;
 
