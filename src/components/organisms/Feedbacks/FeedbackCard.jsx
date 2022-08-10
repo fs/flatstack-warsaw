@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 import Card, { variants as cardVariants } from '../../atoms/Card';
 
-const Photo = styled.div`
-  flex: none;
-
+const Picture = styled.picture`
+  display: block;
   width: 4em;
   height: 4em;
-
-  background-color: ${({ theme }) => theme.colors.secondary};
-
-  border-radius: 50%;
 `;
 
 const Image = styled.img`
@@ -47,23 +42,19 @@ const SubTitle = styled.p`
   color: ${({ theme }) => theme.colors.paleText};
 `;
 
-const FeedbackCardWrapper = styled(Card)`
+const Wrapper = styled(Card)`
   break-inside: avoid;
-
-  max-width: 100%;
-
-  margin-bottom: 2em;
 
   page-break-inside: avoid;
 `;
 
 const Feedback = styled.p``;
 
-const FeedbackCard = ({ items, photos }) => {
+const FeedbackCard = ({ title, teamTime, feedback, photoAlt, photos }) => {
   return (
-    <FeedbackCardWrapper variant={cardVariants.FILL_ACCENT_PALE}>
+    <Wrapper variant={cardVariants.FILL_ACCENT_PALE}>
       <Person>
-        <Photo>
+        <Picture>
           <source
             srcSet={`${photos.avifSmall} 64w, ${photos.avifBig} 128w`}
             type="image/avif"
@@ -75,19 +66,19 @@ const FeedbackCard = ({ items, photos }) => {
           <Image
             srcSet={`${photos.jpgSmall} 64w, ${photos.jpgBig} 128w`}
             src={photos.jpgSmall}
-            alt={items.photoAlt}
-            width="568"
-            height="454"
+            alt={photoAlt}
+            width="64"
+            height="64"
             loading="lazy"
           />
-        </Photo>
+        </Picture>
         <PersonDescription>
-          <Title>{items.title}</Title>
-          <SubTitle>{items.teamTime}</SubTitle>
+          <Title>{title}</Title>
+          <SubTitle>{teamTime}</SubTitle>
         </PersonDescription>
       </Person>
-      <Feedback>{items.feedback}</Feedback>
-    </FeedbackCardWrapper>
+      <Feedback>{feedback}</Feedback>
+    </Wrapper>
   );
 };
 

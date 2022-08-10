@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import FeedbackCard from './FeedbackCard';
 import { useL10n } from '../../L10nContext';
 import alinaAvif128 from './alina_128.avif';
 import alinaWebp128 from './alina_128.webp';
@@ -66,22 +67,35 @@ const CardsWrapper = styled.div`
   column-gap: 2em;
 `;
 
-const FeedbackCard =
-  typeof window === 'undefined'
-    ? require('./FeedbackCard').default
-    : () => null;
+const CardWrapper = styled.div`
+  break-inside: avoid;
+
+  max-width: 100%;
+
+  margin-bottom: 2em;
+
+  page-break-inside: avoid;
+`;
 
 const Content = () => {
   const { t } = useL10n();
   return (
     <CardsWrapper>
-      <FeedbackCard items={t('feedbacks.items.dmitry')} photos={dmitryPhotos} />
-      <FeedbackCard items={t('feedbacks.items.alina')} photos={alinaPhotos} />
-      <FeedbackCard
-        items={t('feedbacks.items.arkadii')}
-        photos={arkadiiPhotos}
-      />
-      <FeedbackCard items={t('feedbacks.items.askar')} photos={askarPhotos} />
+      <CardWrapper>
+        <FeedbackCard {...t('feedbacks.items.dmitry')} photos={dmitryPhotos} />
+      </CardWrapper>
+      <CardWrapper>
+        <FeedbackCard {...t('feedbacks.items.alina')} photos={alinaPhotos} />
+      </CardWrapper>
+      <CardWrapper>
+        <FeedbackCard
+          {...t('feedbacks.items.arkadii')}
+          photos={arkadiiPhotos}
+        />
+      </CardWrapper>
+      <CardWrapper>
+        <FeedbackCard {...t('feedbacks.items.askar')} photos={askarPhotos} />
+      </CardWrapper>
     </CardsWrapper>
   );
 };
