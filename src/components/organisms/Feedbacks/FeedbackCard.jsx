@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 import Card, { variants as cardVariants } from '../../atoms/Card';
 
-const Picture = styled.picture`
+const Photo = styled.picture`
   display: block;
+
+  flex: none;
+
   width: 4em;
   height: 4em;
 `;
@@ -11,6 +14,8 @@ const Image = styled.img`
   display: block;
   width: 100%;
   height: auto;
+
+  background-color: ${({ theme }) => theme.colors.secondary};
 
   border-radius: 1em;
 `;
@@ -54,7 +59,7 @@ const FeedbackCard = ({ title, teamTime, feedback, photoAlt, photos }) => {
   return (
     <Wrapper variant={cardVariants.FILL_ACCENT_PALE}>
       <Person>
-        <Picture>
+        <Photo>
           <source
             srcSet={`${photos.avifSmall} 64w, ${photos.avifBig} 128w`}
             type="image/avif"
@@ -71,7 +76,7 @@ const FeedbackCard = ({ title, teamTime, feedback, photoAlt, photos }) => {
             height="64"
             loading="lazy"
           />
-        </Picture>
+        </Photo>
         <PersonDescription>
           <Title>{title}</Title>
           <SubTitle>{teamTime}</SubTitle>
