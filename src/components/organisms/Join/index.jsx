@@ -114,7 +114,6 @@ const RecommendationCardDescriptionWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 1em;
 `;
 
 const RecommendationDescription = styled.p``;
