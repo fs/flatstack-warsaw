@@ -1,5 +1,4 @@
 https://flatstack-warsaw.netlify.app/* https://warsaw.flatstack.com/:splat 301!
 /index.html / 301!
-/ru.html /ru 301!
 /js/script.js https://plausible.io/js/plausible.js 200
 /api/event https://plausible.io/api/event 202

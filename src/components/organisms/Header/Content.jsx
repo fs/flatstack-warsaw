@@ -4,7 +4,6 @@ import config from '../../../config';
 import Link, { underlineTypes } from '../../atoms/Link';
 import Container from '../../atoms/Container';
 import LogoSvg from './LogoSvg';
-import LangSwitcher from './LangSwitcher';
 
 const InnerWrapper = styled.div`
   display: flex;
@@ -38,16 +37,6 @@ const Li = styled.li`
   &:last-of-type {
     margin-right: 0;
   }
-`;
-
-const Delimiter = styled.div`
-  flex: none;
-  align-self: center;
-  width: 1px;
-  height: 2em;
-  margin: 0 1.5em;
-
-  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 const RightCol = styled.div`
@@ -111,8 +100,6 @@ const Content = () => {
               </Li>
             </Ul>
           </Menu>
-          <Delimiter />
-          <LangSwitcher />
         </RightCol>
       </InnerWrapper>
     </Container>
